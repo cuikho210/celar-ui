@@ -1,0 +1,22 @@
+@use './utils.scss';
+@use './config.scss';
+
+$spacing: (
+	gap--x3: 3rem,
+	gap--x2: 2rem,
+	gap: 1rem,
+	gap--md: 0.7rem,
+	gap--sm: 0.3rem,
+	gap--xs: 0.1rem
+) !default;
+
+$breaking: (
+	break--xs: 540px,
+	break--sm: 960px,
+	break--md: 1320px
+) !default;
+
+:root {
+	@include utils.add_prefix(config.$prefix, $spacing);
+	@include utils.add_prefix(config.$prefix, $breaking);
+}

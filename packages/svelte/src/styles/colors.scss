@@ -1,0 +1,45 @@
+@use './utils.scss';
+@use './config.scss';
+
+$colors-theme: (
+	color-primary--text: #570000,
+	color-primary--darker: #962c0f,
+	color-primary--dark: #ff907f,
+	color-primary: #ffc5b3,
+	color-primary--light: #ffe5dc,
+	color-primary--lighter: #fff6f3,
+
+	color-alt--text: #481523,
+	color-alt--darker: #8f1538,
+	color-alt--dark: #c48591,
+	color-alt: #f1afbb,
+	color-alt--light: #ffe3ec,
+	color-alt--lighter: #fff3f7,
+
+	color-text: #000000,
+	color-text-info: #1a3baa,
+	color-text-success: #438d75,
+	color-text-warning: #c18500,
+	color-text-danger: #98000b,
+
+	color-bg: #ffffff,
+	color-bg-info: #faf8ff,
+	color-bg-success: #e8fef5,
+	color-bg-warning: #fff8ec,
+	color-bg-danger: #fff4ef
+) !default;
+
+$colors-misc: (
+	color-shadow--soft: rgba(0, 0, 0, 0.05),
+	color-shadow--md: rgba(0, 0, 0, 0.075),
+	color-shadow: rgba(0, 0, 0, 0.1),
+	color-shadow--strong: rgba(0, 0, 0, 0.16),
+	color-border: rgba(var(--vuuui-color-text--rgb), 0.07),
+	color-border--strong: rgba(var(--vuuui-color-text--rgb), 0.1),
+	color-wrapper: rgba(var(--vuuui-color-text--rgb), 0.024)
+) !default;
+
+:root {
+	@include utils.add_prefix(config.$prefix, $colors-theme);
+	@include utils.add_prefix(config.$prefix, $colors-misc);
+}

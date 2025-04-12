@@ -1,0 +1,15 @@
+@use './utils.scss';
+@use './config.scss';
+
+$misc: (
+	radius: 16px,
+	radius--half: 8px,
+	blur-length--x2: 8px,
+	blur-length: 4px,
+	transition-dur: 150ms,
+	transition-dur--long: 300ms
+) !default;
+
+:root {
+	@include utils.add_prefix(config.$prefix, $misc);
+}
