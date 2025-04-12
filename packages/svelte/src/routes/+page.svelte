@@ -2,6 +2,7 @@
 	import IconButton from '$lib/buttons/IconButton.svelte';
 	import {
 		Container,
+		Spacer,
 		DuckSpinner,
 		TextButton,
 		ElevatedButton,
@@ -13,11 +14,14 @@
 
 <Container sm>
 	<h3>Buttons</h3>
-	<TextButton>Text</TextButton>
-	<ElevatedButton>Elevated</ElevatedButton>
-	<FilledButton>Filled</FilledButton>
-	<OutlinedButton>Outlined</OutlinedButton>
-	<IconButton><HugeiconsInLove font-size="20px" /></IconButton>
+
+	<Spacer>
+		<TextButton>Text</TextButton>
+		<ElevatedButton>Elevated</ElevatedButton>
+		<FilledButton>Filled</FilledButton>
+		<OutlinedButton>Outlined</OutlinedButton>
+		<IconButton><HugeiconsInLove font-size="20px" /></IconButton>
+	</Spacer>
 </Container>
 
 <Container sm>

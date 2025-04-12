@@ -7,6 +7,7 @@ export { default as OutlinedButton } from './buttons/OutlinedButton.svelte';
 export { default as IconButton } from './buttons/IconButton.svelte';
 
 export { default as Container } from './containment/Container.svelte';
+export { default as Spacer } from './containment/Spacer.svelte';
 
 export { default as Gap } from './misc/Gap.svelte';
 export { default as DuckSpinner } from './misc/DuckSpinner.svelte';
