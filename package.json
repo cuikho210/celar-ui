@@ -1,0 +1,7 @@
+{
+  "name": "celar",
+  "version": "0.0.1",
+  "workspaces": [
+    "packages/*"
+  ]
+}
