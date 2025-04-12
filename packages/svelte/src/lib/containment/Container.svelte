@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { HTMLAttributes } from 'svelte/elements';
 
-	interface ContainerProps extends HTMLAttributes<HTMLElement> {
+	export interface ContainerProps extends HTMLAttributes<HTMLElement> {
 		xs?: boolean;
 		sm?: boolean;
 		md?: boolean;
