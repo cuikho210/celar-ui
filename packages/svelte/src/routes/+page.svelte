@@ -1,4 +1,5 @@
 <script lang="ts">
+	import IconButton from '$lib/buttons/IconButton.svelte';
 	import {
 		Container,
 		DuckSpinner,
@@ -7,6 +8,7 @@
 		FilledButton,
 		OutlinedButton
 	} from '$lib/index.js';
+	import HugeiconsInLove from '~icons/hugeicons/in-love';
 </script>
 
 <Container sm>
@@ -15,6 +17,7 @@
 	<ElevatedButton>Elevated</ElevatedButton>
 	<FilledButton>Filled</FilledButton>
 	<OutlinedButton>Outlined</OutlinedButton>
+	<IconButton><HugeiconsInLove font-size="20px" /></IconButton>
 </Container>
 
 <Container sm>
