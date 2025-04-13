@@ -34,12 +34,12 @@ $colors-misc: (
 	color-shadow--md: rgba(0, 0, 0, 0.075),
 	color-shadow: rgba(0, 0, 0, 0.1),
 	color-shadow--strong: rgba(0, 0, 0, 0.16),
-	color-border: rgba(var(--vuuui-color-text--rgb), 0.07),
-	color-border--strong: rgba(var(--vuuui-color-text--rgb), 0.1),
-	color-wrapper: rgba(var(--vuuui-color-text--rgb), 0.024)
+	color-border: rgba(var(--color-text--rgb), 0.07),
+	color-border--strong: rgba(var(--color-text--rgb), 0.1),
+	color-wrapper: rgba(var(--color-text--rgb), 0.024)
 ) !default;
 
 :root {
-	@include utils.add_prefix(config.$prefix, $colors-theme);
+	@include utils.generate_colors(config.$prefix, $colors-theme);
 	@include utils.add_prefix(config.$prefix, $colors-misc);
 }

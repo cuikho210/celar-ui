@@ -6,15 +6,15 @@
 		color.channel($hex, 'blue', $space: rgb);
 }
 
-@mixin generate_colors($colors) {
+@mixin generate_colors($prefix, $colors) {
 	// Colors, RGB Colors
 	@each $color, $value in $colors {
 		@if string.slice(#{$value}, 1, 1) == '#' {
-			--vuuui-#{$color}: #{$value};
-			--vuuui-#{$color}--rgb: #{convertHexToRGB($value)};
+			--#{$prefix}#{$color}: #{$value};
+			--#{$prefix}#{$color}--rgb: #{convertHexToRGB($value)};
 		} @else {
-			--vuuui-#{$color}: var(--#{$value});
-			--vuuui-#{$color}--rgb: var(--#{$value}--rgb);
+			--#{$prefix}#{$color}: var(--#{$value});
+			--#{$prefix}#{$color}--rgb: var(--#{$value}--rgb);
 		}
 	}
 }
@@ -24,4 +24,4 @@
 	@each $var, $value in $vars {
 		--#{$prefix}#{$var}: #{$value};
 	}
-}
+} ;
