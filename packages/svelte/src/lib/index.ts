@@ -12,5 +12,7 @@ export { default as Card } from './containment/Card.svelte';
 export { default as Breadcrumb } from './containment/Breadcrumb.svelte';
 export { default as Avatar } from './containment/Avatar.svelte';
 
+export { default as Dialog } from './overlay/Dialog.svelte';
+
 export { default as Gap } from './misc/Gap.svelte';
 export { default as DuckSpinner } from './misc/DuckSpinner.svelte';
