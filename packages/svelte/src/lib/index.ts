@@ -19,3 +19,4 @@ export { default as DuckSpinner } from './misc/DuckSpinner.svelte';
 export { default as DotSpinner } from './misc/DotSpinner.svelte';
 
 export { default as TextInput } from './inputs/TextInput.svelte';
+export { default as FileInput } from './inputs/FileInput.svelte';
