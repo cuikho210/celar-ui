@@ -16,3 +16,4 @@ export { default as Dialog } from './overlay/Dialog.svelte';
 
 export { default as Gap } from './misc/Gap.svelte';
 export { default as DuckSpinner } from './misc/DuckSpinner.svelte';
+export { default as DotSpinner } from './misc/DotSpinner.svelte';

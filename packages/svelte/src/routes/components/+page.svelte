@@ -4,6 +4,7 @@
 	import Buttons from './Buttons.svelte';
 	import Spinners from './Spinners.svelte';
 	import Overlay from './Overlay.svelte';
+	import Inputs from './Inputs.svelte';
 </script>
 
 <Container sm>
@@ -17,6 +18,7 @@
 	<Gap />
 
 	<Buttons /><Gap />
+	<Inputs /><Gap />
 	<Avatar /><Gap />
 	<Spinners /><Gap />
 	<Overlay /><Gap />

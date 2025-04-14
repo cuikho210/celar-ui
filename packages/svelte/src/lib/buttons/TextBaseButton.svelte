@@ -1,6 +1,6 @@
 <script lang="ts">
 	import BaseButton from './BaseButton.svelte';
-	import DuckSpinner from '../misc/DuckSpinner.svelte';
+	import DotSpinner from '../misc/DotSpinner.svelte';
 	import type { BaseButtonProps } from './BaseButton.svelte';
 	import type { Snippet } from 'svelte';
 
@@ -28,7 +28,7 @@
 
 	{#if loading}
 		<div class="button-spinner">
-			<DuckSpinner />
+			<DotSpinner size="24px" color="var(--color-primary--text)" />
 		</div>
 	{/if}
 {/snippet}

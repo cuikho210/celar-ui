@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, DuckSpinner, Gap, Spacer } from '$lib/index.js';
+	import { Card, DuckSpinner, DotSpinner, Gap, Spacer } from '$lib/index.js';
 </script>
 
 <Card>
@@ -8,5 +8,6 @@
 	<Spacer align="center">
 		<DuckSpinner size="24" />
 		<DuckSpinner size="48" thin />
+		<DotSpinner size="24px" />
 	</Spacer>
 </Card>

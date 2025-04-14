@@ -1,7 +1,7 @@
 <script lang="ts">
+	import DotSpinner from '$lib/misc/DotSpinner.svelte';
 	import BaseButton from './BaseButton.svelte';
 	import type { BaseButtonProps } from './BaseButton.svelte';
-	import { DuckSpinner } from '../index.js';
 
 	let { children, ...rest }: BaseButtonProps = $props();
 </script>
@@ -15,7 +15,7 @@
 
 	{#if rest.loading}
 		<div class="button-spinner">
-			<DuckSpinner />
+			<DotSpinner size="24px" color="var(--color-primary--text)" />
 		</div>
 	{/if}
 {/snippet}
