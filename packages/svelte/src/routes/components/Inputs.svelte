@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, Gap, TextInput, FileInput, ColorInput } from '$lib/index.js';
+	import { Card, Gap, TextInput, FileInput, ColorInput, Checkbox } from '$lib/index.js';
 	import IconSignature from '~icons/hugeicons/signature';
 	import IconFileAttachment from '~icons/hugeicons/file-attachment';
 </script>
@@ -27,5 +27,8 @@
 			<IconFileAttachment />
 		{/snippet}
 	</ColorInput>
-	<Gap size=".5rem" />
+	<Gap />
+
+	<Checkbox indeterminate>Checkbox 1</Checkbox>
+	<Checkbox indeterminate>Checkbox 2</Checkbox>
 </Card>
