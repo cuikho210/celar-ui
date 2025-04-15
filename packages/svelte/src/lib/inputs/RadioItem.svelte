@@ -24,6 +24,7 @@
 		justify-content: flex-start;
 		align-items: center;
 		transition-property: background-color;
+		transition-duration: var(--transition-dur);
 		cursor: pointer;
 		-webkit-tap-highlight-color: transparent;
 		border-radius: var(--radius--half);
