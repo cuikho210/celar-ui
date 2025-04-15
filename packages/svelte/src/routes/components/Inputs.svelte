@@ -5,6 +5,7 @@
 	import RadioGroup from '$lib/inputs/RadioGroup.svelte';
 	import RadioItem from '$lib/inputs/RadioItem.svelte';
 	import Switch from '$lib/inputs/Switch.svelte';
+	import Slider from '$lib/inputs/Slider.svelte';
 </script>
 
 <Card>
@@ -44,4 +45,7 @@
 	<Gap />
 
 	<Switch>Switch</Switch>
+	<Gap />
+
+	<Slider />
 </Card>
