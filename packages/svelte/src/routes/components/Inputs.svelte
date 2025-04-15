@@ -2,6 +2,8 @@
 	import { Card, Gap, TextInput, FileInput, ColorInput, Checkbox } from '$lib/index.js';
 	import IconSignature from '~icons/hugeicons/signature';
 	import IconFileAttachment from '~icons/hugeicons/file-attachment';
+	import RadioGroup from '$lib/inputs/RadioGroup.svelte';
+	import RadioItem from '$lib/inputs/RadioItem.svelte';
 </script>
 
 <Card>
@@ -30,5 +32,12 @@
 	<Gap />
 
 	<Checkbox indeterminate>Checkbox 1</Checkbox>
-	<Checkbox indeterminate>Checkbox 2</Checkbox>
+	<Checkbox>Checkbox 2</Checkbox>
+	<Gap />
+
+	<RadioGroup>
+		<RadioItem value="ahihi">Ahihi</RadioItem>
+		<RadioItem value="ahuhu">Ahuhu</RadioItem>
+		<RadioItem value="ahaha">Ahaha</RadioItem>
+	</RadioGroup>
 </Card>

@@ -22,3 +22,5 @@ export { default as TextInput } from './inputs/TextInput.svelte';
 export { default as FileInput } from './inputs/FileInput.svelte';
 export { default as ColorInput } from './inputs/ColorInput.svelte';
 export { default as Checkbox } from './inputs/Checkbox.svelte';
+export { default as RadioGroup } from './inputs/RadioGroup.svelte';
+export { default as RadioItem } from './inputs/RadioItem.svelte';

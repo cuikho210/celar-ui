@@ -66,7 +66,7 @@
 		width: 32px;
 		background-color: transparent;
 		outline: none;
-		border: 1px solid var(--color-primary);
+		border: 1px solid var(--color-primary--dark);
 		border-radius: var(--radius--half);
 	}
 
