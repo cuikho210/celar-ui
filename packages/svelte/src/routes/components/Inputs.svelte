@@ -4,6 +4,7 @@
 	import IconFileAttachment from '~icons/hugeicons/file-attachment';
 	import RadioGroup from '$lib/inputs/RadioGroup.svelte';
 	import RadioItem from '$lib/inputs/RadioItem.svelte';
+	import Switch from '$lib/inputs/Switch.svelte';
 </script>
 
 <Card>
@@ -40,4 +41,7 @@
 		<RadioItem value="ahuhu">Ahuhu</RadioItem>
 		<RadioItem value="ahaha">Ahaha</RadioItem>
 	</RadioGroup>
+	<Gap />
+
+	<Switch>Switch</Switch>
 </Card>

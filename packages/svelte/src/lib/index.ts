@@ -24,3 +24,4 @@ export { default as ColorInput } from './inputs/ColorInput.svelte';
 export { default as Checkbox } from './inputs/Checkbox.svelte';
 export { default as RadioGroup } from './inputs/RadioGroup.svelte';
 export { default as RadioItem } from './inputs/RadioItem.svelte';
+export { default as Switch } from './inputs/Switch.svelte';
