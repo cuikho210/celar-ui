@@ -1,11 +1,14 @@
 {
-  "name": "celar",
+  "name": "celar-ui",
   "version": "0.0.1",
+  "repository": "git@github.com:cuikho210/celar-ui.git",
+  "author": "cuikho210 <tonykms210@gmail.com>",
+  "license": "MIT",
   "workspaces": [
     "packages/*"
   ],
   "trustedDependencies": [
-    "@celar/svelte",
+    "@celar-ui/svelte",
     "@parcel/watcher",
     "esbuild"
   ]

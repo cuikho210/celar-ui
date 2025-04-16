@@ -1,6 +1,13 @@
 {
-	"name": "@celar/svelte",
+	"name": "@celar-ui/svelte",
 	"version": "0.0.1",
+	"license": "MIT",
+	"author": {
+		"name": "cuikho210",
+		"email": "tonykms210@gmail.com",
+		"url": "https://github.com/cuikho210"
+	},
+	"private": false,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
