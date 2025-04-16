@@ -85,6 +85,7 @@
 		height: 100%;
 		backdrop-filter: blur(var(--blur-length));
 		background-color: var(--color-border--strong);
+		z-index: 100;
 	}
 
 	:global([data-dialog-content]) {
@@ -100,6 +101,7 @@
 		box-shadow: 0 4px 1rem var(--color-shadow);
 		border-radius: var(--radius);
 		overflow: hidden;
+		z-index: 100;
 
 		&[data-xs='true'] {
 			max-width: min($d-max-w, var(--break--xs));

@@ -8,7 +8,7 @@
 	import TextButton from '$lib/buttons/TextButton.svelte';
 </script>
 
-<AppBar style="position: sticky; top: 0; z-index: 100;">
+<AppBar style="position: sticky; top: 0; z-index: 20;">
 	{#snippet leading()}
 		<TextButton style="color: var(--color-text-info)" onclick={() => history.back()}>
 			Back
