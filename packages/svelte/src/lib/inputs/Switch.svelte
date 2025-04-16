@@ -18,6 +18,8 @@
 </label>
 
 <style lang="scss">
+	@use 'sass:math';
+
 	$s-width: 38px;
 	$s-height: 24px;
 
@@ -26,7 +28,7 @@
 	$t-translate: $s-width - $t-size - ($t-gap * 2);
 
 	$i-width: 48px;
-	$s-margin-x: ($i-width - $s-width) / 2;
+	$s-margin-x: math.div($i-width - $s-width, 2);
 
 	[data-switch] {
 		position: relative;
