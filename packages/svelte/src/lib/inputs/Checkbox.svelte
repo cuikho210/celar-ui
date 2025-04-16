@@ -38,8 +38,6 @@
 		justify-content: flex-start;
 		align-items: center;
 		transition-property: background-color;
-		cursor: pointer;
-		-webkit-tap-highlight-color: transparent;
 		border-radius: var(--radius--half);
 		padding: var(--gap--sm) 0;
 		padding-right: var(--gap);
