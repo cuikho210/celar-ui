@@ -1,9 +1,41 @@
 <script lang="ts">
-	import { Container, Breadcrumb, Gap, Spacer, OutlinedButton, NavigationBar } from '$lib/index.js';
+	import {
+		Container,
+		Breadcrumb,
+		Gap,
+		Spacer,
+		OutlinedButton,
+		NavigationBar,
+		NavigationBarButton
+	} from '$lib/index.js';
+	import IconHome from '~icons/hugeicons/home-01';
+	import IconComponents from '~icons/hugeicons/dashboard-square-03';
+	import IconInfo from '~icons/hugeicons/information-diamond';
 </script>
 
 <div class="app-navigation">
-	<NavigationBar><p>Hi there</p></NavigationBar>
+	<NavigationBar>
+		<NavigationBarButton href="/" active>
+			{#snippet icon()}
+				<IconHome font-size="20px" />
+			{/snippet}
+			Home
+		</NavigationBarButton>
+
+		<NavigationBarButton href="/components">
+			{#snippet icon()}
+				<IconComponents font-size="20px" />
+			{/snippet}
+			Components
+		</NavigationBarButton>
+
+		<NavigationBarButton href="/about">
+			{#snippet icon()}
+				<IconInfo font-size="20px" />
+			{/snippet}
+			About
+		</NavigationBarButton>
+	</NavigationBar>
 </div>
 
 <div class="app-body">
@@ -26,8 +58,8 @@
 	@use 'sass:map';
 	@use '../styles/spacing.scss';
 
-	$navbar-mobile-height: 64px;
-	$navbar-desktop-width: 72px;
+	$navbar-mobile-height: 72px;
+	$navbar-desktop-width: 88px;
 
 	.app-navigation {
 		display: block;

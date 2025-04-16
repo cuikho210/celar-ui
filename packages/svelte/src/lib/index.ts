@@ -29,3 +29,4 @@ export { default as Slider } from './inputs/Slider.svelte';
 
 export { default as AppBar } from './navigation/AppBar.svelte';
 export { default as NavigationBar } from './navigation/NavigationBar.svelte';
+export { default as NavigationBarButton } from './navigation/NavigationBarButton.svelte';
