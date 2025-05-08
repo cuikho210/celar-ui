@@ -1,0 +1,20 @@
+[data-button-elevated] {
+	transition-duration: var(--transition-dur);
+	transition-property: background-color, box-shadow, opacity;
+	box-shadow: 0 2px 2px var(--color-shadow);
+	background-color: var(--color-primary--lighter);
+
+	&:not(:disabled, [data-active='true']):hover {
+		box-shadow: 0 2px 4px var(--color-shadow--strong);
+		background-color: var(--color-primary--light);
+	}
+
+	&:not(:disabled):active {
+		box-shadow: 0 2px 2px var(--color-shadow--strong);
+	}
+}
+
+[data-button-elevated][data-active='true'] {
+	box-shadow: 0 2px 2px var(--color-shadow--strong);
+	background-color: var(--color-alt);
+}

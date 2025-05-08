@@ -1,4 +1,5 @@
 <script lang="ts">
+	import './styles/radio_group.scss';
 	import {
 		RadioGroup as BitRadioGroup,
 		type RadioGroupRootProps as BitRadioGroupRootProps,
@@ -16,8 +17,3 @@
 	{@render children?.()}
 </BitRadioGroup.Root>
 
-<style lang="scss">
-	:global([data-radio-group-root]) {
-		position: relative;
-	}
-</style>

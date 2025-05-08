@@ -1,4 +1,5 @@
 <script lang="ts">
+	import './styles/avatar.scss';
 	import { Avatar as BitAvatar, type AvatarRootProps } from 'bits-ui';
 	import type { Snippet } from 'svelte';
 
@@ -21,19 +22,4 @@
 	</BitAvatar.Fallback>
 </BitAvatar.Root>
 
-<style lang="scss">
-	:global([data-avatar-root]) {
-		display: block;
-		position: relative;
-		background-color: var(--vuuui-color-bg-info);
-		aspect-ratio: 1;
-		width: var(--size);
-	}
 
-	:global([data-avatar-image], [data-avatar-fallback]) {
-		object-fit: cover;
-		border-radius: 50%;
-		width: 100%;
-		height: 100%;
-	}
-</style>

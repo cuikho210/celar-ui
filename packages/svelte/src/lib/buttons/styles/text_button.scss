@@ -1,0 +1,13 @@
+[data-button-text] {
+	transition-duration: var(--transition-dur);
+	transition-property: background-color;
+	background-color: transparent;
+
+	&:not(:disabled, [data-active='true']):hover {
+		background-color: var(--color-primary--light);
+	}
+}
+
+[data-button-text][data-active='true'] {
+	background-color: var(--color-alt);
+}
