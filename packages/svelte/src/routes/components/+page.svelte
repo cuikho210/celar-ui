@@ -6,8 +6,10 @@
 	import Overlay from './Overlay.svelte';
 	import Inputs from './Inputs.svelte';
 	import TextButton from '$lib/buttons/TextButton.svelte';
+	import LinearProgressIndicator from '$lib/misc/LinearProgressIndicator.svelte';
 </script>
 
+<LinearProgressIndicator style="position: fixed; top: 0; z-index: 21;" />
 <AppBar style="position: sticky; top: 0; z-index: 20;">
 	{#snippet leading()}
 		<TextButton style="color: var(--color-text-info)" onclick={() => history.back()}>
