@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Switch, type SwitchRootProps, type WithoutChildren } from 'bits-ui';
+	import { Switch as BitSwitch, type SwitchRootProps, type WithoutChildren } from 'bits-ui';
 	import type { Snippet } from 'svelte';
 
 	export type SwitchProps = WithoutChildren<SwitchRootProps> & {
@@ -10,9 +10,9 @@
 </script>
 
 <label data-switch>
-	<Switch.Root {...rest} bind:checked>
-		<Switch.Thumb />
-	</Switch.Root>
+	<BitSwitch.Root {...rest} bind:checked>
+		<BitSwitch.Thumb />
+	</BitSwitch.Root>
 
 	{@render children?.()}
 </label>

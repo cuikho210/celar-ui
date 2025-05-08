@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Checkbox, type CheckboxRootProps, type WithoutChildren } from 'bits-ui';
+	import { Checkbox as BitCheckbox, type CheckboxRootProps, type WithoutChildren } from 'bits-ui';
 	import IconTick from '~icons/hugeicons/tick-01';
 	import IconMinus from '~icons/hugeicons/minus-sign';
 	import type { Snippet } from 'svelte';
@@ -13,7 +13,7 @@
 
 <label data-checkbox>
 	<div data-checkbox-icon>
-		<Checkbox.Root {...rest}>
+		<BitCheckbox.Root {...rest}>
 			{#snippet children({ checked, indeterminate })}
 				{#if checked}
 					<IconTick font-size="20px" />
@@ -22,7 +22,7 @@
 					<IconMinus />
 				{/if}
 			{/snippet}
-		</Checkbox.Root>
+		</BitCheckbox.Root>
 	</div>
 
 	{@render children?.()}

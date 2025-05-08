@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { RadioGroup, type RadioGroupRootProps, type WithoutChildren } from 'bits-ui';
+	import {
+		RadioGroup as BitRadioGroup,
+		type RadioGroupRootProps,
+		type WithoutChildren
+	} from 'bits-ui';
 	import type { Snippet } from 'svelte';
 
 	export type RadioGroupProps = WithoutChildren<RadioGroupRootProps> & {
@@ -8,9 +12,9 @@
 	let { value = $bindable(''), children, ...rest }: RadioGroupProps = $props();
 </script>
 
-<RadioGroup.Root {...rest} bind:value>
+<BitRadioGroup.Root {...rest} bind:value>
 	{@render children?.()}
-</RadioGroup.Root>
+</BitRadioGroup.Root>
 
 <style lang="scss">
 	:global([data-radio-group-root]) {
