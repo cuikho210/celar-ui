@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import { Dialog, type DialogRootProps } from 'bits-ui';
+	import { Dialog as BitDialog, type DialogRootProps } from 'bits-ui';
 	import type { Snippet } from 'svelte';
 	import IconButton from '$lib/buttons/IconButton.svelte';
 
@@ -30,33 +30,33 @@
 	let duration = 200;
 </script>
 
-<Dialog.Root {...rest} bind:open>
-	<Dialog.Trigger>
+<BitDialog.Root {...rest} bind:open>
+	<BitDialog.Trigger>
 		{#snippet child({ props })}
 			{@render trigger?.({ props })}
 		{/snippet}
-	</Dialog.Trigger>
-	<Dialog.Portal>
-		<Dialog.Overlay forceMount>
+	</BitDialog.Trigger>
+	<BitDialog.Portal>
+		<BitDialog.Overlay forceMount>
 			{#snippet child({ props, open })}
 				{#if open}
 					<div {...props} transition:fade={{ duration }}></div>
 				{/if}
 			{/snippet}
-		</Dialog.Overlay>
-		<Dialog.Content forceMount data-xs={xs} data-sm={sm} data-md={md} data-fluid={fluid}>
+		</BitDialog.Overlay>
+		<BitDialog.Content forceMount data-xs={xs} data-sm={sm} data-md={md} data-fluid={fluid}>
 			{#snippet child({ props, open })}
 				{#if open}
 					<div {...props} transition:fly={{ duration, y: 50 }}>
 						<div data-dialog-header>
-							<Dialog.Title children={title} />
-							<Dialog.Close>
+							<BitDialog.Title children={title} />
+							<BitDialog.Close>
 								{#snippet child({ props })}
 									<IconButton {...props}>
 										{@render close?.()}
 									</IconButton>
 								{/snippet}
-							</Dialog.Close>
+							</BitDialog.Close>
 						</div>
 
 						<div data-dialog-body>
@@ -65,9 +65,9 @@
 					</div>
 				{/if}
 			{/snippet}
-		</Dialog.Content>
-	</Dialog.Portal>
-</Dialog.Root>
+		</BitDialog.Content>
+	</BitDialog.Portal>
+</BitDialog.Root>
 
 <style lang="scss">
 	$gap: var(--gap);
