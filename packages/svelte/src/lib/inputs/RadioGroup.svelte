@@ -1,12 +1,12 @@
 <script lang="ts">
 	import {
 		RadioGroup as BitRadioGroup,
-		type RadioGroupRootProps,
-		type WithoutChildren
+		type RadioGroupRootProps as BitRadioGroupRootProps,
+		type WithoutChildrenOrChild
 	} from 'bits-ui';
 	import type { Snippet } from 'svelte';
 
-	export type RadioGroupProps = WithoutChildren<RadioGroupRootProps> & {
+	export type RadioGroupProps = WithoutChildrenOrChild<BitRadioGroupRootProps> & {
 		children?: Snippet;
 	};
 	let { value = $bindable(''), children, ...rest }: RadioGroupProps = $props();
