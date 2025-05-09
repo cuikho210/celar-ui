@@ -12,9 +12,9 @@
 	&:not(:disabled):active {
 		box-shadow: 0 2px 2px var(--color-shadow--strong);
 	}
-}
 
-[data-button-elevated][data-active='true'] {
-	box-shadow: 0 2px 2px var(--color-shadow--strong);
-	background-color: var(--color-alt);
+	&[data-active='true'] {
+		box-shadow: 0 2px 2px var(--color-shadow--strong);
+		background-color: var(--color-alt);
+	}
 }

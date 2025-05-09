@@ -5,12 +5,13 @@
 
 	export type BaseButtonProps = ButtonRootProps & {
 		loading?: boolean;
+		active?: boolean;
 	};
 
-	let { children, ...rest }: BaseButtonProps = $props();
+	let { children, active = false, ...rest }: BaseButtonProps = $props();
 </script>
 
-<Button.Root {...rest}>
+<Button.Root {...rest} data-active={active}>
 	{#if children}
 		{@render children()}
 	{/if}

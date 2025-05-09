@@ -8,7 +8,7 @@
 		icon?: Snippet;
 	};
 
-	let { children, loading, icon, ...rest }: TextBaseButtonProps = $props();
+	let { children, loading, icon, active = false, ...rest }: TextBaseButtonProps = $props();
 </script>
 
 {#snippet baseChildren()}
@@ -33,7 +33,7 @@
 	{/if}
 {/snippet}
 
-<BaseButton {...rest} children={baseChildren} {loading} data-button-base-text />
+<BaseButton {...rest} children={baseChildren} {loading} {active} data-button-base-text />
 
 <style lang="scss">
 	:global([data-button-base-text]) {

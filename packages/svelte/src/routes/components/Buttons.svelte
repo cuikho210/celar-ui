@@ -36,7 +36,6 @@
 		<TextButton disabled>Text</TextButton>
 		<IconButton disabled><HugeiconsInLove font-size="20px" /></IconButton>
 	</Spacer>
-
 	<Gap />
 
 	<p><i>Loading</i></p>
@@ -48,7 +47,17 @@
 		<TextButton disabled loading>Text</TextButton>
 		<IconButton disabled loading><HugeiconsInLove font-size="20px" /></IconButton>
 	</Spacer>
+	<Gap />
 
+	<p><i>Active</i></p>
+	<Gap size=".5rem" />
+	<Spacer>
+		<ElevatedButton disabled active>Elevated</ElevatedButton>
+		<FilledButton disabled active>Filled</FilledButton>
+		<OutlinedButton disabled active>Outlined</OutlinedButton>
+		<TextButton disabled active>Text</TextButton>
+		<IconButton disabled active><HugeiconsInLove font-size="20px" /></IconButton>
+	</Spacer>
 	<Gap />
 
 	<p><i>With icons</i></p>

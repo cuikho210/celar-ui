@@ -8,9 +8,9 @@
 		background-color: var(--color-primary--light);
 		border-color: var(--color-primary);
 	}
-}
 
-[data-button-text][data-active='true'] {
-	background-color: var(--color-alt);
-	border-color: var(--color-primary);
+	&[data-active='true'] {
+		background-color: var(--color-alt);
+		border-color: var(--color-primary);
+	}
 }

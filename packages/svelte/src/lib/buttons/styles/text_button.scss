@@ -6,8 +6,8 @@
 	&:not(:disabled, [data-active='true']):hover {
 		background-color: var(--color-primary--light);
 	}
-}
 
-[data-button-text][data-active='true'] {
-	background-color: var(--color-alt);
+	&[data-active='true'] {
+		background-color: var(--color-alt);
+	}
 }
