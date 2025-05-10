@@ -4,12 +4,13 @@
 	background-color: var(--color-bg-info);
 	aspect-ratio: 1;
 	width: var(--size);
+	border-radius: 50%;
+	overflow: hidden;
 }
 
 [data-avatar-image],
 [data-avatar-fallback] {
 	object-fit: cover;
-	border-radius: 50%;
 	width: 100%;
 	height: 100%;
 }
