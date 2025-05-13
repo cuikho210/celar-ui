@@ -29,6 +29,7 @@
 		display: block;
 		position: relative;
 		width: 100%;
+		pointer-events: all;
 
 		input {
 			box-sizing: border-box;
