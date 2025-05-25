@@ -2,7 +2,7 @@
 
 cd "$(dirname "$0")"
 
-provider="${DEFAULT_LLM_PROVIDER:-mistral}"
+provider="${DEFAULT_LLM_PROVIDER:-gemini}"
 commit_msg=""
 
 function load_provider_config() {
@@ -18,7 +18,7 @@ function load_provider_config() {
             AUTH_HEADER="Authorization: Bearer $OPENAI_API_KEY"
             ;;
         "gemini")
-            MODEL="gemini-2.0-flash"
+            MODEL="gemini-2.5-flash-preview-04-17"
             API_URL="https://generativelanguage.googleapis.com/v1beta/models/$MODEL:generateContent"
             AUTH_HEADER="x-goog-api-key: $GEMINI_API_KEY"
             ;;
@@ -59,6 +59,11 @@ function get_git_diff() {
     echo "$diff"
 }
 
+function get_git_status() {
+    local status=$(git status)
+    echo "$status" | jq -Rs .
+}
+
 # Get recent 10 commit logs
 function get_commit_logs() {
     local logs=$(git log -10 --pretty=format:"%h - %s")
@@ -68,14 +73,16 @@ function get_commit_logs() {
 
 function get_commit_message() {
     local git_diff=$1
+    local git_status=$2
     local user_msg="${commit_msg:-""}"
     local commit_logs=$(get_commit_logs)
 
     local json_input=$(jq -n \
+        --arg status "$git_status" \
         --arg diff "$git_diff" \
         --arg msg "$user_msg" \
         --arg logs "$commit_logs" \
-        '"Git diff:\n```\n" + $diff + "\n```\nRecent commits:\n```\n" + $logs + "\n```\nUser message:\n```\n" + $msg + "\n```\n"')
+        '"Git status:\n```\n" + $status + "\n```\nGit diff:\n```\n" + $diff + "\n```\nRecent commits:\n```\n" + $logs + "\n```\nUser message:\n```\n" + $msg + "\n```\n"')
 
     local response
 
@@ -102,7 +109,6 @@ function call_gemini_api() {
                 {\"role\": \"user\", \"parts\": [{\"text\": ${user_msg}}]}
             ],
             \"systemInstruction\": {
-                \"role\": \"user\",
                 \"parts\": [{\"text\": ${system_message}}]
             }
         }"
@@ -149,9 +155,10 @@ function main() {
     load_provider_config
 
     local git_diff=$(get_git_diff)
+    local git_status=$(get_git_status)
 
     while true; do
-        local commit_msg=$(get_commit_message "$git_diff")
+        local commit_msg=$(get_commit_message "$git_diff" "$git_status")
         echo "---------- Suggested commit message ----------"
         echo "$commit_msg"
         echo "----------------------------------------------"
