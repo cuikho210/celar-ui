@@ -1,6 +1,6 @@
 [data-button-outlined] {
 	transition-duration: var(--transition-dur);
-	transition-property: background-color, border-color;
+	transition-property: background-color, border-color, opacity;
 	background-color: transparent;
 	border: 1px solid var(--color-primary--light);
 

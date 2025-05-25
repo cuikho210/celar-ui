@@ -1,6 +1,6 @@
 [data-button-text] {
 	transition-duration: var(--transition-dur);
-	transition-property: background-color;
+	transition-property: background-color, opacity;
 	background-color: transparent;
 
 	&:not(:disabled, [data-active='true']):hover {
