@@ -38,19 +38,26 @@
 		{/snippet}
 	</BitDialog.Trigger>
 	<BitDialog.Portal>
-		<BitDialog.Overlay forceMount>
+		<BitDialog.Overlay forceMount data-celar-dialog-overlay>
 			{#snippet child({ props, open })}
 				{#if open}
 					<div {...props} transition:fade={{ duration }}></div>
 				{/if}
 			{/snippet}
 		</BitDialog.Overlay>
-		<BitDialog.Content forceMount data-xs={xs} data-sm={sm} data-md={md} data-fluid={fluid}>
+		<BitDialog.Content
+			forceMount
+			data-xs={xs}
+			data-sm={sm}
+			data-md={md}
+			data-fluid={fluid}
+			data-celar-dialog-content
+		>
 			{#snippet child({ props, open })}
 				{#if open}
 					<div {...props} transition:fly={{ duration, y: 50 }}>
 						<div data-dialog-header>
-							<BitDialog.Title children={title} />
+							<BitDialog.Title children={title} data-celar-dialog-title />
 							<BitDialog.Close>
 								{#snippet child({ props })}
 									<IconButton {...props}>
@@ -69,5 +76,3 @@
 		</BitDialog.Content>
 	</BitDialog.Portal>
 </BitDialog.Root>
-
-

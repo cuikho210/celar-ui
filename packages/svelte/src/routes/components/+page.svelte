@@ -5,6 +5,7 @@
 	import Spinners from './Spinners.svelte';
 	import Overlay from './Overlay.svelte';
 	import Inputs from './Inputs.svelte';
+	import Navigation from './Navigation.svelte';
 	import TextButton from '$lib/buttons/TextButton.svelte';
 	import LinearProgressIndicator from '$lib/misc/LinearProgressIndicator.svelte';
 </script>
@@ -38,4 +39,5 @@
 	<Avatar /><Gap />
 	<Spinners /><Gap />
 	<Overlay /><Gap />
+	<Navigation /><Gap />
 </Container>
