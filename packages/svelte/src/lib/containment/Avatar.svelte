@@ -10,10 +10,10 @@
 		fallback?: Snippet;
 	};
 
-	let { size = '64px', src, alt, fallback, ...rest }: AvatarProps = $props();
+	let { size = '64px', src, alt, fallback, style, ...rest }: AvatarProps = $props();
 </script>
 
-<BitAvatar.Root {...rest} style="--size: {size}">
+<BitAvatar.Root {...rest} style="--size: {size}; {style}">
 	<BitAvatar.Image {src} {alt} />
 	<BitAvatar.Fallback>
 		{#if fallback}
@@ -21,5 +21,3 @@
 		{/if}
 	</BitAvatar.Fallback>
 </BitAvatar.Root>
-
-
