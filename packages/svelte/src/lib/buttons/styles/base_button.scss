@@ -20,11 +20,14 @@
 		top: 1px;
 	}
 
-	&:not([data-active='true']):disabled {
+	&:not([data-active='true']):disabled,
+	&:not([data-active='true'])[aria-disabled='true'] {
 		opacity: 0.5;
 	}
 
-	&:disabled {
+	&:disabled,
+	&[aria-disabled='true'] {
 		cursor: default;
+		pointer-events: none;
 	}
 }

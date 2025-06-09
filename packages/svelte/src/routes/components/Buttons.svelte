@@ -30,7 +30,7 @@
 	<p><i>Disabled</i></p>
 	<Gap size=".5rem" />
 	<Spacer>
-		<ElevatedButton disabled>Elevated</ElevatedButton>
+		<ElevatedButton disabled href="#">Elevated</ElevatedButton>
 		<FilledButton disabled>Filled</FilledButton>
 		<OutlinedButton disabled>Outlined</OutlinedButton>
 		<TextButton disabled>Text</TextButton>
