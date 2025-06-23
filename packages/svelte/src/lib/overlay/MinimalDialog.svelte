@@ -1,10 +1,11 @@
 <script lang="ts">
 	import './styles/dialog.scss';
 	import { fade, fly } from 'svelte/transition';
-	import { Dialog as BitDialog, type DialogRootProps } from 'bits-ui';
+	import { Dialog as BitDialog, type DialogContentProps } from 'bits-ui';
 	import type { Snippet } from 'svelte';
 
-	type MinimalDialogProps = DialogRootProps & {
+	export type MinimalDialogProps = DialogContentProps & {
+		open?: boolean;
 		trigger?: Snippet<[{ props: Record<string, unknown> }]>;
 		xs?: boolean;
 		sm?: boolean;
@@ -26,7 +27,7 @@
 	}: MinimalDialogProps = $props();
 </script>
 
-<BitDialog.Root {...rest} bind:open>
+<BitDialog.Root bind:open>
 	<BitDialog.Trigger>
 		{#snippet child({ props })}
 			{@render trigger?.({ props })}
@@ -41,6 +42,7 @@
 			{/snippet}
 		</BitDialog.Overlay>
 		<BitDialog.Content
+			{...rest}
 			forceMount
 			data-xs={xs}
 			data-sm={sm}

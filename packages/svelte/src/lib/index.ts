@@ -14,6 +14,9 @@ export { default as Avatar } from './containment/Avatar.svelte';
 
 export { default as Dialog } from './overlay/Dialog.svelte';
 export { default as MinimalDialog } from './overlay/MinimalDialog.svelte';
+export { default as CommandDialog } from './overlay/CommandDialog.svelte';
+export { default as CommandGroupItems } from './overlay/CommandGroupItems.svelte';
+export { default as CommandItem } from './overlay/CommandItem.svelte';
 
 export { default as Gap } from './misc/Gap.svelte';
 export { default as DuckSpinner } from './misc/DuckSpinner.svelte';

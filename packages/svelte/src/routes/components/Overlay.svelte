@@ -1,7 +1,13 @@
 <script lang="ts">
 	import { Card, Gap, Spacer, Dialog, ElevatedButton } from '$lib/index.js';
+	import CommandDialog from '$lib/overlay/CommandDialog.svelte';
+	import CommandGroupItems from '$lib/overlay/CommandGroupItems.svelte';
+	import CommandItem from '$lib/overlay/CommandItem.svelte';
 	import MinimalDialog from '$lib/overlay/MinimalDialog.svelte';
 	import IconCancel from '~icons/hugeicons/cancel-01';
+	import IconPlay from '~icons/hugeicons/play';
+	import IconPause from '~icons/hugeicons/pause';
+	import IconStop from '~icons/hugeicons/stop';
 
 	let openDialog1 = $state(false);
 </script>
@@ -51,5 +57,47 @@
 
 			Ahihi do ngok!
 		</MinimalDialog>
+
+		<CommandDialog xs fluid>
+			{#snippet trigger({ props })}
+				<ElevatedButton {...props}>Open CommandDialog</ElevatedButton>
+			{/snippet}
+
+			<CommandGroupItems>
+				{#snippet heading()}
+					Actions
+				{/snippet}
+
+				<CommandItem shortcut="Alt+A">
+					{#snippet icon()}
+						<IconPlay />
+					{/snippet}
+					Start
+				</CommandItem>
+				<CommandItem>
+					{#snippet icon()}
+						<IconStop />
+					{/snippet}
+					Stop
+				</CommandItem>
+				<CommandItem>
+					{#snippet icon()}
+						<IconPause />
+					{/snippet}
+					Pause
+				</CommandItem>
+				<CommandItem>
+					{#snippet icon()}
+						<IconPlay />
+					{/snippet}
+					Resume
+				</CommandItem>
+			</CommandGroupItems>
+
+			<CommandItem>Do ngok 1</CommandItem>
+			<CommandItem>Do ngok 2</CommandItem>
+			<CommandItem>Do ngok 3</CommandItem>
+			<CommandItem>Do ngok 4</CommandItem>
+		</CommandDialog>
 	</Spacer>
 </Card>
