@@ -3,12 +3,9 @@
 	import { fade, fly } from 'svelte/transition';
 	import { Dialog as BitDialog, type DialogRootProps } from 'bits-ui';
 	import type { Snippet } from 'svelte';
-	import IconButton from '$lib/buttons/IconButton.svelte';
 
-	type DialogProps = DialogRootProps & {
+	type MinimalDialogProps = DialogRootProps & {
 		trigger?: Snippet<[{ props: Record<string, unknown> }]>;
-		title?: Snippet;
-		close?: Snippet;
 		xs?: boolean;
 		sm?: boolean;
 		md?: boolean;
@@ -19,8 +16,6 @@
 	let {
 		open = $bindable(false),
 		trigger,
-		title,
-		close,
 		children,
 		xs,
 		sm,
@@ -28,7 +23,7 @@
 		fluid,
 		transitionDuration = 200,
 		...rest
-	}: DialogProps = $props();
+	}: MinimalDialogProps = $props();
 </script>
 
 <BitDialog.Root {...rest} bind:open>
@@ -56,17 +51,6 @@
 			{#snippet child({ props, open })}
 				{#if open}
 					<div {...props} transition:fly={{ duration: transitionDuration, y: 50 }}>
-						<div data-dialog-header>
-							<BitDialog.Title children={title} data-celar-dialog-title />
-							<BitDialog.Close>
-								{#snippet child({ props })}
-									<IconButton {...props}>
-										{@render close?.()}
-									</IconButton>
-								{/snippet}
-							</BitDialog.Close>
-						</div>
-
 						<div data-dialog-body>
 							{@render children?.()}
 						</div>

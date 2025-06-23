@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Card, Gap, Spacer, Dialog, ElevatedButton } from '$lib/index.js';
+	import MinimalDialog from '$lib/overlay/MinimalDialog.svelte';
 	import IconCancel from '~icons/hugeicons/cancel-01';
 
 	let openDialog1 = $state(false);
@@ -42,5 +43,13 @@
 				{/each}
 			</Dialog>
 		</Dialog>
+
+		<MinimalDialog xs fluid>
+			{#snippet trigger({ props })}
+				<ElevatedButton {...props}>Open MinimalDialog</ElevatedButton>
+			{/snippet}
+
+			Ahihi do ngok!
+		</MinimalDialog>
 	</Spacer>
 </Card>
