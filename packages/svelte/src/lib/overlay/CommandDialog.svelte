@@ -33,13 +33,14 @@
 		loop = false,
 		disablePointerSelection = false,
 		vimBindings = true,
+		open = $bindable(),
 		...rest
 	}: CommandDialogProps = $props();
 
 	let searchValue = $state('');
 </script>
 
-<MinimalDialog {...rest} data-command-dialog>
+<MinimalDialog {...rest} bind:open data-command-dialog>
 	<Command.Root
 		bind:value
 		{onValueChange}
