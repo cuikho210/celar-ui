@@ -1,4 +1,7 @@
 [data-button-icon] {
+	--color-hover: var(--color-text);
+	--color-active: var(--color-text);
+
 	flex-grow: 0;
 	flex-shrink: 0;
 	transition-duration: var(--transition-dur);
@@ -26,10 +29,11 @@
 
 	&:not(:disabled, [data-active='true']):hover {
 		background-color: var(--color-primary--light);
+		color: var(--color-hover);
 	}
 
 	&[data-active='true'] {
 		background-color: var(--color-alt);
-		color: var(--color-primary--text);
+		color: var(--color-active);
 	}
 }

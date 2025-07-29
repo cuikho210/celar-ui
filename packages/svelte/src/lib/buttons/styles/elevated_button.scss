@@ -1,12 +1,16 @@
 [data-button-elevated] {
+	--color-hover: var(--color-text);
+	--color-active: var(--color-text);
+
 	transition-duration: var(--transition-dur);
-	transition-property: background-color, box-shadow, opacity;
+	transition-property: background-color, box-shadow, opacity, color;
 	box-shadow: 0 2px 2px var(--color-shadow);
 	background-color: var(--color-primary--lighter);
 
 	&:not(:disabled, [data-active='true']):hover {
 		box-shadow: 0 2px 4px var(--color-shadow--strong);
 		background-color: var(--color-primary--light);
+		color: var(--color-hover);
 	}
 
 	&:not(:disabled):active {
@@ -16,5 +20,6 @@
 	&[data-active='true'] {
 		box-shadow: 0 2px 2px var(--color-shadow--strong);
 		background-color: var(--color-alt);
+		color: var(--color-active);
 	}
 }

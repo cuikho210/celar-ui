@@ -10,7 +10,6 @@
 	import LinearProgressIndicator from '$lib/misc/LinearProgressIndicator.svelte';
 </script>
 
-<LinearProgressIndicator style="position: fixed; top: 0; z-index: 21;" />
 <AppBar style="position: sticky; top: 0; z-index: 20;">
 	{#snippet leading()}
 		<TextButton style="color: var(--color-text-info)" onclick={() => history.back()}>
@@ -21,10 +20,6 @@
 	{#snippet title()}
 		Components
 	{/snippet}
-
-	{#snippet actions()}
-		<TextButton style="color: var(--color-text-info)">Settings</TextButton>
-	{/snippet}
 </AppBar>
 
 <Container sm>
@@ -32,6 +27,9 @@
 		<a href="/">Home</a>
 		<a href="/components">Components</a>
 	</Breadcrumb>
+	<Gap />
+
+	<LinearProgressIndicator />
 	<Gap />
 
 	<Buttons /><Gap />
