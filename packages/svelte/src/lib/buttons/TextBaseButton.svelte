@@ -28,7 +28,7 @@
 
 	{#if loading}
 		<div class="button-spinner">
-			<DotSpinner size="24px" color="var(--color-primary--text)" />
+			<DotSpinner size="24px" />
 		</div>
 	{/if}
 {/snippet}

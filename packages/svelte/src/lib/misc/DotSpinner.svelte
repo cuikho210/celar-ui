@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { color = 'var(--color-primary--dark)', size }: { color?: string; size?: string } = $props();
+	let { color = 'currentColor', size }: { color?: string; size?: string } = $props();
 </script>
 
 <svg viewBox="0 0 57 60" xmlns="http://www.w3.org/2000/svg" stroke={color} style:width={size}>
