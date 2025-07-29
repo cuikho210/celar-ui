@@ -100,7 +100,7 @@
 		z-index: 100;
 		flex-direction: column;
 		background-color: var(--color-bg);
-		height: 100vh;
+		height: 100dvh;
 		overflow-y: auto;
 		box-shadow: 0 4px 1rem var(--color-shadow);
 		max-width: 85%;

@@ -33,7 +33,7 @@
 		loop = false,
 		disablePointerSelection = false,
 		vimBindings = true,
-		open = $bindable(),
+		open = $bindable(false),
 		...rest
 	}: CommandDialogProps = $props();
 
