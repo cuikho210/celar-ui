@@ -10,12 +10,12 @@
 	&:not(:disabled, [data-active='true']):hover {
 		background-color: var(--color-primary--light);
 		border-color: var(--color-primary);
-		color: var(--color-hover);
+		color: var(--color-hover) !important;
 	}
 
 	&[data-active='true'] {
 		background-color: var(--color-alt);
 		border-color: var(--color-primary);
-		color: var(--color-active);
+		color: var(--color-active) !important;
 	}
 }

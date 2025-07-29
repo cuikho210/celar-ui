@@ -8,11 +8,11 @@
 
 	&:not(:disabled, [data-active='true']):hover {
 		background-color: var(--color-primary--light);
-		color: var(--color-hover);
+		color: var(--color-hover) !important;
 	}
 
 	&[data-active='true'] {
 		background-color: var(--color-alt);
-		color: var(--color-active);
+		color: var(--color-active) !important;
 	}
 }
