@@ -21,7 +21,7 @@
 
 <style lang="scss">
 	$icon-width: 48px;
-	$color-text-placeholder: rgba(var(--color-text--rgb), 0.4);
+	$color-text-placeholder: rgba(var(--color-text--rgb), 0.5);
 
 	[data-text-input] {
 		margin: 0;
@@ -43,6 +43,7 @@
 			width: 100%;
 			font-size: inherit;
 			font-family: inherit;
+			color: inherit;
 
 			&:focus {
 				outline: none;

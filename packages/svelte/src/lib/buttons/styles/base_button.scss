@@ -15,6 +15,7 @@
 	user-select: none;
 	text-decoration: none;
 	-webkit-tap-highlight-color: transparent;
+	color: inherit;
 
 	&:not(:disabled):active {
 		top: 1px;
