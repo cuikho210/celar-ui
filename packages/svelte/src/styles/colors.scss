@@ -73,8 +73,12 @@ $colors-misc: (
 	@include utils.add_prefix(config.$prefix, $colors-misc);
 }
 
+:root[data-theme='dark'] {
+	@include utils.generate_colors(config.$prefix, $colors-theme-dark);
+}
+
 @media (prefers-color-scheme: dark) {
-	:root {
+	:root[data-theme='auto'] {
 		@include utils.generate_colors(config.$prefix, $colors-theme-dark);
 	}
 }
