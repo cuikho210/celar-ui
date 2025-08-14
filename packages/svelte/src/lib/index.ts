@@ -1,5 +1,7 @@
 // Reexport your entry components here
 
+export * from './utils.js';
+
 export { default as TextButton } from './buttons/TextButton.svelte';
 export { default as ElevatedButton } from './buttons/ElevatedButton.svelte';
 export { default as FilledButton } from './buttons/FilledButton.svelte';

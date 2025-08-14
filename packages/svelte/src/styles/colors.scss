@@ -51,7 +51,7 @@ $colors-theme-dark: (
 	color-text-warning: #bfa060,
 	color-text-danger: #b36a6a,
 
-	color-bg: #0a0a0a,
+	color-bg: #1a1a1a,
 	color-bg-info: #101a3b,
 	color-bg-success: #184d3a,
 	color-bg-warning: #4a3700,
@@ -59,10 +59,10 @@ $colors-theme-dark: (
 ) !default;
 
 $colors-misc: (
-	color-shadow--soft: rgba(0, 0, 0, 0.05),
-	color-shadow--md: rgba(0, 0, 0, 0.075),
-	color-shadow: rgba(0, 0, 0, 0.1),
-	color-shadow--strong: rgba(0, 0, 0, 0.16),
+	color-shadow--soft: rgba(var(--color-text--rgb), 0.05),
+	color-shadow--md: rgba(var(--color-text--rgb), 0.075),
+	color-shadow: rgba(var(--color-text--rgb), 0.1),
+	color-shadow--strong: rgba(var(--color-text--rgb), 0.16),
 	color-border: rgba(var(--color-text--rgb), 0.07),
 	color-border--strong: rgba(var(--color-text--rgb), 0.1),
 	color-wrapper: rgba(var(--color-text--rgb), 0.024)
@@ -73,8 +73,6 @@ $colors-misc: (
 	@include utils.add_prefix(config.$prefix, $colors-misc);
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		@include utils.generate_colors(config.$prefix, $colors-theme-dark);
-	}
+:root[data-theme='dark'] {
+	@include utils.generate_colors(config.$prefix, $colors-theme-dark);
 }

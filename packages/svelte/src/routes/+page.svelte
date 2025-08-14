@@ -4,13 +4,14 @@
 		Breadcrumb,
 		Gap,
 		Spacer,
-		OutlinedButton,
 		NavigationBar,
-		NavigationBarButton
+		NavigationBarButton,
+		applyPreferredColorScheme
 	} from '$lib/index.js';
 	import IconHome from '~icons/hugeicons/home-01';
 	import IconComponents from '~icons/hugeicons/dashboard-square-03';
 	import IconInfo from '~icons/hugeicons/information-diamond';
+	import ElevatedButton from '$lib/buttons/ElevatedButton.svelte';
 </script>
 
 <div class="app-navigation">
@@ -49,7 +50,9 @@
 		<Gap />
 
 		<Spacer>
-			<OutlinedButton href="/components">Components</OutlinedButton>
+			<ElevatedButton onclick={() => applyPreferredColorScheme('auto')}>Auto</ElevatedButton>
+			<ElevatedButton onclick={() => applyPreferredColorScheme('light')}>Light</ElevatedButton>
+			<ElevatedButton onclick={() => applyPreferredColorScheme('dark')}>Dark</ElevatedButton>
 		</Spacer>
 
 		<!-- Color Palette Section -->
