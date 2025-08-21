@@ -18,7 +18,8 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"npm-publish": "bun run build && export $(grep -v '^#' ../../.env | xargs) && npm publish --access=public"
+		"npm-publish": "bun run build && export $(grep -v '^#' ../../.env | xargs) && npm publish --access=public",
+		"gen-colors": "bun run ./scripts/gen-colors.ts"
 	},
 	"files": [
 		"dist",
@@ -50,10 +51,12 @@
 		"@eslint/compat": "^1.2.8",
 		"@eslint/js": "^9.24.0",
 		"@iconify-json/hugeicons": "^1.2.4",
+		"@material/material-color-utilities": "^0.3.0",
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.20.5",
 		"@sveltejs/package": "^2.3.10",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
+		"@types/bun": "^1.2.20",
 		"autoprefixer": "^10.4.21",
 		"bits-ui": "^2.8.8",
 		"csstype": "^3.1.3",
