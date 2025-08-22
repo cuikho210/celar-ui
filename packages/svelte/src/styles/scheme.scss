@@ -20,7 +20,7 @@ $scheme-light: (
 	color-onErrorContainer: #410002,
 	color-background: #fffbff,
 	color-onBackground: #201a19,
-	color-surface: #fffbff,
+	color-surface: #fff8f6,
 	color-onSurface: #201a19,
 	color-surfaceVariant: #f5ddda,
 	color-onSurfaceVariant: #534341,
@@ -30,7 +30,14 @@ $scheme-light: (
 	color-scrim: #000000,
 	color-inverseSurface: #362f2e,
 	color-inverseOnSurface: #fbeeec,
-	color-inversePrimary: #ffb4a8
+	color-inversePrimary: #ffb4a8,
+	color-surfaceDim: #e4d7d5,
+	color-surfaceBright: #fff8f6,
+	color-surfaceContainerLowest: #ffffff,
+	color-surfaceContainerLow: #fef1ee,
+	color-surfaceContainer: #f8ebe9,
+	color-surfaceContainerHigh: #f3e5e3,
+	color-surfaceContainerHighest: #ede0dd
 );
 
 $scheme-dark: (
@@ -52,7 +59,7 @@ $scheme-dark: (
 	color-onErrorContainer: #ffb4ab,
 	color-background: #201a19,
 	color-onBackground: #ede0dd,
-	color-surface: #201a19,
+	color-surface: #181211,
 	color-onSurface: #ede0dd,
 	color-surfaceVariant: #534341,
 	color-onSurfaceVariant: #d8c2be,
@@ -62,5 +69,12 @@ $scheme-dark: (
 	color-scrim: #000000,
 	color-inverseSurface: #ede0dd,
 	color-inverseOnSurface: #362f2e,
-	color-inversePrimary: #9c4235
+	color-inversePrimary: #9c4235,
+	color-surfaceDim: #181211,
+	color-surfaceBright: #3f3736,
+	color-surfaceContainerLowest: #120d0c,
+	color-surfaceContainerLow: #201a19,
+	color-surfaceContainer: #251e1d,
+	color-surfaceContainerHigh: #2f2827,
+	color-surfaceContainerHighest: #3b3332
 );
