@@ -64,7 +64,7 @@
 		bottom: 0;
 		left: 0;
 		z-index: 50;
-		width: 100%;
+		width: 100vw;
 		height: auto;
 	}
 

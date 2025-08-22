@@ -4,11 +4,11 @@
 	color: var(--color-onPrimary);
 
 	&:not(:disabled, [data-active='true']):hover {
-		filter: brightness(1.1);
+		filter: brightness(1.2);
 	}
 
 	&:not(:disabled):active {
-		filter: brightness(1.2);
+		filter: brightness(1);
 	}
 
 	&[data-active='true'] {
