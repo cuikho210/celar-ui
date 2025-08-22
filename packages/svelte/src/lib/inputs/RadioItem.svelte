@@ -25,10 +25,12 @@
 		align-items: center;
 		transition-property: background-color;
 		transition-duration: var(--transition-dur);
+		transition-timing-function: ease-in;
 		border-radius: var(--radius--half);
 		padding: var(--gap--sm) 0;
 		padding-right: var(--gap);
 		width: 100%;
+		user-select: none;
 
 		[data-radio-item-icon] {
 			width: $icon-width;
@@ -38,20 +40,20 @@
 		}
 
 		&:hover {
-			background-color: var(--color-primary--lighter);
+			background-color: var(--color-primaryContainer);
 		}
 	}
 
 	:global([data-radio-group-item]) {
 		background-color: transparent;
-		outline: 1px solid var(--color-primary--dark);
-		border: 4px solid var(--color-bg);
+		outline: 1px solid var(--color-primary);
+		border: 4px solid var(--color-surface);
 		width: 24px;
 		height: 24px;
 		border-radius: 50%;
 	}
 
 	:global([data-radio-group-item][data-state='checked']) {
-		background-color: var(--color-primary--dark);
+		background-color: var(--color-primary);
 	}
 </style>

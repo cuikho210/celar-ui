@@ -8,17 +8,25 @@
 	import Navigation from './Navigation.svelte';
 	import TextButton from '$lib/buttons/TextButton.svelte';
 	import LinearProgressIndicator from '$lib/misc/LinearProgressIndicator.svelte';
+	import ToggleThemeButton from '../ToggleThemeButton.svelte';
+	import { layout } from '../state.svelte.js';
+
+	layout.activedNavbar = 'components';
 </script>
 
 <AppBar style="position: sticky; top: 0; z-index: 20;">
 	{#snippet leading()}
-		<TextButton style="color: var(--color-text-info)" onclick={() => history.back()}>
+		<TextButton style="color: var(--color-onSurface-info)" onclick={() => history.back()}>
 			Back
 		</TextButton>
 	{/snippet}
 
 	{#snippet title()}
 		Components
+	{/snippet}
+
+	{#snippet actions()}
+		<ToggleThemeButton />
 	{/snippet}
 </AppBar>
 

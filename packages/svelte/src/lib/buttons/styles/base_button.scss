@@ -5,6 +5,7 @@
 	padding: 0;
 	margin: 0;
 	transition-duration: var(--transition-dur);
+	transition-timing-function: ease-in;
 	cursor: pointer;
 	border: none;
 	width: fit-content;

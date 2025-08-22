@@ -21,7 +21,7 @@
 
 <style lang="scss">
 	$icon-width: 48px;
-	$color-text-placeholder: rgba(var(--color-text--rgb), 0.5);
+	$color-text-placeholder: rgba(var(--color-onSurface--rgb), 0.7);
 
 	[data-text-input] {
 		margin: 0;
@@ -35,6 +35,7 @@
 			box-sizing: border-box;
 			transition-duration: var(--transition-dur);
 			transition-property: border-color;
+			transition-timing-function: ease-in;
 			border: 1px solid var(--color-border);
 			border-radius: var(--radius);
 			background-color: transparent;
@@ -48,9 +49,10 @@
 			&:focus {
 				outline: none;
 				border: 1px solid var(--color-primary);
+				color: var(--color-primary);
 
 				+ [data-text-input-icon] {
-					color: var(--color-primary--dark);
+					color: var(--color-primary);
 				}
 			}
 

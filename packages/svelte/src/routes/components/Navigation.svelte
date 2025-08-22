@@ -83,6 +83,6 @@
 		border: 1px solid var(--color-border);
 		background-color: var(--color-bg);
 		font-size: 1rem;
-		color: var(--color-text);
+		color: var(--color-onSurface);
 	}
 </style>
