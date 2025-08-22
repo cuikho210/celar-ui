@@ -2,17 +2,16 @@
 	import { applyPreferredColorScheme, IconButton } from '$lib/index.js';
 	import IconSun from '~icons/hugeicons/sun-01';
 	import IconMoon from '~icons/hugeicons/moon-02';
-
-	let theme = $state<'light' | 'dark'>('light');
+	import { layout } from './state.svelte.js';
 </script>
 
 <IconButton
 	onclick={() => {
-		theme = theme == 'light' ? 'dark' : 'light';
-		applyPreferredColorScheme(theme);
+		layout.theme = layout.theme == 'light' ? 'dark' : 'light';
+		applyPreferredColorScheme(layout.theme);
 	}}
 >
-	{#if theme == 'light'}
+	{#if layout.theme == 'light'}
 		<IconSun font-size="20px" />
 	{:else}
 		<IconMoon font-size="20px" />

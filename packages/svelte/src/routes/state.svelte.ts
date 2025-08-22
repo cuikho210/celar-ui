@@ -1,3 +1,4 @@
 export const layout = $state({
-	activedNavbar: 'home'
+	activedNavbar: 'home',
+	theme: 'light' as 'light' | 'dark'
 });
