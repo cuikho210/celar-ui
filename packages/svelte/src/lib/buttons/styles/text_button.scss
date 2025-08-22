@@ -1,18 +1,17 @@
 [data-button-text] {
-	--color-hover: var(--color-text);
-	--color-active: var(--color-text);
-
-	transition-duration: var(--transition-dur);
-	transition-property: background-color, opacity, color;
+	transition-property: background-color, opacity, filter;
 	background-color: transparent;
+	color: var(--color-onPrimaryContainer);
 
 	&:not(:disabled, [data-active='true']):hover {
-		background-color: var(--color-primary--light);
-		color: var(--color-hover) !important;
+		background-color: var(--color-primaryContainer);
+	}
+
+	&:not(:disabled):active {
+		filter: brightness(0.95);
 	}
 
 	&[data-active='true'] {
-		background-color: var(--color-alt);
-		color: var(--color-active) !important;
+		background-color: var(--color-inversePrimary);
 	}
 }
