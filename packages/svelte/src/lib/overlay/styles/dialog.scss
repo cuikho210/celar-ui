@@ -12,7 +12,7 @@ $body-max-h: calc($d-max-h - $header-h);
 	width: 100%;
 	height: 100%;
 	backdrop-filter: blur(var(--blur-length));
-	background-color: rgba(var(--color-onBackground--rgb), 0.2);
+	background-color: rgba(var(--color-onBackground--rgb), 0.1);
 	z-index: 100;
 }
 
@@ -25,7 +25,7 @@ $body-max-h: calc($d-max-h - $header-h);
 	max-width: $d-max-w;
 	max-height: $d-max-h;
 	margin: $gap;
-	background-color: var(--color-surface);
+	background-color: var(--color-background);
 	box-shadow: 0 var(--gap--xs) var(--gap--half) var(--color-shadow);
 	border-radius: var(--radius);
 	overflow: hidden;
