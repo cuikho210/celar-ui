@@ -27,7 +27,7 @@
 	$t-size: $s-height - ($t-gap * 2);
 	$t-translate: $s-width - $t-size - ($t-gap * 2);
 
-	$i-width: 48px;
+	$i-width: 56px;
 	$s-margin-x: math.div($i-width - $s-width, 2);
 
 	[data-switch] {

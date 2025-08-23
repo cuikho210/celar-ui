@@ -55,7 +55,7 @@
 </label>
 
 <style lang="scss">
-	$icon-width: 48px;
+	$icon-width: 56px;
 
 	[data-checkbox] {
 		position: relative;

@@ -16,7 +16,7 @@
 </label>
 
 <style lang="scss">
-	$icon-width: 48px;
+	$icon-width: 56px;
 
 	[data-radio-item] {
 		box-sizing: border-box;
