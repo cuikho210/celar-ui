@@ -10,8 +10,11 @@
 	import LinearProgressIndicator from '$lib/misc/LinearProgressIndicator.svelte';
 	import ToggleThemeButton from '../ToggleThemeButton.svelte';
 	import { layout } from '../state.svelte.js';
+	import { onMount } from 'svelte';
 
-	layout.activedNavbar = 'components';
+	onMount(() => {
+		layout.activedNavbar = 'components';
+	});
 </script>
 
 <AppBar style="position: sticky; top: 0; z-index: 20;">

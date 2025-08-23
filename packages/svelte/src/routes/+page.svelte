@@ -1,11 +1,14 @@
 <script lang="ts">
 	import { Container } from '$lib/index.js';
 	import AppBar from '$lib/navigation/AppBar.svelte';
+	import { onMount } from 'svelte';
 	import ColorPallete from './ColorPallete.svelte';
 	import ToggleThemeButton from './ToggleThemeButton.svelte';
 	import { layout } from './state.svelte.js';
 
-	layout.activedNavbar = 'home';
+	onMount(() => {
+		layout.activedNavbar = 'home';
+	});
 </script>
 
 <AppBar>
