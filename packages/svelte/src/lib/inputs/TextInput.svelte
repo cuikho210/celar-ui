@@ -49,7 +49,7 @@
 			&:focus {
 				outline: none;
 				border: 1px solid var(--color-primary);
-				color: var(--color-primary);
+				caret-color: var(--color-primary);
 
 				+ [data-text-input-icon] {
 					color: var(--color-primary);
