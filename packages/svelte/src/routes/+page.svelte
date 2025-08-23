@@ -2,7 +2,7 @@
 	import { Container } from '$lib/index.js';
 	import AppBar from '$lib/navigation/AppBar.svelte';
 	import { onMount } from 'svelte';
-	import ColorPallete from './ColorPallete.svelte';
+	import ColorPalette from './ColorPalette.svelte';
 	import ToggleThemeButton from './ToggleThemeButton.svelte';
 	import { layout } from './state.svelte.js';
 
@@ -22,5 +22,5 @@
 </AppBar>
 
 <Container sm>
-	<ColorPallete />
+	<ColorPalette />
 </Container>
