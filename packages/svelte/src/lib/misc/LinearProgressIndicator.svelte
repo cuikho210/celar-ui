@@ -14,7 +14,7 @@
 
 		display: block;
 		position: relative;
-		background-color: var(--color-primary--lighter);
+		background-color: var(--color-surfaceDim);
 		width: 100%;
 		height: var(--line-height);
 		overflow: hidden;
@@ -24,7 +24,7 @@
 			top: 0;
 			left: 0;
 			animation: linear-progress-animation var(--anim-duration) linear infinite;
-			background-color: var(--color-primary--dark);
+			background-color: var(--color-primary);
 			width: 0;
 			height: 100%;
 		}

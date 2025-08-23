@@ -44,7 +44,7 @@
 						style:width
 						transition:fly={{
 							duration,
-							x: position === 'left' ? -280 : 280,
+							x: position === 'left' ? '-' + width : width,
 							opacity: 0
 						}}
 						aria-label="Navigation drawer"
@@ -88,7 +88,7 @@
 		width: 100%;
 		height: 100%;
 		backdrop-filter: blur(var(--blur-length));
-		background-color: var(--color-border--strong);
+		background-color: rgba(var(--color-onBackground--rgb), 0.2);
 		z-index: 100;
 	}
 
@@ -99,10 +99,10 @@
 		top: 0;
 		z-index: 100;
 		flex-direction: column;
-		background-color: var(--color-bg);
+		background-color: var(--color-surface);
 		height: 100dvh;
 		overflow-y: auto;
-		box-shadow: 0 4px 1rem var(--color-shadow);
+		box-shadow: 0 var(--gap--xs) var(--gap--half) var(--color-shadow--md);
 		max-width: 85%;
 
 		&[data-position='left'] {
@@ -162,7 +162,7 @@
 		}
 
 		&::-webkit-scrollbar-thumb:hover {
-			background-color: var(--color-primary--light);
+			background-color: var(--color-primaryContainer);
 		}
 	}
 

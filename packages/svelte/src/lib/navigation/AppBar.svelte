@@ -36,7 +36,7 @@
 		align-items: center;
 		gap: var(--gap--half);
 		backdrop-filter: blur(var(--blur-length--x2));
-		background-color: rgba(var(--color-bg--rgb), 0.88);
+		background-color: rgba(var(--color-background--rgb), 0.88);
 		padding: 0 var(--gap--half);
 		min-height: var(--gap--x3);
 

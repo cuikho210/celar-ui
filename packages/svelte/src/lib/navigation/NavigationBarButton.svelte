@@ -34,7 +34,7 @@
 		background-color: transparent;
 		padding: var(--gap--half) 0;
 		width: 100%;
-		color: var(--color-text);
+		color: var(--color-onSurface);
 		text-align: center;
 		font-size: 0.8rem;
 		text-decoration: none;
@@ -46,22 +46,22 @@
 
 		&:hover {
 			& > [data-navigation-bar-button-icon] {
-				background-color: var(--color-primary--light);
+				background-color: var(--color-primaryContainer);
 			}
 		}
 
 		&[data-active='true'] {
 			& > [data-navigation-bar-button-icon] {
-				background-color: var(--color-primary);
-				color: var(--color-primary--text);
+				background-color: var(--color-inversePrimary);
 			}
 		}
 
 		& > [data-navigation-bar-button-icon] {
 			transition-duration: var(--transition-dur);
 			transition-property: color, background-color;
+			transition-timing-function: ease-in;
 			border-radius: var(--radius);
-			background-color: var(--color-primary--lighter);
+			background-color: transparent;
 			padding: var(--gap--xs) var(--gap);
 		}
 	}

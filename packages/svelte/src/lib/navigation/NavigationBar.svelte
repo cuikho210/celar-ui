@@ -19,7 +19,7 @@
 		justify-content: space-evenly;
 		border-top-right-radius: var(--radius);
 		border-top-left-radius: var(--radius);
-		background-color: var(--color-primary--lighter);
+		background-color: var(--color-surfaceContainerLow);
 		width: 100%;
 		height: auto;
 

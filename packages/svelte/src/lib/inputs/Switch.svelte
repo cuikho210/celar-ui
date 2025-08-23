@@ -27,7 +27,7 @@
 	$t-size: $s-height - ($t-gap * 2);
 	$t-translate: $s-width - $t-size - ($t-gap * 2);
 
-	$i-width: 48px;
+	$i-width: 56px;
 	$s-margin-x: math.div($i-width - $s-width, 2);
 
 	[data-switch] {
@@ -38,13 +38,15 @@
 		align-items: center;
 		transition-property: background-color;
 		transition-duration: var(--transition-dur);
+		transition-timing-function: ease-in;
 		border-radius: var(--radius--half);
 		padding: var(--gap--sm) 0;
 		padding-right: var(--gap);
 		width: 100%;
+		user-select: none;
 
 		&:hover {
-			background-color: var(--color-primary--lighter);
+			background-color: var(--color-primaryContainer);
 		}
 	}
 
@@ -54,11 +56,12 @@
 		width: $s-width;
 		height: $s-height;
 		border-radius: $s-height;
-		background-color: var(--color-bg);
-		outline: 1px solid var(--color-primary--dark);
+		background-color: transparent;
+		outline: 1px solid var(--color-primary);
 		border: none;
 		transition-property: background-color;
 		transition-duration: var(--transition-dur);
+		transition-timing-function: ease-out;
 		margin: 0 $s-margin-x;
 	}
 
@@ -71,18 +74,17 @@
 		height: $t-size;
 		border-radius: $t-size;
 		box-sizing: border-box;
-		background-color: var(--color-primary--dark);
+		background-color: var(--color-primary);
 		transition-property: background-color, transform, outline-color;
 		transition-duration: var(--transition-dur);
 	}
 
 	:global([data-switch-root][data-state='checked']) {
-		background-color: var(--color-primary--dark);
-		outline-color: var(--color-primary--darker);
+		background-color: var(--color-primary);
 	}
 
 	:global([data-switch-thumb][data-state='checked']) {
-		background-color: var(--color-primary--lighter);
+		background-color: var(--color-primaryContainer);
 		transform: translateX($t-translate);
 	}
 </style>

@@ -19,9 +19,9 @@
 	$track-w: 100%;
 	$track-h: var(--gap--half);
 	$thumb-d: 24px;
-	$track-c: var(--color-alt--light);
-	$filll-c: var(--color-primary--dark);
-	$thumb-c: var(--color-primary--dark);
+	$track-c: var(--color-surfaceDim);
+	$filll-c: var(--color-primary);
+	$thumb-c: var(--color-primary);
 
 	@mixin track($fill: 0) {
 		box-sizing: border-box;

@@ -141,7 +141,7 @@
 	[data-duck-spinner] {
 		.line {
 			fill: none;
-			stroke: var(--color-text);
+			stroke: var(--color-onSurface);
 			stroke-width: 1.2;
 			stroke-linecap: round;
 			stroke-linejoin: round;

@@ -21,7 +21,7 @@
 <style lang="scss">
 	[data-color-input] {
 		$icon-width: 48px;
-		$color-text-placeholder: rgba(var(--color-text--rgb), 0.4);
+		$color-text-placeholder: rgba(var(--color-onSurface--rgb), 0.7);
 		display: flex;
 
 		position: relative;

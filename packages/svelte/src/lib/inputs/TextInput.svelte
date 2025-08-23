@@ -21,7 +21,7 @@
 
 <style lang="scss">
 	$icon-width: 48px;
-	$color-text-placeholder: rgba(var(--color-text--rgb), 0.5);
+	$color-text-placeholder: rgba(var(--color-onSurface--rgb), 0.7);
 
 	[data-text-input] {
 		margin: 0;
@@ -35,6 +35,7 @@
 			box-sizing: border-box;
 			transition-duration: var(--transition-dur);
 			transition-property: border-color;
+			transition-timing-function: ease-in-out;
 			border: 1px solid var(--color-border);
 			border-radius: var(--radius);
 			background-color: transparent;
@@ -48,16 +49,15 @@
 			&:focus {
 				outline: none;
 				border: 1px solid var(--color-primary);
+				caret-color: var(--color-primary);
 
 				+ [data-text-input-icon] {
-					color: var(--color-primary--dark);
+					color: var(--color-primary);
 				}
 			}
 
 			&:is(:placeholder-shown) ~ [data-text-input-placeholder] {
-				top: var(--gap--md);
-				right: calc(100% - $icon-width);
-				translate: 100%;
+				transform: translateY(50%);
 				visibility: hidden;
 				opacity: 0;
 			}
@@ -77,6 +77,7 @@
 			align-items: center;
 			transition-duration: var(--transition-dur);
 			transition-property: color;
+			transition-timing-function: ease-in-out;
 			width: $icon-width;
 			height: 100%;
 			pointer-events: none;
@@ -85,13 +86,13 @@
 		[data-text-input-placeholder] {
 			position: absolute;
 			transition-duration: var(--transition-dur);
-			transition-property: visibility, opacity, top, right, translate;
+			transition-property: visibility, opacity, transform;
 			pointer-events: none;
 			color: $color-text-placeholder;
-			font-size: smaller;
+			font-size: 0.8em;
 			top: 0;
 			right: var(--gap);
-			translate: 0;
+			transform: translateY(0);
 			visibility: visible;
 			opacity: 1;
 		}

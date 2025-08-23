@@ -1,24 +1,17 @@
 [data-button-filled] {
-	--color-hover: var(--color-text);
-	--color-active: var(--color-bg);
-
-	transition-duration: var(--transition-dur);
-	transition-property: background-color, box-shadow, opacity, color;
+	transition-property: opacity, filter;
 	background-color: var(--color-primary);
+	color: var(--color-onPrimary);
 
 	&:not(:disabled, [data-active='true']):hover {
-		background-color: var(--color-primary--dark);
-		box-shadow: 0 2px 4px var(--color-shadow--strong);
-		color: var(--color-hover) !important;
+		filter: brightness(1.2);
 	}
 
 	&:not(:disabled):active {
-		box-shadow: 0 2px 2px var(--color-shadow--strong);
+		filter: brightness(1);
 	}
 
 	&[data-active='true'] {
-		box-shadow: 0 2px 2px var(--color-shadow--strong);
-		background-color: var(--color-alt--darker);
-		color: var(--color-active) !important;
+		filter: brightness(1.3);
 	}
 }
