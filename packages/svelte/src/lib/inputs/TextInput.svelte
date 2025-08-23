@@ -57,9 +57,7 @@
 			}
 
 			&:is(:placeholder-shown) ~ [data-text-input-placeholder] {
-				top: var(--gap--md);
-				right: calc(100% - $icon-width);
-				translate: 100%;
+				transform: translateY(50%);
 				visibility: hidden;
 				opacity: 0;
 			}
@@ -87,13 +85,13 @@
 		[data-text-input-placeholder] {
 			position: absolute;
 			transition-duration: var(--transition-dur);
-			transition-property: visibility, opacity, top, right, translate;
+			transition-property: visibility, opacity, transform;
 			pointer-events: none;
 			color: $color-text-placeholder;
-			font-size: smaller;
+			font-size: 0.8em;
 			top: 0;
 			right: var(--gap);
-			translate: 0;
+			transform: translateY(0);
 			visibility: visible;
 			opacity: 1;
 		}
