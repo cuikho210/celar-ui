@@ -35,7 +35,7 @@
 			box-sizing: border-box;
 			transition-duration: var(--transition-dur);
 			transition-property: border-color;
-			transition-timing-function: ease-in;
+			transition-timing-function: ease-in-out;
 			border: 1px solid var(--color-border);
 			border-radius: var(--radius);
 			background-color: transparent;
@@ -77,6 +77,7 @@
 			align-items: center;
 			transition-duration: var(--transition-dur);
 			transition-property: color;
+			transition-timing-function: ease-in-out;
 			width: $icon-width;
 			height: 100%;
 			pointer-events: none;
