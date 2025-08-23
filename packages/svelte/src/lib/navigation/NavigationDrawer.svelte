@@ -102,7 +102,7 @@
 		background-color: var(--color-surface);
 		height: 100dvh;
 		overflow-y: auto;
-		box-shadow: 0 var(--gap--xs) var(--gap--half) var(--color-shadow);
+		box-shadow: 0 var(--gap--xs) var(--gap--half) var(--color-shadow--md);
 		max-width: 85%;
 
 		&[data-position='left'] {

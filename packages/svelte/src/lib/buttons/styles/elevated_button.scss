@@ -1,6 +1,6 @@
 [data-button-elevated] {
 	transition-property: box-shadow, opacity, filter, background-color;
-	box-shadow: 0 1px 1px var(--color-shadow);
+	box-shadow: 0 1px 1px var(--color-shadow--md);
 	background-color: var(--color-primaryContainer);
 	color: var(--color-onPrimaryContainer);
 

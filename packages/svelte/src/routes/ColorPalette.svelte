@@ -51,7 +51,6 @@
 	const miscColors = [
 		'color-shadow--soft',
 		'color-shadow--md',
-		'color-shadow',
 		'color-shadow--strong',
 		'color-border',
 		'color-border--strong',
