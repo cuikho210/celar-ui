@@ -33,9 +33,11 @@ $colors-misc: (
 	@include utils.generate_colors(config.$prefix, scheme.$scheme-light);
 	@include utils.generate_colors(config.$prefix, $ext-colors-light);
 	@include utils.add_prefix(config.$prefix, $colors-misc);
+	color-scheme: light;
 }
 
 :root[data-theme='dark'] {
 	@include utils.generate_colors(config.$prefix, scheme.$scheme-dark);
 	@include utils.generate_colors(config.$prefix, $ext-colors-dark);
+	color-scheme: dark;
 }
