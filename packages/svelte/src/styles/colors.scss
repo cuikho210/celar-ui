@@ -24,8 +24,8 @@ $colors-misc: (
 	color-shadow--soft: rgba(var(--#{config.$prefix}color-shadow--rgb), 0.1),
 	color-shadow--md: rgba(var(--#{config.$prefix}color-shadow--rgb), 0.15),
 	color-shadow--strong: rgba(var(--#{config.$prefix}color-shadow--rgb), 0.2),
-	color-border: rgba(var(--#{config.$prefix}color-outline--rgb), 0.8),
-	color-border--strong: var(--#{config.$prefix}color-outline),
+	color-border: rgba(var(--#{config.$prefix}color-outline--rgb), 0.5),
+	color-border--strong: rgba(var(--#{config.$prefix}color-outline--rgb), 0.8),
 	color-wrapper: var(--#{config.$prefix}color-outline)
 ) !default;
 
