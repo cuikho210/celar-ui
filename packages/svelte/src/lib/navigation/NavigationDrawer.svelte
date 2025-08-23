@@ -44,7 +44,7 @@
 						style:width
 						transition:fly={{
 							duration,
-							x: position === 'left' ? -280 : 280,
+							x: position === 'left' ? '-' + width : width,
 							opacity: 0
 						}}
 						aria-label="Navigation drawer"
