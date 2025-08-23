@@ -65,20 +65,26 @@
 
 	// Prefix from config.scss (default is empty string, change if needed)
 	const prefix = ''; // If you use a prefix, set it here (e.g., "myapp-")
+	const cssVarName = (name: string) => `--${prefix}${name}`;
+	const cssVar = (name: string, fallback = 'transparent') =>
+		`var(${cssVarName(name)}, ${fallback})`;
 </script>
 
-{#each allColors as { group, keys }, index (index)}
+{#each allColors as { group, keys } (group)}
 	<div class="palette-group">
 		<div class="palette-title">{group}</div>
 		<div class="palette-grid">
 			{#each keys as key (key)}
 				<div class="palette-item">
-					<div class="palette-swatch" style="background: var(--{prefix}{key});" title={key}></div>
+					<div
+						class="palette-swatch"
+						style:background={cssVar(key)}
+						aria-hidden="true"
+						title={key}
+					></div>
 					<div>
 						<div class="palette-label">{prefix}{key}</div>
-						<div class="palette-value">
-							<code>var(--{prefix}{key})</code>
-						</div>
+						<div class="palette-value"><code>var({cssVarName(key)})</code></div>
 					</div>
 				</div>
 			{/each}
@@ -122,7 +128,7 @@
 	}
 	.palette-value {
 		font-size: 0.85em;
-		color: #666;
+		color: var(--color-onSurfaceVariant, #666);
 	}
 	:root[data-theme='dark'] .palette-item {
 		background: var(--color-surfaceContainer, #251e1d);
