@@ -9,7 +9,7 @@ $ext-colors-light: (
 	color-onSuccess: #438d75,
 	color-warning: #fff8ec,
 	color-onWarning: #c18500
-);
+) !default;
 
 $ext-colors-dark: (
 	color-info: #101a3b,
@@ -18,7 +18,7 @@ $ext-colors-dark: (
 	color-onSuccess: #7ab8a3,
 	color-warning: #4a3700,
 	color-onWarning: #bfa060
-);
+) !default;
 
 $colors-misc: (
 	color-shadow--soft: rgba(var(--color-shadow--rgb), 0.08),
