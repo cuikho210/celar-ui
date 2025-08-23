@@ -84,6 +84,7 @@
 
 		&[data-selected] {
 			background-color: var(--color-primaryContainer);
+			color: var(--color-onPrimaryContainer);
 		}
 
 		&[data-disabled] {
@@ -97,6 +98,7 @@
 
 		&:focus-visible {
 			background-color: var(--color-primaryContainer);
+			color: var(--color-onPrimaryContainer);
 			box-shadow: 0 var(--gap--xs) var(--gap--sm) var(--color-shadow);
 		}
 
