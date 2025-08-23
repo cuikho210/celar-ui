@@ -29,7 +29,7 @@ $body-max-h: calc($d-max-h - $header-h);
 	box-shadow: 0 var(--gap--xs) var(--gap--half) var(--color-shadow);
 	border-radius: var(--radius);
 	overflow: hidden;
-	z-index: 100;
+	z-index: 101;
 
 	&[data-xs='true'] {
 		max-width: min($d-max-w, var(--break--xs));
