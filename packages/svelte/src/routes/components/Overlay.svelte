@@ -8,6 +8,7 @@
 	import IconPlay from '~icons/hugeicons/play';
 	import IconPause from '~icons/hugeicons/pause';
 	import IconStop from '~icons/hugeicons/stop';
+	import MinimalSurfaceDialog from '$lib/overlay/MinimalSurfaceDialog.svelte';
 
 	let openDialog1 = $state(false);
 </script>
@@ -99,5 +100,21 @@
 			<CommandItem>Do ngok 3</CommandItem>
 			<CommandItem>Do ngok 4</CommandItem>
 		</CommandDialog>
+
+		<MinimalSurfaceDialog xs fluid elevated={2}>
+			{#snippet trigger({ props })}
+				<ElevatedButton {...props}>Surface Dialog</ElevatedButton>
+			{/snippet}
+
+			{#snippet header()}
+				Header
+			{/snippet}
+
+			{#snippet footer()}
+				Footer
+			{/snippet}
+
+			<p>Ahihi</p>
+		</MinimalSurfaceDialog>
 	</Spacer>
 </Card>

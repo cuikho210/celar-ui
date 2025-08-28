@@ -5,7 +5,7 @@
 	import type { Snippet } from 'svelte';
 	import IconButton from '$lib/buttons/IconButton.svelte';
 
-	type DialogProps = Omit<DialogContentProps, 'title'> & {
+	export type DialogProps = Omit<DialogContentProps, 'title'> & {
 		open?: boolean;
 		trigger?: Snippet<[{ props: Record<string, unknown> }]>;
 		title?: Snippet;
