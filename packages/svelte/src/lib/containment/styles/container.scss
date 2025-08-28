@@ -1,0 +1,22 @@
+[data-container] {
+	position: relative;
+	margin: 0 auto;
+	padding: var(--gap);
+	box-sizing: border-box;
+
+	&[data-xs='true'] {
+		max-width: var(--break--xs);
+	}
+
+	&[data-sm='true'] {
+		max-width: var(--break--sm);
+	}
+
+	&[data-md='true'] {
+		max-width: var(--break--md);
+	}
+
+	&[data-fluid='true'] {
+		width: 100%;
+	}
+}

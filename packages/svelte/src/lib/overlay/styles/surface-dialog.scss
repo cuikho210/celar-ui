@@ -1,0 +1,17 @@
+[data-minimal-surface-dialog] {
+	border-radius: var(--gap--x2);
+
+	[data-dialog-body] {
+		[data-surface-dialog-body] {
+			border-radius: var(--gap--x2);
+			background-color: var(--color-surfaceContainerLowest);
+			padding: var(--gap);
+		}
+		[data-surface-dialog-header] {
+			margin-bottom: var(--gap);
+		}
+		[data-surface-dialog-footer] {
+			margin-top: var(--gap);
+		}
+	}
+}

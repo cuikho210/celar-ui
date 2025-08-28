@@ -13,17 +13,15 @@
 <Card>
 	<h3>Navigation Drawer</h3>
 	<Gap />
-	<Spacer align="start">
-		<div style="display: flex; gap: var(--gap-half); align-items: center;">
-			<ElevatedButton onclick={toggleDrawer}>Open Drawer</ElevatedButton>
-			<label>
-				Position:
-				<select bind:value={drawerPosition}>
-					<option value="left">Left</option>
-					<option value="right">Right</option>
-				</select>
-			</label>
-		</div>
+	<Spacer align="center">
+		<ElevatedButton onclick={toggleDrawer}>Open Drawer</ElevatedButton>
+		<label>
+			Position:
+			<select bind:value={drawerPosition}>
+				<option value="left">Left</option>
+				<option value="right">Right</option>
+			</select>
+		</label>
 	</Spacer>
 
 	<NavigationDrawer bind:open={openDrawer} position={drawerPosition} width="320px">
@@ -78,10 +76,10 @@
 
 <style lang="scss">
 	select {
-		padding: var(--gap-xs) var(--gap-half);
+		padding: var(--gap--xs) var(--gap--half);
 		border-radius: var(--radius);
 		border: 1px solid var(--color-border);
-		background-color: var(--color-bg);
+		background-color: var(--color-surface);
 		font-size: 1rem;
 		color: var(--color-onSurface);
 	}

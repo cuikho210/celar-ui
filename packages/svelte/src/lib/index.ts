@@ -9,6 +9,7 @@ export { default as OutlinedButton } from './buttons/OutlinedButton.svelte';
 export { default as IconButton } from './buttons/IconButton.svelte';
 
 export { default as Container } from './containment/Container.svelte';
+export { default as SurfaceContainer } from './containment/SurfaceContainer.svelte';
 export { default as Spacer } from './containment/Spacer.svelte';
 export { default as Card } from './containment/Card.svelte';
 export { default as Breadcrumb } from './containment/Breadcrumb.svelte';
@@ -19,6 +20,7 @@ export { default as MinimalDialog } from './overlay/MinimalDialog.svelte';
 export { default as CommandDialog } from './overlay/CommandDialog.svelte';
 export { default as CommandGroupItems } from './overlay/CommandGroupItems.svelte';
 export { default as CommandItem } from './overlay/CommandItem.svelte';
+export { default as MinimalSurfaceDialog } from './overlay/MinimalSurfaceDialog.svelte';
 
 export { default as Gap } from './misc/Gap.svelte';
 export { default as DuckSpinner } from './misc/DuckSpinner.svelte';
