@@ -8,10 +8,10 @@
 			padding: var(--gap);
 		}
 		[data-surface-dialog-header] {
-			margin-bottom: var(--gap);
+			margin-block-end: var(--gap);
 		}
 		[data-surface-dialog-footer] {
-			margin-top: var(--gap);
+			margin-block-start: var(--gap);
 		}
 	}
 }
