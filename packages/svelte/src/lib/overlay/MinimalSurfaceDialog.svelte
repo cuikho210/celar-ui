@@ -9,7 +9,7 @@
 	type MinimalSurfaceDialogProps = MinimalDialogProps & {
 		header?: Snippet;
 		footer?: Snippet;
-		elevated?: number;
+		elevated?: 0 | 1 | 2 | 3 | 4;
 	};
 
 	let { elevated, children, header, footer, ...rest }: MinimalSurfaceDialogProps = $props();
