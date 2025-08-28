@@ -12,11 +12,19 @@
 		elevated?: 0 | 1 | 2 | 3 | 4;
 	};
 
-	let { elevated, children, header, footer, ...rest }: MinimalSurfaceDialogProps = $props();
+	let {
+		open = $bindable(),
+		elevated,
+		children,
+		header,
+		footer,
+		...rest
+	}: MinimalSurfaceDialogProps = $props();
 </script>
 
 <MinimalDialog
 	{...rest}
+	bind:open
 	data-surface-container
 	data-minimal-surface-dialog
 	data-elevated={elevated}
