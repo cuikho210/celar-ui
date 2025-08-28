@@ -1,0 +1,19 @@
+[data-surface-container] {
+	border-radius: var(--gap--x2);
+
+	// Default: Elevated 0
+	background-color: var(--color-surface);
+
+	&[data-elevated='1'] {
+		background-color: var(--color-surfaceContainerLow);
+	}
+	&[data-elevated='2'] {
+		background-color: var(--color-surfaceContainer);
+	}
+	&[data-elevated='3'] {
+		background-color: var(--color-surfaceContainerHigh);
+	}
+	&[data-elevated='4'] {
+		background-color: var(--color-surfaceContainerHighest);
+	}
+}

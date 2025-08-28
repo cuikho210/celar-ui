@@ -11,6 +11,7 @@
 	import ToggleThemeButton from '../ToggleThemeButton.svelte';
 	import { layout } from '../state.svelte.js';
 	import { onMount } from 'svelte';
+	import SurfaceContainers from './SurfaceContainers.svelte';
 
 	onMount(() => {
 		layout.activedNavbar = 'components';
@@ -49,4 +50,5 @@
 	<Spinners /><Gap />
 	<Overlay /><Gap />
 	<Navigation /><Gap />
+	<SurfaceContainers /><Gap />
 </Container>
