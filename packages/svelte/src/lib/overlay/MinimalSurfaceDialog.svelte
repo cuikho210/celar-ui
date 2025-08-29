@@ -9,11 +9,11 @@
 	type MinimalSurfaceDialogProps = MinimalDialogProps & {
 		header?: Snippet;
 		footer?: Snippet;
-		elevated?: 0 | 1 | 2 | 3 | 4;
+		elevated?: 0 | 1 | 2 | 3 | 4 | 5;
 	};
 
 	let {
-		open = $bindable(),
+		open = $bindable(false),
 		elevated,
 		children,
 		header,

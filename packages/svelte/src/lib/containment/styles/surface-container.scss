@@ -6,16 +6,22 @@
 	// Default: Elevated 0
 	background-color: var(--color-background);
 
+	&[data-elevated='0'] {
+		--color-background: var(--color-surfaceContainerLowest);
+	}
 	&[data-elevated='1'] {
-		--color-background: var(--color-surfaceContainerLow);
+		--color-background: var(--color-surface);
 	}
 	&[data-elevated='2'] {
-		--color-background: var(--color-surfaceContainer);
+		--color-background: var(--color-surfaceContainerLow);
 	}
 	&[data-elevated='3'] {
-		--color-background: var(--color-surfaceContainerHigh);
+		--color-background: var(--color-surfaceContainer);
 	}
 	&[data-elevated='4'] {
+		--color-background: var(--color-surfaceContainerHigh);
+	}
+	&[data-elevated='5'] {
 		--color-background: var(--color-surfaceContainerHighest);
 	}
 }

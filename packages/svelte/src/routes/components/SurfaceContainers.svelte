@@ -1,17 +1,17 @@
 <script lang="ts">
+	import Spacer from '$lib/containment/Spacer.svelte';
 	import { Card, Gap, SurfaceContainer } from '$lib/index.js';
 </script>
 
 <Card>
 	<h3>SurfaceContainers</h3>
 	<Gap />
-	<SurfaceContainer>Default 0</SurfaceContainer>
-	<Gap size=".5rem" />
-	<SurfaceContainer elevated={1}>Elevated 1</SurfaceContainer>
-	<Gap size=".5rem" />
-	<SurfaceContainer elevated={2}>Elevated 2</SurfaceContainer>
-	<Gap size=".5rem" />
-	<SurfaceContainer elevated={3}>Elevated 3</SurfaceContainer>
-	<Gap size=".5rem" />
-	<SurfaceContainer elevated={4}>Elevated 4</SurfaceContainer>
+	<Spacer direction="column">
+		<SurfaceContainer fluid>Default 0</SurfaceContainer>
+		<SurfaceContainer fluid elevated={1}>Elevated 1</SurfaceContainer>
+		<SurfaceContainer fluid elevated={2}>Elevated 2</SurfaceContainer>
+		<SurfaceContainer fluid elevated={3}>Elevated 3</SurfaceContainer>
+		<SurfaceContainer fluid elevated={4}>Elevated 4</SurfaceContainer>
+		<SurfaceContainer fluid elevated={5}>Elevated 5</SurfaceContainer>
+	</Spacer>
 </Card>
