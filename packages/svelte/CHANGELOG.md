@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.2] - 2025-08-29
+
+### Added
+
+- ✨ Introduce `elevated=5` and refine surface elevation scale
+- Elevation-to-surface mapping:
+  - 0 → `--color-surfaceContainerLowest`
+  - 1 → `--color-surface`
+  - 2 → `--color-surfaceContainerLow`
+  - 3 → `--color-surfaceContainer`
+  - 4 → `--color-surfaceContainerHigh`
+  - 5 → `--color-surfaceContainerHighest`
+
+### Changed
+
+- `MinimalSurfaceDialog`: `open` now defaults to `false` (previously unspecified via `$bindable()`).
+- `SurfaceContainer`: default `elevated` is now `1` (previously `0`).
+- `MinimalSurfaceDialog`: default `elevated` is `1`.
+
+## [1.2.1] - 2025-08-28
+
+### Added
+
+- `MinimalSurfaceDialog` component,
+- `SurfaceContainer` component,
+
 ## [1.0.1] - 2025-08-23
 
 ### Changed
