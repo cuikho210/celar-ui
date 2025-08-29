@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - ✨ Introduce `elevated=5` and refine surface elevation scale
 
+### Changed
+
+- MinimalSurfaceDialog: `open` now defaults to `false` (previously unspecified via `$bindable()`).
 ## [1.2.1] - 2025-08-28
 
 ### Added
