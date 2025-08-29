@@ -14,7 +14,7 @@
 
 	let {
 		open = $bindable(false),
-		elevated,
+		elevated = 1,
 		children,
 		header,
 		footer,
