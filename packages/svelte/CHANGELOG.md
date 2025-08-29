@@ -10,16 +10,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - ✨ Introduce `elevated=5` and refine surface elevation scale
+- Elevation-to-surface mapping:
+  - 0 → `--color-surfaceContainerLowest`
+  - 1 → `--color-surface`
+  - 2 → `--color-surfaceContainerLow`
+  - 3 → `--color-surfaceContainer`
+  - 4 → `--color-surfaceContainerHigh`
+  - 5 → `--color-surfaceContainerHighest`
 
 ### Changed
 
-- MinimalSurfaceDialog: `open` now defaults to `false` (previously unspecified via `$bindable()`).
+- `MinimalSurfaceDialog`: `open` now defaults to `false` (previously unspecified via `$bindable()`).
+
 ## [1.2.1] - 2025-08-28
 
 ### Added
 
-- MinimalSurfaceDialog component
-- SurfaceContainer component
+- `MinimalSurfaceDialog` component,
+- `SurfaceContainer` component,
 
 ## [1.0.1] - 2025-08-23
 

@@ -8,10 +8,9 @@
 	<Gap />
 	<Spacer direction="column">
 		<SurfaceContainer fluid>Default 0</SurfaceContainer>
-		<SurfaceContainer fluid elevated={1}>Elevated 1</SurfaceContainer>
-		<SurfaceContainer fluid elevated={2}>Elevated 2</SurfaceContainer>
-		<SurfaceContainer fluid elevated={3}>Elevated 3</SurfaceContainer>
-		<SurfaceContainer fluid elevated={4}>Elevated 4</SurfaceContainer>
-		<SurfaceContainer fluid elevated={5}>Elevated 5</SurfaceContainer>
+
+		{#each [1, 2, 3, 4, 5] as level (level)}
+			<SurfaceContainer fluid elevated={level as 0}>Elevated {level}</SurfaceContainer>
+		{/each}
 	</Spacer>
 </Card>
