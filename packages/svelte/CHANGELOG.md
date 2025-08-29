@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - `MinimalSurfaceDialog`: `open` now defaults to `false` (previously unspecified via `$bindable()`).
+- `SurfaceContainer`: default `elevated` is now `1` (previously `0`).
+- `MinimalSurfaceDialog`: default `elevated` is `1`.
 
 ## [1.2.1] - 2025-08-28
 
