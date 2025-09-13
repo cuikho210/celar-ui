@@ -6,6 +6,8 @@
 	import RadioItem from '$lib/inputs/RadioItem.svelte';
 	import Switch from '$lib/inputs/Switch.svelte';
 	import Slider from '$lib/inputs/Slider.svelte';
+
+	let sliderValue = $state(0.8);
 </script>
 
 <Card>
@@ -47,5 +49,6 @@
 	<Switch>Switch</Switch>
 	<Gap />
 
-	<Slider />
+	<p>sliderValue: {sliderValue}</p>
+	<Slider min={0.5} max={1.0} step={0.05} bind:value={sliderValue} />
 </Card>

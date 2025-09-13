@@ -1,13 +1,16 @@
 <script lang="ts">
 	import type { HTMLInputAttributes } from 'svelte/elements';
 
-	let { value = $bindable(), min, max, ...rest }: HTMLInputAttributes = $props();
+	let { value = $bindable(), min, max, step, ...rest }: HTMLInputAttributes = $props();
 </script>
 
 <div data-slider>
 	<input
 		type="range"
 		bind:value
+		{min}
+		{max}
+		{step}
 		style:--val={value || 0}
 		style:--min={min || 0}
 		style:--max={max || 100}
@@ -56,6 +59,8 @@
 	[data-slider] {
 		position: relative;
 		padding: 0 var(--gap);
+		width: 100%;
+		box-sizing: border-box;
 
 		& > input {
 			--range: calc(var(--max) - var(--min));
