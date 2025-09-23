@@ -70,7 +70,7 @@
 	role="button"
 	tabindex="0"
 >
-	{#each tags as tag, index (tag)}
+	{#each tags as tag, index (index)}
 		<Badge size="large">
 			{tag}
 
