@@ -6,6 +6,7 @@
 	import Overlay from './Overlay.svelte';
 	import Inputs from './Inputs.svelte';
 	import Navigation from './Navigation.svelte';
+	import Badge from './Badge.svelte';
 	import TextButton from '$lib/buttons/TextButton.svelte';
 	import LinearProgressIndicator from '$lib/misc/LinearProgressIndicator.svelte';
 	import ToggleThemeButton from '../ToggleThemeButton.svelte';
@@ -51,4 +52,5 @@
 	<Overlay /><Gap />
 	<Navigation /><Gap />
 	<SurfaceContainers /><Gap />
+	<Badge /><Gap />
 </Container>
