@@ -26,7 +26,7 @@
 
 		&:not(:last-child)::after {
 			content: '/';
-			color: var(--color-info);
+			color: currentColor;
 			padding: 0 var(--gap--half);
 		}
 
