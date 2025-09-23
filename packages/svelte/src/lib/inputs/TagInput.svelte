@@ -29,7 +29,7 @@
 		const trimmedTag = tag.trim();
 		if (!trimmedTag) return;
 
-		if (maxTags && tags.length >= maxTags) return;
+		if (maxTags !== undefined && tags.length >= maxTags) return;
 		if (!allowDuplicates && tags.includes(trimmedTag)) return;
 
 		tags.push(trimmedTag);
