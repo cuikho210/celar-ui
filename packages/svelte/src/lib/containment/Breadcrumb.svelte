@@ -21,12 +21,12 @@
 	:global([data-breadcrumb] > a) {
 		padding: 0;
 		margin: 0;
-		color: var(--color-onInfo);
+		color: var(--color-info);
 		text-decoration: none;
 
 		&:not(:last-child)::after {
 			content: '/';
-			color: var(--color-onInfo);
+			color: currentColor;
 			padding: 0 var(--gap--half);
 		}
 

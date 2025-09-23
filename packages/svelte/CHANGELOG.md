@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2025-09-23
+
+### Added
+
+- Added a Badge component (small/medium/large, color variants) and added it to the components gallery.
+
+### Style
+
+- Swapped light/dark color palettes to adjust theme appearance.
+- Adjusted breadcrumb color token usage for consistent rendering.
+
+### Chores
+
+- Bumped package version and upgraded Svelte, Vite, TypeScript, Prettier, and related tooling.
+- Migrated ESLint config format and added a Svelte navigation safety rule.
+
 ## [1.2.2] - 2025-08-29
 
 ### Added
