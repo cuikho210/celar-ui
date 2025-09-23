@@ -36,6 +36,7 @@ export { default as RadioGroup } from './inputs/RadioGroup.svelte';
 export { default as RadioItem } from './inputs/RadioItem.svelte';
 export { default as Switch } from './inputs/Switch.svelte';
 export { default as Slider } from './inputs/Slider.svelte';
+export { default as TagInput } from './inputs/TagInput.svelte';
 
 export { default as AppBar } from './navigation/AppBar.svelte';
 export { default as NavigationBar } from './navigation/NavigationBar.svelte';
