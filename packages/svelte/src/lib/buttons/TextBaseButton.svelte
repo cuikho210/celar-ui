@@ -6,13 +6,21 @@
 
 	export type TextBaseButtonProps = BaseButtonProps & {
 		icon?: Snippet;
+		gap?: string;
 	};
 
-	let { children, loading, icon, active = false, ...rest }: TextBaseButtonProps = $props();
+	let {
+		children,
+		loading,
+		icon,
+		active = false,
+		gap = 'var(--gap--half)',
+		...rest
+	}: TextBaseButtonProps = $props();
 </script>
 
 {#snippet baseChildren()}
-	<div class="button-body" style:visibility={loading ? 'hidden' : 'initial'}>
+	<div class="button-body" style:visibility={loading ? 'hidden' : 'initial'} style:--body-gap={gap}>
 		{#if icon}
 			<span class="button-icon">
 				{@render icon()}
@@ -43,7 +51,7 @@
 	.button-body {
 		display: flex;
 		align-items: center;
-		gap: var(--gap--half);
+		gap: var(--body-gap);
 		padding: 0 var(--gap);
 
 		.button-content {

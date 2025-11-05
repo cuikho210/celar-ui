@@ -1,14 +1,10 @@
-[data-button-text] {
+[data-button-text-expanded] {
 	transition-property: background-color, opacity, filter;
 	background-color: transparent;
 	color: var(--color-onPrimaryContainer);
 	display: block;
 	width: 100%;
 	overflow: hidden;
-
-	.button-body {
-		gap: var(--gap);
-	}
 
 	&:not(:disabled, [data-active='true']):hover {
 		background-color: var(--color-primaryContainer);
