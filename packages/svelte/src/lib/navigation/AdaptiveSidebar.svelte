@@ -22,10 +22,12 @@
 	<div
 		data-adaptive-sidebar-backdrop
 		onclick={() => (open = false)}
-		onkeyup={() => (open = false)}
-		aria-controls="close adaptive sidebar"
+		onkeyup={(e) => {
+			if (e.key == 'Escape') open = false;
+		}}
+		aria-label="close adaptive sidebar"
 		role="button"
-		tabindex="-1"
+		tabindex="0"
 	></div>
 
 	<aside
