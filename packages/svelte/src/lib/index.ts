@@ -3,6 +3,7 @@
 export * from './utils.js';
 
 export { default as TextButton } from './buttons/TextButton.svelte';
+export { default as ExpandedTextButton } from './buttons/ExpandedTextButton.svelte';
 export { default as ElevatedButton } from './buttons/ElevatedButton.svelte';
 export { default as FilledButton } from './buttons/FilledButton.svelte';
 export { default as OutlinedButton } from './buttons/OutlinedButton.svelte';
@@ -42,3 +43,4 @@ export { default as AppBar } from './navigation/AppBar.svelte';
 export { default as NavigationBar } from './navigation/NavigationBar.svelte';
 export { default as NavigationBarButton } from './navigation/NavigationBarButton.svelte';
 export { default as NavigationDrawer } from './navigation/NavigationDrawer.svelte';
+export { default as AdaptiveSidebar } from './navigation/AdaptiveSidebar.svelte';

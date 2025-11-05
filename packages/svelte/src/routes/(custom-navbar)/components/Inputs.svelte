@@ -7,7 +7,6 @@
 	import Switch from '$lib/inputs/Switch.svelte';
 	import Slider from '$lib/inputs/Slider.svelte';
 	import TagInput from '$lib/inputs/TagInput.svelte';
-	import IconTag from '~icons/hugeicons/tag-01';
 
 	let sliderValue = $state(0.8);
 	let tags = $state<string[]>([]);
