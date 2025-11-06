@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import './styles/popover.scss';
-	import { fly } from 'svelte/transition';
+	import { scale } from 'svelte/transition';
 	import { Popover as BitsPopover, type PopoverContentProps } from 'bits-ui';
 
 	type PopoverProps = PopoverContentProps & {
@@ -26,7 +26,7 @@
 			{#snippet child({ wrapperProps, props, open })}
 				{#if open}
 					<div {...wrapperProps}>
-						<div {...props} transition:fly={{ duration: transitionDuration, y: 50 }}>
+						<div {...props} transition:scale={{ duration: transitionDuration }}>
 							{@render children?.()}
 						</div>
 					</div>
