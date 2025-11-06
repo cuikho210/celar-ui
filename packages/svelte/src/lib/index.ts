@@ -22,6 +22,7 @@ export { default as CommandDialog } from './overlay/CommandDialog.svelte';
 export { default as CommandGroupItems } from './overlay/CommandGroupItems.svelte';
 export { default as CommandItem } from './overlay/CommandItem.svelte';
 export { default as MinimalSurfaceDialog } from './overlay/MinimalSurfaceDialog.svelte';
+export { default as Popover } from './overlay/Popover.svelte';
 
 export { default as Gap } from './misc/Gap.svelte';
 export { default as DuckSpinner } from './misc/DuckSpinner.svelte';

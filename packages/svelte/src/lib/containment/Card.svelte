@@ -1,9 +1,9 @@
 <script lang="ts">
 	import './styles/card.scss';
-	import Container from './Container.svelte';
-	import type { ContainerProps } from './Container.svelte';
+	import type { SurfaceContainerProps } from './SurfaceContainer.svelte';
+	import SurfaceContainer from './SurfaceContainer.svelte';
 
-	let props: ContainerProps = $props();
+	let props: SurfaceContainerProps = $props();
 </script>
 
-<Container {...props} data-card />
+<SurfaceContainer {...props} data-card />
