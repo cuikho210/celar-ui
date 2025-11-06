@@ -13,7 +13,7 @@
 		open = $bindable(false),
 		collapsedSize = '80px',
 		expandedSize = '300px',
-		elevated = 2,
+		elevated = 3,
 		children,
 		...rest
 	}: AdaptiveSidebarProps = $props();
@@ -73,6 +73,7 @@
 		height: 100vh;
 		width: var(--expanded);
 		padding: var(--gap);
+		border-radius: 0;
 		border-top-right-radius: var(--gap--x2);
 		border-bottom-right-radius: var(--gap--x2);
 		max-width: 80vw;
