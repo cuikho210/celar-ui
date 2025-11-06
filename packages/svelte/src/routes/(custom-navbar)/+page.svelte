@@ -5,6 +5,8 @@
 	import ColorPalette from './ColorPalette.svelte';
 	import ToggleThemeButton from './ToggleThemeButton.svelte';
 	import { layout } from './state.svelte.js';
+	import Gap from '$lib/misc/Gap.svelte';
+	import OutlinedButton from '$lib/buttons/OutlinedButton.svelte';
 
 	onMount(() => {
 		layout.activedNavbar = 'home';
@@ -22,5 +24,7 @@
 </AppBar>
 
 <Container sm>
+	<OutlinedButton href="/adaptive-sidebar">Adaptive Sidebar</OutlinedButton>
+	<Gap />
 	<ColorPalette />
 </Container>
