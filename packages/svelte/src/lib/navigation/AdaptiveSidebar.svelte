@@ -73,9 +73,7 @@
 		height: 100vh;
 		width: var(--expanded);
 		padding: var(--gap);
-		border-radius: 0;
-		border-top-right-radius: var(--gap--x2);
-		border-bottom-right-radius: var(--gap--x2);
+		border-radius: 0 var(--gap--x2) var(--gap--x2) 0;
 		max-width: 80vw;
 		overflow: hidden;
 		transition-property: transform, width, opacity, visibility;
