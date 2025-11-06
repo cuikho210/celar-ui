@@ -1,16 +1,19 @@
 <script lang="ts">
+	import '../containment/styles/surface-container.scss';
 	import type { HTMLAttributes } from 'svelte/elements';
 
 	interface AdaptiveSidebarProps extends HTMLAttributes<HTMLElement> {
 		open?: boolean;
 		collapsedSize?: string;
 		expandedSize?: string;
+		elevated?: 0 | 1 | 2 | 3 | 4 | 5;
 	}
 
 	let {
 		open = $bindable(false),
 		collapsedSize = '80px',
 		expandedSize = '300px',
+		elevated = 2,
 		children,
 		...rest
 	}: AdaptiveSidebarProps = $props();
@@ -33,9 +36,11 @@
 	<aside
 		{...rest}
 		data-adaptive-sidebar
+		data-surface-container
 		style:--collapsed={collapsedSize}
 		style:--expanded={expandedSize}
 		style:--width={open ? expandedSize : collapsedSize}
+		data-elevated={elevated}
 	>
 		{@render children?.()}
 	</aside>
@@ -67,7 +72,6 @@
 		position: relative;
 		height: 100vh;
 		width: var(--expanded);
-		background-color: var(--color-surface);
 		padding: var(--gap);
 		border-top-right-radius: var(--gap--x2);
 		border-bottom-right-radius: var(--gap--x2);
