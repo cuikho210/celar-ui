@@ -7,5 +7,3 @@
 </script>
 
 <TextBaseButton {...props} data-button-text />
-
-

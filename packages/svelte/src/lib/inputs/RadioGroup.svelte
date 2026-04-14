@@ -16,4 +16,3 @@
 <BitRadioGroup.Root {...rest} bind:value>
 	{@render children?.()}
 </BitRadioGroup.Root>
-

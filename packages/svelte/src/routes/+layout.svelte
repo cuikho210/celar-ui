@@ -1,7 +1,5 @@
 <script lang="ts">
-	import '$style/spacing.scss';
-	import '$style/colors.scss';
-	import '$style/misc.scss';
+	import '$style/index.css';
 	import './style.scss';
 
 	let { children } = $props();
