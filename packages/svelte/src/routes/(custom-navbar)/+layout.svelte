@@ -29,8 +29,8 @@
 	];
 </script>
 
-<div class="block fixed bottom-0 left-0 z-50 w-screen h-auto sm:w-auto sm:h-full">
-	<NavigationBar class="h-18 sm:w-32 sm:h-full">
+<div class="fixed bottom-0 left-0 z-50 block h-auto w-screen sm:h-full sm:w-auto">
+	<NavigationBar class="h-18 sm:h-full sm:w-32">
 		{#each navbarItems as item (item.name)}
 			<NavigationBarButton href={item.path} active={layout.activedNavbar == item.name}>
 				{#snippet icon()}

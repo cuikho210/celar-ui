@@ -1,0 +1,19 @@
+@reference './button_utils.css';
+
+@layer components {
+	[data-button-elevated] {
+		@apply button-text-base shadow bg-primaryContainer text-onPrimaryContainer;
+
+		&:not(:disabled, [data-active='true']):hover {
+			@apply shadow-md brightness-105;
+		}
+
+		&:not(:disabled):active {
+			@apply shadow brightness-100;
+		}
+
+		&[data-active='true'] {
+			@apply bg-inversePrimary shadow;
+		}
+	}
+}

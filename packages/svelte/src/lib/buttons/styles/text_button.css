@@ -1,0 +1,22 @@
+@reference './button_utils.css';
+
+@layer components {
+	[data-button-text] {
+		@apply button-text-base;
+		transition-property: background-color, opacity, filter;
+		background-color: transparent;
+		color: var(--color-onPrimaryContainer);
+
+		&:not(:disabled, [data-active='true']):hover {
+			background-color: var(--color-primaryContainer);
+		}
+
+		&:not(:disabled):active {
+			filter: brightness(0.95);
+		}
+
+		&[data-active='true'] {
+			background-color: var(--color-inversePrimary);
+		}
+	}
+}

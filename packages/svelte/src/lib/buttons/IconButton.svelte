@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles/icon_button.scss';
+	import './styles/icon_button.css';
 	import DotSpinner from '$lib/misc/DotSpinner.svelte';
 	import BaseButton from './BaseButton.svelte';
 	import type { BaseButtonProps } from './BaseButton.svelte';

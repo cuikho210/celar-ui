@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles/text_button.scss';
+	import './styles/text_button.css';
 	import TextBaseButton from './TextBaseButton.svelte';
 	import type { TextBaseButtonProps } from './TextBaseButton.svelte';
 

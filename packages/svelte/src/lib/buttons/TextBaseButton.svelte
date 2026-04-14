@@ -14,63 +14,28 @@
 		loading,
 		icon,
 		active = false,
-		gap = 'var(--gap--half)',
+		gap = 'calc(var(--spacing) * 2)',
 		...rest
 	}: TextBaseButtonProps = $props();
+	let visibility = $derived(loading ? 'hidden' : 'initial');
 </script>
 
-{#snippet baseChildren()}
-	<div class="button-body" style:visibility={loading ? 'hidden' : 'initial'} style:--body-gap={gap}>
-		{#if icon}
-			<span class="button-icon">
-				{@render icon()}
-			</span>
-		{/if}
-
-		<span class="button-content">
-			{#if children}
-				{@render children()}
-			{/if}
+<BaseButton {...rest} {loading} {active} data-button-base-text style="--body-gap: {gap}">
+	{#if icon}
+		<span class="button-icon" style:visibility>
+			{@render icon()}
 		</span>
-	</div>
+	{/if}
+
+	<span class="button-content" style:visibility>
+		{#if children}
+			{@render children()}
+		{/if}
+	</span>
 
 	{#if loading}
-		<div class="button-spinner">
+		<div class="flex justify-center items-center w-full h-full absolute top-0 left-0">
 			<DotSpinner size="24px" />
 		</div>
 	{/if}
-{/snippet}
-
-<BaseButton {...rest} children={baseChildren} {loading} {active} data-button-base-text />
-
-<style lang="scss">
-	:global([data-button-base-text]) {
-		border-radius: var(--radius);
-	}
-
-	.button-body {
-		display: flex;
-		align-items: center;
-		gap: var(--body-gap);
-		padding: 0 var(--gap);
-
-		.button-content {
-			padding: var(--gap--half) 0;
-		}
-
-		.button-icon {
-			line-height: 0;
-		}
-	}
-
-	.button-spinner {
-		display: flex;
-		position: absolute;
-		top: 0;
-		left: 0;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+</BaseButton>

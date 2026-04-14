@@ -20,7 +20,7 @@
 </script>
 
 <main style:--sidebar-width={openSidebar ? expandedSize : collapsedSize}>
-	<section class="fixed left-0 top-0 z-100">
+	<section class="fixed top-0 left-0 z-100">
 		<AdaptiveSidebar bind:open={openSidebar} {collapsedSize} {expandedSize}>
 			<ExpandedTextButton onclick={toggleSidebar}>
 				{#snippet icon()}

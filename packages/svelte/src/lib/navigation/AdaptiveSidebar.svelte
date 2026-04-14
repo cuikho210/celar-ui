@@ -50,7 +50,7 @@
 	@reference '$style/index.css';
 
 	[data-adaptive-sidebar-backdrop] {
-		@apply blur-md bg-onBackground/20 transition-all;
+		@apply bg-onBackground/20 blur-md transition-all;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -62,7 +62,7 @@
 	}
 
 	[data-adaptive-sidebar] {
-		@apply transition-all shadow-lg;
+		@apply shadow-lg transition-all;
 		box-sizing: border-box;
 		z-index: 100;
 		height: 100vh;

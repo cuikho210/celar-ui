@@ -1,0 +1,21 @@
+@reference './button_utils.css';
+
+@layer components {
+	[data-button-filled] {
+		@apply button-text-base;
+		background-color: var(--color-primary);
+		color: var(--color-onPrimary);
+
+		&:not(:disabled, [data-active='true']):hover {
+			filter: brightness(1.2);
+		}
+
+		&:not(:disabled):active {
+			filter: brightness(1);
+		}
+
+		&[data-active='true'] {
+			filter: brightness(1.3);
+		}
+	}
+}

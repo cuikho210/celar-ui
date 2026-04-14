@@ -1,0 +1,39 @@
+@reference '$style/index.css';
+
+@utility button-base {
+	@apply relative m-0 box-border inline-block h-fit w-fit cursor-pointer
+           	border-none p-0 transition-all
+    		select-none no-underline;
+	font-size: inherit;
+	font-family: inherit;
+	-webkit-tap-highlight-color: transparent;
+
+	&:not([data-active='true']):disabled,
+	&:not([data-active='true'])[aria-disabled='true'] {
+		opacity: 0.6;
+		filter: grayscale(100%);
+	}
+
+	&:disabled,
+	&[aria-disabled='true'] {
+		cursor: default;
+		pointer-events: none;
+	}
+}
+
+@utility button-text-base {
+	@apply button-base;
+	border-radius: var(--radius-2xl);
+	display: inline-flex;
+	align-items: center;
+	gap: var(--body-gap);
+	padding: 0 --spacing(4);
+
+	.button-content {
+		padding: --spacing(1.5) 0;
+	}
+
+	.button-icon {
+		line-height: 0;
+	}
+}
