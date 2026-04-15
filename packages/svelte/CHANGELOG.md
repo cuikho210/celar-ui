@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.2] - 2026-04-16
+
+### Changed
+
+- **Build script**: Removed `gen-theme` from build script (now runs separately)
+- **Package exports**: Changed CSS style exports to explicit file mappings for better package resolution
+- **@reference paths**: Updated all component styles to use absolute package reference (`@celar-ui/svelte/styles/index.css`)
+
+### Added
+
+- **CLI tool**: Added `gen-theme.ts` as a bin command for theme generation
+
+---
+
 ## [2.0.1] - 2026-04-15
 
 ### Fixed

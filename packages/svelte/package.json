@@ -1,6 +1,6 @@
 {
 	"name": "@celar-ui/svelte",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"license": "MIT",
 	"author": {
 		"name": "cuikho210",
@@ -13,7 +13,7 @@
 	},
 	"scripts": {
 		"dev": "vite dev",
-		"build": "bun run gen-theme && vite build && bun run prepack",
+		"build": "vite build && bun run prepack",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"prepack": "svelte-kit sync && svelte-package && publint",
@@ -41,11 +41,11 @@
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
 		},
-		"./src/styles/*.css": {
-			"import": "./src/styles/*.css",
-			"require": "./src/styles/*.css"
-		}
+		"./styles/index.css": "./src/styles/index.css",
+		"./styles/theme.css": "./src/styles/theme.css",
+		"./styles/*.css": "./src/styles/*.css"
 	},
+	"bin": "./src/bin/gen-theme.ts",
 	"peerDependencies": {
 		"bits-ui": "^2.8.0",
 		"svelte": "^5.0.0"

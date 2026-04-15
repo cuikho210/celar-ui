@@ -9,7 +9,7 @@
 </section>
 
 <style lang="postcss">
-	@reference '$style/index.css';
+	@reference '@celar-ui/svelte/styles/index.css';
 
 	@layer components {
 		[data-navigation-bar] {

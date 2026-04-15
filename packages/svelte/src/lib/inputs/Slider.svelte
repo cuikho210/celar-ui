@@ -19,7 +19,7 @@
 </div>
 
 <style lang="postcss">
-	@reference '$style/index.css';
+	@reference '@celar-ui/svelte/styles/index.css';
 
 	@utility track {
 		@apply box-border h-2 w-full rounded-2xl border-none;
