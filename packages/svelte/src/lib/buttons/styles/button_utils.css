@@ -1,4 +1,4 @@
-@reference '$style/index.css';
+@reference '@celar-ui/svelte/styles/index.css';
 
 @utility button-base {
 	@apply relative m-0 box-border inline-block h-fit w-fit cursor-pointer border-none p-0 no-underline transition-all select-none;

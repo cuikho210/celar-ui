@@ -24,7 +24,7 @@
 </label>
 
 <style lang="postcss">
-	@reference '$style/index.css';
+	@reference '@celar-ui/svelte/styles/index.css';
 
 	@layer components {
 		[data-file-input] {

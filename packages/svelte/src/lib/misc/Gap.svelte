@@ -9,7 +9,7 @@
 <div data-gap style:width={size}></div>
 
 <style lang="postcss">
-	@reference '$style/index.css';
+	@reference '@celar-ui/svelte/styles/index.css';
 
 	@layer components {
 		[data-gap] {
