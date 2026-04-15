@@ -4,6 +4,5 @@
 	[data-surface-container] {
 		@apply elevated;
 		border-radius: var(--radius-4xl);
-		background-color: var(--color-background);
 	}
 }

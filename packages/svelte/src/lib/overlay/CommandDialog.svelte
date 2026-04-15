@@ -6,13 +6,6 @@
 
 	type CommandDialogProps = MinimalDialogProps & {
 		trigger?: Snippet<[{ props: Record<string, unknown> }]>;
-		xs?: boolean;
-		sm?: boolean;
-		md?: boolean;
-		lg?: boolean;
-		xl?: boolean;
-		x2xl?: boolean;
-		fluid?: boolean;
 		transitionDuration?: number;
 		placeholder?: string;
 		emptyText?: string;
