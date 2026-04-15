@@ -31,16 +31,16 @@
 				width: 0;
 				height: 100%;
 			}
+		}
 
-			@keyframes linear-progress-animation {
-				0% {
-					left: -8%;
-					width: 8%;
-				}
-				100% {
-					left: 100%;
-					width: 100%;
-				}
+		@keyframes linear-progress-animation {
+			0% {
+				left: -8%;
+				width: 8%;
+			}
+			100% {
+				left: 100%;
+				width: 100%;
 			}
 		}
 	}

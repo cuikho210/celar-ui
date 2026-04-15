@@ -13,6 +13,7 @@
 		children,
 		loading,
 		icon,
+		style,
 		active = false,
 		gap = 'calc(var(--spacing) * 2)',
 		...rest
@@ -20,7 +21,7 @@
 	let visibility = $derived(loading ? 'hidden' : 'initial');
 </script>
 
-<BaseButton {...rest} {loading} {active} data-button-base-text style="--body-gap: {gap}">
+<BaseButton {...rest} {loading} {active} data-button-base-text style="--body-gap: {gap}; {style}">
 	{#if icon}
 		<span class="button-icon" style:visibility>
 			{@render icon()}

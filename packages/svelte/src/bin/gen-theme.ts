@@ -9,7 +9,7 @@
  */
 
 import materialDynamicColors from 'material-dynamic-colors';
-import { writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
 // ---- CONFIGURABLE SOURCE COLOR / OUTPUT ----
@@ -66,5 +66,6 @@ ${darkVars}
 `;
 
 // ---- WRITE FILE ----
+await mkdir(path.dirname(outputPath), { recursive: true });
 await writeFile(outputPath, css);
 console.log(`Material theme CSS written to ${outputPath}`);

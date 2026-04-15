@@ -51,7 +51,7 @@
 
 	@layer components {
 		[data-adaptive-sidebar-backdrop] {
-			@apply bg-onBackground/20 blur-md transition-all;
+			@apply bg-onBackground/20 backdrop-blur transition-all;
 			position: fixed;
 			top: 0;
 			left: 0;

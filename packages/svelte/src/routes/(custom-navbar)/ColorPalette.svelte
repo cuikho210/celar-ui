@@ -1,5 +1,5 @@
 <script lang="ts">
-	// List of color keys from scheme.scss and colors.scss
+	// List of color keys from theme.css
 	const schemeColors = [
 		'color-primary',
 		'color-onPrimary',
@@ -53,11 +53,7 @@
 		{ group: 'Extended Colors', keys: extColors }
 	];
 
-	// Prefix from config.scss (default is empty string, change if needed)
-	const prefix = ''; // If you use a prefix, set it here (e.g., "myapp-")
-	const cssVarName = (name: string) => `--${prefix}${name}`;
-	const cssVar = (name: string, fallback = 'transparent') =>
-		`var(${cssVarName(name)}, ${fallback})`;
+	const cssVar = (name: string, fallback = 'transparent') => `var(--${name}, ${fallback})`;
 </script>
 
 {#each allColors as { group, keys } (group)}
@@ -73,8 +69,8 @@
 						title={key}
 					></div>
 					<div>
-						<div class="palette-label">{prefix}{key}</div>
-						<div class="palette-value"><code>var({cssVarName(key)})</code></div>
+						<div class="palette-label">{key}</div>
+						<div class="palette-value"><code>var(--{key})</code></div>
 					</div>
 				</div>
 			{/each}
@@ -102,13 +98,13 @@
 		padding: 0.5rem;
 		border-radius: 6px;
 		background: var(--color-surfaceContainer, #f8ebe9);
-		box-shadow: 0 1px 4px var(--color-shadow--soft, rgba(0, 0, 0, 0.08));
+		box-shadow: 0 0.2rem 0.2rem --alpha(var(--color-shadow, black) / 10%);
 	}
 	.palette-swatch {
 		width: 2.5rem;
 		height: 2.5rem;
 		border-radius: 4px;
-		border: 1px solid var(--color-border, #ccc);
+		border: 1px solid var(--color-outline, #ccc);
 		box-sizing: border-box;
 		flex-shrink: 0;
 	}

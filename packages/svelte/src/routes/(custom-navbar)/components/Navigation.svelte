@@ -17,7 +17,10 @@
 		<ElevatedButton onclick={toggleDrawer}>Open Drawer</ElevatedButton>
 		<label>
 			Position:
-			<select bind:value={drawerPosition}>
+			<select
+				bind:value={drawerPosition}
+				class="rounded-rounded-2xl border-onBackground/20 bg-bg-surface text-onSurface border border-solid px-2 py-1"
+			>
 				<option value="left">Left</option>
 				<option value="right">Right</option>
 			</select>
@@ -34,12 +37,12 @@
 		{/snippet}
 
 		{#snippet footer()}
-			<div style="padding: var(--gap-half);">
+			<div class="p-2">
 				<p>Drawer Footer</p>
 			</div>
 		{/snippet}
 
-		<div style="padding: var(--gap-half);">
+		<div class="p-2">
 			<p>This is the main content of the navigation drawer.</p>
 			<p>You can place any content here.</p>
 			<ul>
@@ -73,14 +76,3 @@
 		</div>
 	</NavigationDrawer>
 </Card>
-
-<style lang="scss">
-	select {
-		padding: var(--gap--xs) var(--gap--half);
-		border-radius: var(--radius);
-		border: 1px solid var(--color-border);
-		background-color: var(--color-surface);
-		font-size: 1rem;
-		color: var(--color-onSurface);
-	}
-</style>

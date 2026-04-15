@@ -8,7 +8,7 @@
 		max-height: calc(75dvh - --spacing(8));
 
 		[data-command-input] {
-			@apply border-onBackground/20 border border-solid;
+			@apply border-onBackground/20 border border-solid transition-colors;
 			background-color: var(--color-background);
 			border-radius: var(--radius-lg);
 			padding: --spacing(2);
@@ -17,7 +17,6 @@
 			line-height: 1.5;
 			color: var(--color-onSurface);
 			outline: none;
-			transition: border-color var(--tw-duration, 150ms) ease-in-out;
 			width: 100%;
 			box-sizing: border-box;
 

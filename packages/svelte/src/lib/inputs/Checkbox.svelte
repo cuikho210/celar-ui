@@ -95,5 +95,9 @@
 		:global([data-checkbox-root]:not([data-state='unchecked'])) {
 			background-color: var(--color-primary);
 		}
+
+		:global([data-checkbox-root]:focus-visible) {
+			@apply outline-primary outline outline-solid;
+		}
 	}
 </style>

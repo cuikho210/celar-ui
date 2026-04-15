@@ -1,6 +1,6 @@
 @reference './button_utils.css';
 
-@layer component {
+@layer components {
 	[data-button-text-expanded] {
 		@apply button-text-base;
 		background-color: transparent;

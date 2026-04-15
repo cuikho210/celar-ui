@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '$style/index.css';
-	import './style.scss';
+	import './style.css';
 
 	let { children } = $props();
 </script>

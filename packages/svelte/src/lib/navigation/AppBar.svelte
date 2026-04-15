@@ -45,7 +45,7 @@
 			[data-app-bar-left] {
 				display: flex;
 				align-items: center;
-				gap: var(--gap--half);
+				gap: --spacing(2);
 				overflow: hidden;
 
 				[data-app-bar-title] {

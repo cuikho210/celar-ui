@@ -149,7 +149,7 @@
 				stroke-linecap: round;
 				stroke-linejoin: round;
 				stroke-dasharray: none;
-				transition-duration: var(--tw-duration, 150ms);
+				transition-duration: var(--default-transition-duration, 150ms);
 				transition-property: stroke;
 			}
 
@@ -171,15 +171,6 @@
 					opacity: 0.32;
 					animation-direction: reverse;
 				}
-
-				@keyframes spin {
-					from {
-						rotate: 0;
-					}
-					to {
-						rotate: 359deg;
-					}
-				}
 			}
 
 			.duck {
@@ -190,18 +181,6 @@
 				animation-iteration-count: infinite;
 				animation-name: slay;
 
-				@keyframes slay {
-					0% {
-						rotate: -24deg;
-					}
-					50% {
-						rotate: 24deg;
-					}
-					100% {
-						rotate: -24deg;
-					}
-				}
-
 				.body {
 					stroke-width: 1.5;
 				}
@@ -210,21 +189,42 @@
 					stroke-width: 1;
 				}
 			}
+
+			&[data-thin='true'] {
+				.line {
+					stroke-width: 0.5;
+				}
+
+				.duck {
+					.body {
+						stroke-width: 1;
+					}
+
+					.eye {
+						stroke-width: 0.8;
+					}
+				}
+			}
 		}
 
-		[data-thin='true'] {
-			.line {
-				stroke-width: 0.5;
+		@keyframes slay {
+			0% {
+				rotate: -24deg;
 			}
+			50% {
+				rotate: 24deg;
+			}
+			100% {
+				rotate: -24deg;
+			}
+		}
 
-			.duck {
-				.body {
-					stroke-width: 1;
-				}
-
-				.eye {
-					stroke-width: 0.8;
-				}
+		@keyframes spin {
+			from {
+				rotate: 0;
+			}
+			to {
+				rotate: 359deg;
 			}
 		}
 	}

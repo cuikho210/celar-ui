@@ -64,7 +64,7 @@
 	</section>
 
 	<section class="ml-0 transition-all sm:ml-(--sidebar-width)">
-		<Container>
+		<Container sm>
 			<Card>
 				<h3>Adaptive Sidebar</h3>
 				<p>

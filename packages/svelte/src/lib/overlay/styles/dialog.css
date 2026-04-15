@@ -12,7 +12,8 @@
 	}
 
 	[data-celar-dialog-content] {
-		box-sizing: border-box shadow-xl;
+		@apply shadow-xl;
+		box-sizing: border-box;
 		position: fixed;
 		top: calc(50dvh - --spacing(4));
 		left: calc(50lvw - --spacing(4));
@@ -29,10 +30,10 @@
 			max-width: min(calc(100% - --spacing(8)), var(--breakpoint-xs));
 		}
 		&[data-sm='true'] {
-			max-width: min(calc(100% - --spacing(8)), var(--breakpoint--sm));
+			max-width: min(calc(100% - --spacing(8)), var(--breakpoint-sm));
 		}
 		&[data-md='true'] {
-			max-width: min(calc(100% - --spacing(8)), var(--breakpoint--md));
+			max-width: min(calc(100% - --spacing(8)), var(--breakpoint-md));
 		}
 		&[data-fluid='true'] {
 			width: 100%;
