@@ -45,7 +45,9 @@
 		"./styles/theme.css": "./src/styles/theme.css",
 		"./styles/*.css": "./src/styles/*.css"
 	},
-	"bin": "./src/bin/gen-theme.ts",
+	"bin": {
+		"gen-theme": "./src/bin/gen-theme.ts"
+	},
 	"peerDependencies": {
 		"bits-ui": "^2.8.0",
 		"svelte": "^5.0.0"
