@@ -1,0 +1,7 @@
+@reference '$style/index.css';
+
+@layer components {
+	[data-card] {
+		@apply shadow-lg;
+	}
+}

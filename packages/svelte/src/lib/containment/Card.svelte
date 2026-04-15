@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles/card.scss';
+	import './styles/card.css';
 	import type { SurfaceContainerProps } from './SurfaceContainer.svelte';
 	import SurfaceContainer from './SurfaceContainer.svelte';
 

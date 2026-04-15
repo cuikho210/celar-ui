@@ -8,29 +8,30 @@
 	{@render children?.()}
 </section>
 
-<style lang="scss">
-	@use 'sass:map';
-	@use '../../styles/spacing.scss';
+<style lang="postcss">
+	@reference '$style/index.css';
 
-	[data-navigation-bar] {
-		box-sizing: border-box;
-		display: flex;
-		position: relative;
-		justify-content: space-evenly;
-		border-top-right-radius: var(--radius);
-		border-top-left-radius: var(--radius);
-		background-color: var(--color-surfaceContainerLow);
-		width: 100%;
-		height: auto;
+	@layer components {
+		[data-navigation-bar] {
+			box-sizing: border-box;
+			display: flex;
+			position: relative;
+			justify-content: space-evenly;
+			border-top-right-radius: var(--radius-2xl);
+			border-top-left-radius: var(--radius-2xl);
+			background-color: var(--color-surfaceContainerLow);
+			width: 100%;
+			height: auto;
 
-		@media screen and (min-width: map.get(spacing.$breaking, break--xs)) {
-			flex-direction: column;
-			justify-content: flex-start;
-			border-top-left-radius: 0;
-			border-bottom-right-radius: var(--radius);
-			padding: 0 var(--gap--half);
-			width: min-content;
-			height: 100%;
+			@variant sm {
+				flex-direction: column;
+				justify-content: flex-start;
+				border-top-left-radius: 0;
+				border-bottom-right-radius: var(--radius);
+				padding: 0 --spacing(2);
+				width: min-content;
+				height: 100%;
+			}
 		}
 	}
 </style>

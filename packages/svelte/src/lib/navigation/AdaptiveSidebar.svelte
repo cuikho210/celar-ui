@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../containment/styles/surface-container.scss';
+	import '../containment/styles/surface-container.css';
 	import type { HTMLAttributes } from 'svelte/elements';
 
 	interface AdaptiveSidebarProps extends HTMLAttributes<HTMLElement> {
@@ -46,54 +46,50 @@
 	</aside>
 </div>
 
-<style lang="scss">
-	@use 'sass:map';
-	@use '../../styles/spacing.scss';
+<style lang="postcss">
+	@reference '$style/index.css';
 
-	[data-adaptive-sidebar-backdrop] {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		backdrop-filter: blur(var(--blur-length));
-		background-color: rgba(var(--color-onBackground--rgb), 0.2);
-		z-index: 100;
-		visibility: hidden;
-		opacity: 0;
-		transition-property: opacity, visibility;
-		transition-timing-function: ease-in;
-		transition-duration: var(--transition-dur);
-	}
-
-	[data-adaptive-sidebar] {
-		box-sizing: border-box;
-		z-index: 100;
-		position: relative;
-		height: 100vh;
-		width: var(--expanded);
-		padding: var(--gap);
-		border-radius: 0 var(--gap--x2) var(--gap--x2) 0;
-		max-width: 80vw;
-		overflow: hidden;
-		transition-property: transform, width, opacity, visibility;
-		transition-timing-function: ease-in-out;
-		transition-duration: var(--transition-dur);
-	}
-
-	[data-adaptive-sidebar-state] {
-		display: none;
-	}
-
-	@media screen and (max-width: map.get(spacing.$breaking, break--xs)) {
-		[data-adaptive-sidebar] {
+	@layer components {
+		[data-adaptive-sidebar-backdrop] {
+			@apply bg-onBackground/20 backdrop-blur transition-all;
 			position: fixed;
 			top: 0;
 			left: 0;
-			box-shadow: 0 0rem var(--gap) var(--color-shadow--md);
+			width: 100%;
+			height: 100%;
+			z-index: 100;
+			visibility: hidden;
+			opacity: 0;
+		}
+
+		[data-adaptive-sidebar] {
+			@apply shadow-lg transition-all;
+			box-sizing: border-box;
+			z-index: 100;
+			height: 100vh;
+			width: var(--expanded);
+			padding: --spacing(4);
+			border-radius: 0 --spacing(8) --spacing(8) 0;
+			max-width: 80vw;
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+			left: 0;
 			transform: translateX(-100%);
 			opacity: 0;
 			visibility: hidden;
+
+			@variant sm {
+				position: relative;
+				opacity: 1;
+				visibility: visible;
+				width: var(--width);
+				transform: initial;
+			}
+		}
+
+		[data-adaptive-sidebar-state] {
+			display: none;
 		}
 
 		[data-adaptive-sidebar-state]:checked {
@@ -107,12 +103,13 @@
 				opacity: 1;
 				visibility: visible;
 			}
-		}
-	}
 
-	@media screen and (min-width: calc(map.get(spacing.$breaking, break--xs) + 1px)) {
-		[data-adaptive-sidebar] {
-			width: var(--width);
+			@variant sm {
+				~ [data-adaptive-sidebar-backdrop] {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
 		}
 	}
 </style>

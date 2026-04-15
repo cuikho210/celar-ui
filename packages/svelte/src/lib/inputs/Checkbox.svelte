@@ -54,54 +54,50 @@
 	{@render children?.()}
 </label>
 
-<style lang="scss">
-	$icon-width: 56px;
+<style lang="postcss">
+	@reference '$style/index.css';
 
-	[data-checkbox] {
-		position: relative;
-		box-sizing: border-box;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		transition-duration: var(--transition-dur);
-		transition-property: background-color;
-		transition-timing-function: ease-in;
-		border-radius: var(--radius--half);
-		padding: var(--gap--sm) 0;
-		padding-right: var(--gap);
-		width: 100%;
-		user-select: none;
+	@layer components {
+		[data-checkbox] {
+			position: relative;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: --spacing(1) 0;
+			padding-right: --spacing(4);
+			width: 100%;
+			user-select: none;
 
-		&:hover {
-			background-color: var(--color-primaryContainer);
+			[data-checkbox-icon] {
+				display: flex;
+				flex-shrink: 0;
+				justify-content: center;
+				align-items: center;
+				width: --spacing(14);
+			}
 		}
 
-		[data-checkbox-icon] {
+		:global([data-checkbox-root]) {
+			@apply rounded-xl transition-all;
 			display: flex;
-			flex-shrink: 0;
 			justify-content: center;
 			align-items: center;
-			width: $icon-width;
+			height: --spacing(6);
+			width: --spacing(8);
+			background-color: transparent;
+			color: var(--color-onPrimary);
+			outline: none;
+			border: 1px solid var(--color-primary);
+			border-radius: --spacing(2);
 		}
-	}
 
-	:global([data-checkbox-root]) {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 24px;
-		width: 32px;
-		background-color: transparent;
-		color: var(--color-onPrimary);
-		outline: none;
-		border: 1px solid var(--color-primary);
-		border-radius: var(--radius--half);
-		transition-duration: var(--transition-dur);
-		transition-property: background-color, color;
-		transition-timing-function: ease-in;
-	}
+		:global([data-checkbox-root]:not([data-state='unchecked'])) {
+			background-color: var(--color-primary);
+		}
 
-	:global([data-checkbox-root]:not([data-state='unchecked'])) {
-		background-color: var(--color-primary);
+		:global([data-checkbox-root]:focus-visible) {
+			@apply outline-primary outline outline-solid;
+		}
 	}
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles/surface-container.scss';
+	import './styles/surface-container.css';
 	import Container, { type ContainerProps } from './Container.svelte';
 
 	export interface SurfaceContainerProps extends ContainerProps {

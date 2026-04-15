@@ -1,0 +1,6 @@
+@reference '$style/index.css';
+@layer components {
+	[data-radio-group-root] {
+		position: relative;
+	}
+}

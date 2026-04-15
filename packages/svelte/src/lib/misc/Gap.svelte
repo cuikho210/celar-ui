@@ -8,11 +8,15 @@
 
 <div data-gap style:width={size}></div>
 
-<style lang="scss">
-	[data-gap] {
-		display: block;
-		aspect-ratio: 1;
-		width: 1rem;
-		height: auto;
+<style lang="postcss">
+	@reference '$style/index.css';
+
+	@layer components {
+		[data-gap] {
+			display: block;
+			aspect-ratio: 1;
+			width: 1rem;
+			height: auto;
+		}
 	}
 </style>

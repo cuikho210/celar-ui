@@ -5,6 +5,67 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1] - 2026-04-15
+
+### Fixed
+
+- **TextBaseButton**: Added `style` prop for custom inline styles
+- **Container**: Fixed breakpoint variable names (`--breakpoint--sm` → `--breakpoint-sm`)
+- **Checkbox**: Added focus-visible outline for accessibility
+- **DuckSpinner**: Fixed CSS nesting issues and animation keyframes placement
+- **LinearProgressIndicator**: Fixed keyframes placement
+- **AdaptiveSidebar**: Changed `blur-md` to `backdrop-blur` for Tailwind 4 compatibility
+- **AppBar**: Fixed gap variable syntax (`gap: var(--gap--half)` → `gap: --spacing(2)`)
+- **CommandDialog**: Fixed transition syntax in postcss layer
+- **Dialog**: Fixed box-sizing and breakpoint variable names
+- **Navigation layout**: Reduced sidebar width from 32 to 24 units
+- **ColorPalette**: Updated to use standard CSS variable naming (no prefix)
+- **Demos**: Replaced remaining SCSS with Tailwind classes
+
+### Changed
+
+- **Build script**: Added `gen-theme` as pre-build step for theme generation
+- **Demo styles**: Renamed `style.scss` to `style.css`
+- **vite.config**: Removed unused autoprefixer plugin
+
+### Dependencies Removed
+
+- `sass` (replaced by Tailwind CSS 4)
+- `autoprefixer` (not needed with Tailwind CSS 4)
+
+---
+
+## [2.0.0] - 2026-04-15
+
+### 🚀 Major Features
+
+#### Migration from SCSS to Tailwind CSS 4
+
+- **Build system upgrade**: Migrated from SCSS to Tailwind CSS 4 with `@tailwindcss/vite` plugin
+- **Theme generation refactored**: Replaced `scripts/gen-colors.ts` with `src/bin/gen-theme.ts` to generate CSS custom properties instead of SCSS maps
+- **Centralized styling**: Added `src/styles/index.css` and `src/styles/theme.css` for theme management
+- **SCSS removal**: Removed all remaining `.scss` files (colors.scss, config.scss, misc.scss, scheme.scss, spacing.scss, utils.scss)
+
+### 🎨 Style
+
+#### Component Styling Migration
+
+All components have been migrated from SCSS to PostCSS/Tailwind:
+
+- **Buttons**: ElevatedButton, ExpandedTextButton, FilledButton, IconButton, OutlinedButton, TextButton, TextBaseButton
+- **Containment**: Avatar, Breadcrumb, Card, Container, Spacer, SurfaceContainer
+- **Inputs**: Checkbox, ColorInput, FileInput, RadioGroup, RadioItem, Slider, Switch, TagInput, TextInput
+- **Misc**: Badge, DotSpinner, DuckSpinner, Gap, LinearProgressIndicator
+- **Navigation**: AdaptiveSidebar, AppBar, NavigationBar, NavigationBarButton, NavigationDrawer
+- **Overlay**: CommandDialog, Dialog, MinimalDialog, MinimalSurfaceDialog, Popover
+
+### ⚠️ Breaking Changes
+
+- **Styling migration**: All `.scss` style files have been replaced with `.css` equivalents using Tailwind 4 features
+- **Version bump**: Major version increased to 2.0.0 to reflect styling system migration
+
+---
+
 ## [1.4.0] - 2025-09-23
 
 ### Added

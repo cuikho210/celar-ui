@@ -1,4 +1,5 @@
 <script lang="ts">
+	import './styles/breadcrumb.css';
 	import type { HTMLAttributes } from 'svelte/elements';
 
 	let { children, ...rest }: HTMLAttributes<HTMLDivElement> = $props();
@@ -9,30 +10,3 @@
 		{@render children()}
 	{/if}
 </div>
-
-<style lang="scss">
-	:global([data-breadcrumb]) {
-		position: relative;
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-	}
-
-	:global([data-breadcrumb] > a) {
-		padding: 0;
-		margin: 0;
-		color: var(--color-info);
-		text-decoration: none;
-
-		&:not(:last-child)::after {
-			content: '/';
-			color: currentColor;
-			padding: 0 var(--gap--half);
-		}
-
-		&:last-child {
-			pointer-events: none;
-			color: var(--color-primary);
-		}
-	}
-</style>

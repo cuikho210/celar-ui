@@ -1,0 +1,27 @@
+@reference '$style/index.css';
+
+@layer components {
+	[data-breadcrumb] {
+		position: relative;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+
+		& > a {
+			padding: 0;
+			margin: 0;
+			color: var(--color-info);
+			text-decoration: none;
+
+			&:not(:last-child)::after {
+				content: ' /';
+				color: currentColor;
+			}
+
+			&:last-child {
+				pointer-events: none;
+				color: var(--color-primary);
+			}
+		}
+	}
+}

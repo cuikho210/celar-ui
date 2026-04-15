@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles/command.scss';
+	import './styles/command.css';
 	import { Command } from 'bits-ui';
 	import { default as MinimalDialog, type MinimalDialogProps } from './MinimalDialog.svelte';
 	import type { Snippet } from 'svelte';

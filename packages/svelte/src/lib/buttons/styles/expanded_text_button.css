@@ -1,0 +1,23 @@
+@reference './button_utils.css';
+
+@layer components {
+	[data-button-text-expanded] {
+		@apply button-text-base;
+		background-color: transparent;
+		color: var(--color-onPrimaryContainer);
+		width: 100%;
+		overflow: hidden;
+
+		&:not(:disabled, [data-active='true']):hover {
+			background-color: var(--color-primaryContainer);
+		}
+
+		&:not(:disabled):active {
+			filter: brightness(0.95);
+		}
+
+		&[data-active='true'] {
+			background-color: var(--color-inversePrimary);
+		}
+	}
+}

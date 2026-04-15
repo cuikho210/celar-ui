@@ -18,63 +18,64 @@
 	<div data-color-input-placeholder>{placeholder}</div>
 </label>
 
-<style lang="scss">
-	[data-color-input] {
-		$icon-width: 48px;
-		$color-text-placeholder: rgba(var(--color-onSurface--rgb), 0.7);
-		display: flex;
+<style lang="postcss">
+	@reference '$style/index.css';
 
-		position: relative;
-		justify-content: flex-start;
-		align-items: center;
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius);
-		padding: var(--gap--md) 0;
-		width: 100%;
-
-		> input {
-			position: absolute;
-			top: 0;
-			right: 0;
-			appearance: none;
-			outline: none;
-			border: none;
-			border-radius: var(--radius);
-			width: 64px;
-			height: 100%;
-
-			&::-moz-color-swatch {
-				border: none;
-			}
-
-			&::-webkit-color-swatch-wrapper {
-				padding: 0;
-			}
-
-			&::-webkit-color-swatch {
-				border: none;
-				border-radius: var(--radius);
-			}
-		}
-
-		[data-color-input-icon] {
+	@layer components {
+		[data-color-input] {
+			@apply border-onBackground/20 border border-solid;
 			display: flex;
-			flex-shrink: 0;
-			justify-content: center;
+			position: relative;
+			justify-content: flex-start;
 			align-items: center;
-			width: $icon-width;
-			height: 100%;
-			line-height: 1rem;
-		}
+			border-radius: var(--radius-2xl);
+			padding: --spacing(1.5) 0;
+			width: 100%;
 
-		[data-color-input-placeholder] {
-			margin-right: 4rem;
-			padding-right: var(--gap--half);
-			max-width: 100%;
-			overflow: hidden;
-			color: $color-text-placeholder;
-			text-overflow: ellipsis;
-			white-space: nowrap;
+			> input {
+				position: absolute;
+				top: 0;
+				right: 0;
+				appearance: none;
+				outline: none;
+				border: none;
+				border-radius: var(--radius-2xl);
+				width: 64px;
+				height: 100%;
+
+				&::-moz-color-swatch {
+					border: none;
+				}
+
+				&::-webkit-color-swatch-wrapper {
+					padding: 0;
+				}
+
+				&::-webkit-color-swatch {
+					border: none;
+					border-radius: var(--radius-2xl);
+				}
+			}
+
+			[data-color-input-icon] {
+				display: flex;
+				flex-shrink: 0;
+				justify-content: center;
+				align-items: center;
+				width: --spacing(14);
+				height: 100%;
+				line-height: 1rem;
+			}
+
+			[data-color-input-placeholder] {
+				@apply text-onBackground/70;
+				margin-right: 4rem;
+				padding-right: --spacing(2);
+				max-width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
 		}
 	}
 </style>

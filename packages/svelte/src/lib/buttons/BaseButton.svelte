@@ -1,6 +1,4 @@
 <script lang="ts">
-	import './styles/base_button.scss';
-
 	import { Button, type ButtonRootProps } from 'bits-ui';
 
 	export type BaseButtonProps = ButtonRootProps & {

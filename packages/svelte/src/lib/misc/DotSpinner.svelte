@@ -69,9 +69,11 @@
 	</g>
 </svg>
 
-<style lang="scss">
-	svg {
-		display: inline-block;
-		aspect-ratio: 1;
+<style lang="postcss">
+	@layer components {
+		svg {
+			display: inline-block;
+			aspect-ratio: 1;
+		}
 	}
 </style>

@@ -18,96 +18,79 @@
 	/>
 </div>
 
-<style lang="scss">
-	$track-w: 100%;
-	$track-h: var(--gap--half);
-	$thumb-d: 24px;
-	$track-c: var(--color-surfaceDim);
-	$filll-c: var(--color-primary);
-	$thumb-c: var(--color-primary);
+<style lang="postcss">
+	@reference '$style/index.css';
 
-	@mixin track($fill: 0) {
-		box-sizing: border-box;
-		border: none;
-		border-radius: var(--radius);
-		background: $track-c;
-		width: $track-w;
-		height: $track-h;
-
-		@if $fill == 1 {
-			& {
-				background: linear-gradient($filll-c, $filll-c) 0 / var(--sx) 100% no-repeat $track-c;
-			}
-		}
+	@utility track {
+		@apply box-border h-2 w-full rounded-2xl border-none;
+		background: var(--color-surfaceDim);
+	}
+	@utility track-fill {
+		@apply track;
+		background: linear-gradient(var(--color-primary), var(--color-primary)) 0 / var(--sx) 100%
+			no-repeat var(--color-surfaceDim);
+	}
+	@utility fill {
+		@apply bg-primary h-2 rounded-2xl;
+	}
+	@utility thumb {
+		@apply bg-primary box-border h-8 w-8 rounded-[50%] border-none;
 	}
 
-	@mixin fill() {
-		border-radius: var(--radius);
-		background: $filll-c;
-		height: $track-h;
-	}
+	@layer components {
+		[data-slider] {
+			position: relative;
+			padding: 0 --spacing(4);
+			width: 100%;
+			box-sizing: border-box;
 
-	@mixin thumb() {
-		box-sizing: border-box;
-		border: none;
-		border-radius: 50%;
-		background: $thumb-c;
-		width: $thumb-d;
-		height: $thumb-d;
-	}
+			& > input {
+				--range: calc(var(--max) - var(--min));
+				--ratio: calc((var(--val) - var(--min)) / var(--range));
+				--sx: calc(0.5 * --spacing(4) + var(--ratio) * (100% - --spacing(4)));
+				margin: 0;
+				background: transparent;
+				padding: 0;
+				width: 100%;
+				height: --spacing(4);
 
-	[data-slider] {
-		position: relative;
-		padding: 0 var(--gap);
-		width: 100%;
-		box-sizing: border-box;
+				&,
+				&::-webkit-slider-thumb {
+					appearance: none;
+				}
 
-		& > input {
-			--range: calc(var(--max) - var(--min));
-			--ratio: calc((var(--val) - var(--min)) / var(--range));
-			--sx: calc(0.5 *#{$thumb-d} + var(--ratio) * (100% - #{$thumb-d}));
-			margin: 0;
-			background: transparent;
-			padding: 0;
-			width: $track-w;
-			height: $thumb-d;
+				&::-webkit-slider-runnable-track {
+					@apply track-fill;
+				}
+				&::-moz-range-track {
+					@apply track;
+				}
+				&::-ms-track {
+					@apply track;
+				}
 
-			&,
-			&::-webkit-slider-thumb {
-				appearance: none;
-			}
+				&::-moz-range-progress {
+					@apply fill;
+				}
+				&::-ms-fill-lower {
+					@apply fill;
+				}
 
-			&::-webkit-slider-runnable-track {
-				@include track(1);
-			}
-			&::-moz-range-track {
-				@include track;
-			}
-			&::-ms-track {
-				@include track;
-			}
+				&::-webkit-slider-thumb {
+					margin-top: calc(0.5 * (--spacing(2) - --spacing(8)));
+					@apply thumb;
+				}
+				&::-moz-range-thumb {
+					@apply thumb;
+				}
+				&::-ms-thumb {
+					margin-top: 0;
+					@apply thumb;
+				}
 
-			&::-moz-range-progress {
-				@include fill;
-			}
-			&::-ms-fill-lower {
-				@include fill;
-			}
-
-			&::-webkit-slider-thumb {
-				margin-top: calc(0.5 * ($track-h - $thumb-d));
-				@include thumb;
-			}
-			&::-moz-range-thumb {
-				@include thumb;
-			}
-			&::-ms-thumb {
-				margin-top: 0;
-				@include thumb;
-			}
-
-			&::-ms-tooltip {
-				display: none;
+				&::-ms-tooltip {
+					display: none;
+				}
 			}
 		}
 	}

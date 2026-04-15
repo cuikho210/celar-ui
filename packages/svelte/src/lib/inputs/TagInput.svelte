@@ -105,78 +105,74 @@
 	/>
 </div>
 
-<style lang="scss">
-	$color-text-placeholder: rgba(var(--color-onSurface--rgb), 0.7);
+<style lang="postcss">
+	@reference '$style/index.css';
 
-	[data-tag-input] {
-		--color-background: transparent;
+	@layer components {
+		[data-tag-input] {
+			--color-background: transparent;
 
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: var(--gap--sm);
-		position: relative;
-		width: 100%;
-		box-sizing: border-box;
-		transition-duration: var(--transition-dur);
-		transition-property: border-color;
-		transition-timing-function: ease-in-out;
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius);
-		background-color: var(--color-background);
-		padding: var(--gap--md);
-		cursor: text;
-
-		&:focus-within {
-			border: 1px solid var(--color-primary);
-		}
-
-		input {
-			flex: 1;
-			border: none;
-			outline: none;
-			background: transparent;
-			font-size: inherit;
-			font-family: inherit;
-			color: inherit;
-
-			&::placeholder {
-				opacity: 1;
-				color: $color-text-placeholder;
-			}
-
-			&:disabled {
-				opacity: 0.5;
-				cursor: not-allowed;
-			}
-		}
-
-		[data-tag-remove] {
-			display: inline-flex;
-			justify-content: center;
+			@apply border-onBackground/20 rounded-2xl border border-solid transition-all;
+			display: flex;
 			align-items: center;
-			background-color: transparent;
-			border: none;
-			color: inherit;
-			cursor: pointer;
-			padding: var(--gap--xs);
-			border-radius: 50%;
-			aspect-ratio: 1;
-			transition-duration: var(--transition-dur);
-			transition-property: background-color;
-			transition-timing-function: ease-in-out;
-			margin-left: var(--gap--sm);
+			flex-wrap: wrap;
+			gap: --spacing(1.5);
+			position: relative;
+			width: 100%;
+			box-sizing: border-box;
+			background-color: var(--color-background);
+			padding: --spacing(2);
+			cursor: text;
 
-			&:hover {
-				background-color: var(--color-surfaceContainer);
+			&:focus-within {
+				@apply border-primary;
 			}
 
-			&:focus {
-				outline: 1px solid var(--color-border);
+			input {
+				flex: 1;
+				border: none;
+				outline: none;
+				background: transparent;
+				font-size: inherit;
+				font-family: inherit;
+				color: inherit;
+
+				&::placeholder {
+					@apply text-onBackground/70;
+					opacity: 1;
+				}
+
+				&:disabled {
+					opacity: 0.5;
+					cursor: not-allowed;
+				}
 			}
 
-			svg {
-				width: var(--gap);
+			[data-tag-remove] {
+				@apply transition-all;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				background-color: transparent;
+				border: none;
+				color: inherit;
+				cursor: pointer;
+				padding: --spacing(1);
+				border-radius: 50%;
+				aspect-ratio: 1;
+				margin-left: --spacing(1.5);
+
+				&:hover {
+					background-color: var(--color-surfaceContainer);
+				}
+
+				&:focus {
+					@apply outline-onBackground/20 outline outline-solid;
+				}
+
+				svg {
+					width: --spacing(4);
+				}
 			}
 		}
 	}

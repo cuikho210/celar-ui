@@ -1,0 +1,21 @@
+@reference '$style/index.css';
+
+@layer components {
+	[data-minimal-surface-dialog] {
+		border-radius: var(--radius-4xl);
+
+		[data-dialog-body] {
+			[data-surface-dialog-body] {
+				border-radius: var(--radius-4xl);
+				background-color: var(--color-surfaceContainerLowest);
+				padding: --spacing(4);
+			}
+			[data-surface-dialog-header] {
+				margin-block-end: --spacing(4);
+			}
+			[data-surface-dialog-footer] {
+				margin-block-start: --spacing(4);
+			}
+		}
+	}
+}

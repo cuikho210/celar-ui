@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles/avatar.scss';
+	import './styles/avatar.css';
 	import { Avatar as BitAvatar, type AvatarRootProps } from 'bits-ui';
 	import type { Snippet } from 'svelte';
 

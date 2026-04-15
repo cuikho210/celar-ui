@@ -122,11 +122,7 @@
 			{#snippet trigger({ props })}
 				<ElevatedButton {...props}>Popover</ElevatedButton>
 			{/snippet}
-			<Card
-				xs
-				elevated={3}
-				style="box-shadow: 0 var(--gap--xs) var(--gap--md) var(--color-shadow--md);"
-			>
+			<Card xs elevated={3}>
 				Mot con vit xoe ra hai con than lan con dua nhau can nhau dut con chim non tren canh cay hot
 				bo oi bo la
 			</Card>

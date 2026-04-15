@@ -34,7 +34,7 @@
 		<Badge size="large" color="error">4</Badge>
 		<Badge size="large" color="surface">
 			<span>Item item</span>
-			<IconButton style="margin-left: var(--gap--sm);">
+			<IconButton class="ml-1.5">
 				<IconCancel />
 			</IconButton>
 		</Badge>

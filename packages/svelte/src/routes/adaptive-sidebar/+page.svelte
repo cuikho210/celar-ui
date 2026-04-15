@@ -20,7 +20,7 @@
 </script>
 
 <main style:--sidebar-width={openSidebar ? expandedSize : collapsedSize}>
-	<section class="sidebar">
+	<section class="fixed top-0 left-0 z-100">
 		<AdaptiveSidebar bind:open={openSidebar} {collapsedSize} {expandedSize}>
 			<ExpandedTextButton onclick={toggleSidebar}>
 				{#snippet icon()}
@@ -63,8 +63,8 @@
 		</AdaptiveSidebar>
 	</section>
 
-	<section class="body">
-		<Container>
+	<section class="ml-0 transition-all sm:ml-(--sidebar-width)">
+		<Container sm>
 			<Card>
 				<h3>Adaptive Sidebar</h3>
 				<p>
@@ -79,30 +79,3 @@
 		</Container>
 	</section>
 </main>
-
-<style lang="scss">
-	@use 'sass:map';
-	@use '../../styles/spacing.scss';
-
-	main {
-		.sidebar {
-			position: fixed;
-			left: 0;
-			top: 0;
-			z-index: 100;
-		}
-
-		.body {
-			margin-left: 0;
-			transition-property: margin-left;
-			transition-timing-function: ease-in-out;
-			transition-duration: var(--transition-dur);
-		}
-
-		@media screen and (min-width: calc(map.get(spacing.$breaking, break--xs) + 1px)) {
-			.body {
-				margin-left: var(--sidebar-width);
-			}
-		}
-	}
-</style>

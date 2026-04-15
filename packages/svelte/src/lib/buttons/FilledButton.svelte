@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles/filled_button.scss';
+	import './styles/filled_button.css';
 	import TextBaseButton from './TextBaseButton.svelte';
 	import type { TextBaseButtonProps } from './TextBaseButton.svelte';
 
@@ -7,4 +7,3 @@
 </script>
 
 <TextBaseButton {...props} data-button-filled />
-

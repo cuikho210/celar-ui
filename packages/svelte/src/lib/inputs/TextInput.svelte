@@ -19,82 +19,75 @@
 	<div data-text-input-placeholder>{placeholder}</div>
 </label>
 
-<style lang="scss">
-	$icon-width: 48px;
-	$color-text-placeholder: rgba(var(--color-onSurface--rgb), 0.7);
+<style lang="postcss">
+	@reference '$style/index.css';
 
-	[data-text-input] {
-		margin: 0;
-		padding: 0;
-		display: block;
-		position: relative;
-		width: 100%;
-		pointer-events: all;
-
-		input {
-			box-sizing: border-box;
-			transition-duration: var(--transition-dur);
-			transition-property: border-color;
-			transition-timing-function: ease-in-out;
-			border: 1px solid var(--color-border);
-			border-radius: var(--radius);
-			background-color: transparent;
-			padding: var(--gap--md) var(--gap);
-			padding-left: $icon-width;
+	@layer components {
+		[data-text-input] {
+			margin: 0;
+			padding: 0;
+			display: block;
+			position: relative;
 			width: 100%;
-			font-size: inherit;
-			font-family: inherit;
-			color: inherit;
+			pointer-events: all;
 
-			&:focus {
-				outline: none;
-				border: 1px solid var(--color-primary);
-				caret-color: var(--color-primary);
+			input {
+				@apply border-onBackground/20 rounded-2xl border border-solid transition-all;
+				box-sizing: border-box;
+				background-color: transparent;
+				padding: --spacing(1.5) --spacing(4);
+				padding-left: --spacing(14);
+				width: 100%;
+				font-size: inherit;
+				font-family: inherit;
+				color: inherit;
 
-				+ [data-text-input-icon] {
-					color: var(--color-primary);
+				&:focus {
+					@apply border-primary;
+					outline: none;
+					caret-color: var(--color-primary);
+
+					+ [data-text-input-icon] {
+						color: var(--color-primary);
+					}
+				}
+
+				&:is(:placeholder-shown) ~ [data-text-input-placeholder] {
+					transform: translateY(50%);
+					visibility: hidden;
+					opacity: 0;
+				}
+
+				&::placeholder {
+					@apply text-onBackground/70;
+					opacity: 1;
 				}
 			}
 
-			&:is(:placeholder-shown) ~ [data-text-input-placeholder] {
-				transform: translateY(50%);
-				visibility: hidden;
-				opacity: 0;
+			[data-text-input-icon] {
+				@apply transition-all;
+				display: flex;
+				position: absolute;
+				top: 0;
+				left: 0;
+				justify-content: center;
+				align-items: center;
+				width: --spacing(14);
+				height: 100%;
+				pointer-events: none;
 			}
 
-			&::placeholder {
+			[data-text-input-placeholder] {
+				@apply text-onBackground/70 transition-all;
+				position: absolute;
+				pointer-events: none;
+				font-size: 0.8em;
+				top: 0;
+				right: --spacing(4);
+				transform: translateY(0);
+				visibility: visible;
 				opacity: 1;
-				color: $color-text-placeholder;
 			}
-		}
-
-		[data-text-input-icon] {
-			display: flex;
-			position: absolute;
-			top: 0;
-			left: 0;
-			justify-content: center;
-			align-items: center;
-			transition-duration: var(--transition-dur);
-			transition-property: color;
-			transition-timing-function: ease-in-out;
-			width: $icon-width;
-			height: 100%;
-			pointer-events: none;
-		}
-
-		[data-text-input-placeholder] {
-			position: absolute;
-			transition-duration: var(--transition-dur);
-			transition-property: visibility, opacity, transform;
-			pointer-events: none;
-			color: $color-text-placeholder;
-			font-size: 0.8em;
-			top: 0;
-			right: var(--gap);
-			transform: translateY(0);
-			visibility: visible;
-			opacity: 1;
 		}
 	}
 </style>

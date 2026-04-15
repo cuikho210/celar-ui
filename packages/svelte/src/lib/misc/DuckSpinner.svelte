@@ -137,90 +137,94 @@
 	</g>
 </svg>
 
-<style lang="scss">
-	[data-duck-spinner] {
-		.line {
-			fill: none;
-			stroke: var(--color-onSurface);
-			stroke-width: 1.2;
-			stroke-linecap: round;
-			stroke-linejoin: round;
-			stroke-dasharray: none;
-			transition-duration: var(--transition-duration);
-			transition-property: stroke;
-		}
+<style lang="postcss">
+	@reference '$style/index.css';
 
-		.spinner {
-			transform-origin: center;
-			scale: 1.1;
+	@layer components {
+		[data-duck-spinner] {
+			.line {
+				fill: none;
+				stroke: var(--color-onSurface);
+				stroke-width: 1.2;
+				stroke-linecap: round;
+				stroke-linejoin: round;
+				stroke-dasharray: none;
+				transition-duration: var(--default-transition-duration, 150ms);
+				transition-property: stroke;
+			}
 
-			& > * {
+			.spinner {
 				transform-origin: center;
-				opacity: 0.64;
-				animation-duration: 3s;
-				animation-timing-function: linear;
+				scale: 1.1;
+
+				& > * {
+					transform-origin: center;
+					opacity: 0.64;
+					animation-duration: 3s;
+					animation-timing-function: linear;
+					animation-iteration-count: infinite;
+					animation-name: spin;
+				}
+
+				.circle-1 {
+					scale: 0.85;
+					opacity: 0.32;
+					animation-direction: reverse;
+				}
+			}
+
+			.duck {
+				transform-origin: center;
+				scale: 1.2;
+				animation-duration: 2s;
+				animation-timing-function: ease;
 				animation-iteration-count: infinite;
-				animation-name: spin;
-			}
+				animation-name: slay;
 
-			.circle-1 {
-				scale: 0.85;
-				opacity: 0.32;
-				animation-direction: reverse;
-			}
-
-			@keyframes spin {
-				from {
-					rotate: 0;
+				.body {
+					stroke-width: 1.5;
 				}
-				to {
-					rotate: 359deg;
+
+				.eye {
+					stroke-width: 1;
+				}
+			}
+
+			&[data-thin='true'] {
+				.line {
+					stroke-width: 0.5;
+				}
+
+				.duck {
+					.body {
+						stroke-width: 1;
+					}
+
+					.eye {
+						stroke-width: 0.8;
+					}
 				}
 			}
 		}
 
-		.duck {
-			transform-origin: center;
-			scale: 1.2;
-			animation-duration: 2s;
-			animation-timing-function: ease;
-			animation-iteration-count: infinite;
-			animation-name: slay;
-
-			@keyframes slay {
-				0% {
-					rotate: -24deg;
-				}
-				50% {
-					rotate: 24deg;
-				}
-				100% {
-					rotate: -24deg;
-				}
+		@keyframes slay {
+			0% {
+				rotate: -24deg;
 			}
-
-			.body {
-				stroke-width: 1.5;
+			50% {
+				rotate: 24deg;
 			}
-
-			.eye {
-				stroke-width: 1;
+			100% {
+				rotate: -24deg;
 			}
 		}
-	}
 
-	[data-thin='true'] {
-		.line {
-			stroke-width: 0.5;
-		}
-
-		.duck {
-			.body {
-				stroke-width: 1;
+		@keyframes spin {
+			from {
+				rotate: 0;
 			}
-
-			.eye {
-				stroke-width: 0.8;
+			to {
+				rotate: 359deg;
 			}
 		}
 	}
