@@ -2,25 +2,10 @@
 
 @layer components {
 	[data-container] {
+		@apply container-sizing;
 		position: relative;
 		margin: 0 auto;
 		padding: --spacing(4);
 		box-sizing: border-box;
-
-		&[data-xs='true'] {
-			max-width: var(--breakpoint-xs);
-		}
-
-		&[data-sm='true'] {
-			max-width: var(--breakpoint-sm);
-		}
-
-		&[data-md='true'] {
-			max-width: var(--breakpoint-md);
-		}
-
-		&[data-fluid='true'] {
-			width: 100%;
-		}
 	}
 }

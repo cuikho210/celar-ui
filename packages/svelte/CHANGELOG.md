@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.1.0] - 2026-04-16
+
+### Changed
+
+- **Container**: Added `lg`, `xl`, `x2xl` breakpoint props for larger container sizes
+- **Dialog components**: Added `lg`, `xl`, `x2xl` breakpoint props (CommandDialog, Dialog, MinimalDialog)
+- **Input padding**: Unified padding from `--spacing(1.5)` to `--spacing(2)` (TextInput, ColorInput, FileInput)
+- **Slider thumb**: Reduced thumb size from 8 to 6 units; simplified margin calculation
+
+### Added
+
+- **container-sizing utility**: Extracted container breakpoint styles to reusable utility in theme
+- **elevated utility**: Extracted surface elevation styles to reusable utility for SurfaceContainer
+
+### Fixed
+
+- **Container**: Migrated breakpoint styles to `@apply container-sizing` utility
+- **SurfaceContainer**: Migrated elevation styles to `@apply elevated` utility
+
+---
+
 ## [2.0.2] - 2026-04-16
 
 ### Changed

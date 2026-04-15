@@ -13,6 +13,9 @@
 		xs?: boolean;
 		sm?: boolean;
 		md?: boolean;
+		lg?: boolean;
+		xl?: boolean;
+		x2xl?: boolean;
 		fluid?: boolean;
 		transitionDuration?: number;
 	};
@@ -26,6 +29,9 @@
 		xs,
 		sm,
 		md,
+		lg,
+		xl,
+		x2xl,
 		fluid,
 		transitionDuration = 200,
 		...rest
@@ -52,6 +58,9 @@
 			data-xs={xs}
 			data-sm={sm}
 			data-md={md}
+			data-lg={lg}
+			data-xl={xl}
+			data-2xl={x2xl}
 			data-fluid={fluid}
 			data-celar-dialog-content
 		>
