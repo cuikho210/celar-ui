@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../containment/styles/surface-container.scss';
+	import '../containment/styles/surface-container.css';
 	import type { HTMLAttributes } from 'svelte/elements';
 
 	interface AdaptiveSidebarProps extends HTMLAttributes<HTMLElement> {

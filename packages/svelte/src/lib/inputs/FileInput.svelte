@@ -23,41 +23,42 @@
 	</div>
 </label>
 
-<style lang="scss">
-	[data-file-input] {
-		$icon-width: 48px;
-		$color-text-placeholder: rgba(var(--color-onSurface--rgb), 0.7);
-		display: flex;
+<style lang="postcss">
+	@reference '$style/index.css';
 
-		position: relative;
-		justify-content: flex-start;
-		align-items: center;
-		border: 1px solid var(--color-border);
-		border-radius: var(--radius);
-		padding: var(--gap--md) 0;
-		width: 100%;
-
-		input {
-			display: none;
-		}
-
-		[data-file-input-icon] {
+	@layer components {
+		[data-file-input] {
+			@apply border-onBackground/20 border border-solid;
 			display: flex;
-			flex-shrink: 0;
-			justify-content: center;
+			position: relative;
+			justify-content: flex-start;
 			align-items: center;
-			width: $icon-width;
-			height: 100%;
-			line-height: 1rem;
-		}
+			border-radius: var(--radius-2xl);
+			padding: --spacing(1.5) 0;
+			width: 100%;
 
-		[data-file-input-placeholder] {
-			padding-right: var(--gap);
-			max-width: 100%;
-			overflow: hidden;
-			color: $color-text-placeholder;
-			text-overflow: ellipsis;
-			white-space: nowrap;
+			input {
+				display: none;
+			}
+
+			[data-file-input-icon] {
+				display: flex;
+				flex-shrink: 0;
+				justify-content: center;
+				align-items: center;
+				width: --spacing(14);
+				height: 100%;
+				line-height: 1rem;
+			}
+
+			[data-file-input-placeholder] {
+				@apply text-onBackground/70;
+				padding-right: --spacing(4);
+				max-width: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
 		}
 	}
 </style>

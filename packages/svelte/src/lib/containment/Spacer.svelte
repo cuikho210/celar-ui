@@ -27,16 +27,20 @@
 	{/if}
 </div>
 
-<style lang="scss">
-	[data-spacer] {
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-		display: flex;
-		position: relative;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-items: flex-start;
-		gap: var(--gap--half);
+<style lang="postcss">
+	@reference '$style/index.css';
+
+	@layer components {
+		[data-spacer] {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			display: flex;
+			position: relative;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: --spacing(2);
+		}
 	}
 </style>

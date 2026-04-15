@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles/container.scss';
+	import './styles/container.css';
 	import type { HTMLAttributes } from 'svelte/elements';
 
 	export interface ContainerProps extends HTMLAttributes<HTMLElement> {

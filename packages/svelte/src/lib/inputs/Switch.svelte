@@ -17,74 +17,54 @@
 	{@render children?.()}
 </label>
 
-<style lang="scss">
-	@use 'sass:math';
+<style lang="postcss">
+	@reference '$style/index.css';
 
-	$s-width: 38px;
-	$s-height: 24px;
-
-	$t-gap: 2px;
-	$t-size: $s-height - ($t-gap * 2);
-	$t-translate: $s-width - $t-size - ($t-gap * 2);
-
-	$i-width: 56px;
-	$s-margin-x: math.div($i-width - $s-width, 2);
-
-	[data-switch] {
-		position: relative;
-		box-sizing: border-box;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		transition-property: background-color;
-		transition-duration: var(--transition-dur);
-		transition-timing-function: ease-in;
-		border-radius: var(--radius--half);
-		padding: var(--gap--sm) 0;
-		padding-right: var(--gap);
-		width: 100%;
-		user-select: none;
-
-		&:hover {
-			background-color: var(--color-primaryContainer);
+	@layer components {
+		[data-switch] {
+			@apply rounded-lg py-1.5 pr-4 transition-all;
+			position: relative;
+			box-sizing: border-box;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			width: 100%;
+			user-select: none;
 		}
-	}
 
-	:global([data-switch-root]) {
-		position: relative;
-		display: block;
-		width: $s-width;
-		height: $s-height;
-		border-radius: $s-height;
-		background-color: transparent;
-		outline: 1px solid var(--color-primary);
-		border: none;
-		transition-property: background-color;
-		transition-duration: var(--transition-dur);
-		transition-timing-function: ease-out;
-		margin: 0 $s-margin-x;
-	}
+		:global([data-switch-root]) {
+			@apply transition-all;
+			position: relative;
+			display: block;
+			width: --spacing(9.5);
+			height: --spacing(6);
+			border-radius: --spacing(8);
+			background-color: transparent;
+			outline: 1px solid var(--color-primary);
+			border: none;
+			margin: 0 --spacing(2.25);
+		}
 
-	:global([data-switch-thumb]) {
-		position: absolute;
-		top: $t-gap;
-		left: $t-gap;
-		display: block;
-		width: $t-size;
-		height: $t-size;
-		border-radius: $t-size;
-		box-sizing: border-box;
-		background-color: var(--color-primary);
-		transition-property: background-color, transform, outline-color;
-		transition-duration: var(--transition-dur);
-	}
+		:global([data-switch-thumb]) {
+			@apply transition-all;
+			position: absolute;
+			top: --spacing(0.2);
+			left: --spacing(0.2);
+			display: block;
+			width: --spacing(5.6);
+			height: --spacing(5.6);
+			border-radius: 50%;
+			box-sizing: border-box;
+			background-color: var(--color-primary);
+		}
 
-	:global([data-switch-root][data-state='checked']) {
-		background-color: var(--color-primary);
-	}
+		:global([data-switch-root][data-state='checked']) {
+			background-color: var(--color-primary);
+		}
 
-	:global([data-switch-thumb][data-state='checked']) {
-		background-color: var(--color-primaryContainer);
-		transform: translateX($t-translate);
+		:global([data-switch-thumb][data-state='checked']) {
+			background-color: var(--color-primaryContainer);
+			transform: translateX(--spacing(3.5));
+		}
 	}
 </style>

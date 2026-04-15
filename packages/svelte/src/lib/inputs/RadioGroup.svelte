@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles/radio_group.scss';
+	import './styles/radio_group.css';
 	import {
 		RadioGroup as BitRadioGroup,
 		type RadioGroupRootProps as BitRadioGroupRootProps,

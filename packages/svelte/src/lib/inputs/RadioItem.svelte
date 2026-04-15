@@ -15,45 +15,41 @@
 	{@render children?.()}
 </label>
 
-<style lang="scss">
-	$icon-width: 56px;
+<style lang="postcss">
+	@reference '$style/index.css';
 
-	[data-radio-item] {
-		box-sizing: border-box;
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		transition-property: background-color;
-		transition-duration: var(--transition-dur);
-		transition-timing-function: ease-in;
-		border-radius: var(--radius--half);
-		padding: var(--gap--sm) 0;
-		padding-right: var(--gap);
-		width: 100%;
-		user-select: none;
-
-		[data-radio-item-icon] {
-			width: $icon-width;
+	@layer components {
+		[data-radio-item] {
+			@apply transition-all;
+			box-sizing: border-box;
 			display: flex;
-			justify-content: center;
+			justify-content: flex-start;
 			align-items: center;
+			padding: --spacing(1) 0;
+			padding-right: --spacing(4);
+			width: 100%;
+			user-select: none;
+
+			[data-radio-item-icon] {
+				width: --spacing(14);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 		}
 
-		&:hover {
-			background-color: var(--color-primaryContainer);
+		:global([data-radio-group-item]) {
+			@apply transition-all;
+			background-color: transparent;
+			outline: 1px solid var(--color-primary);
+			border: 4px solid var(--color-surface);
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
 		}
-	}
 
-	:global([data-radio-group-item]) {
-		background-color: transparent;
-		outline: 1px solid var(--color-primary);
-		border: 4px solid var(--color-surface);
-		width: 24px;
-		height: 24px;
-		border-radius: 50%;
-	}
-
-	:global([data-radio-group-item][data-state='checked']) {
-		background-color: var(--color-primary);
+		:global([data-radio-group-item][data-state='checked']) {
+			background-color: var(--color-primary);
+		}
 	}
 </style>
