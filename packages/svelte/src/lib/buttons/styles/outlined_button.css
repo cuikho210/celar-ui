@@ -2,7 +2,7 @@
 
 @layer components {
 	[data-button-outlined] {
-		@apply button-text-base border border-solid border-onBackground/20;
+		@apply button-text-base border-onBackground/20 border border-solid;
 		background-color: transparent;
 		color: var(--color-onPrimaryContainer);
 

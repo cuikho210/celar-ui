@@ -1,9 +1,7 @@
 @reference '$style/index.css';
 
 @utility button-base {
-	@apply relative m-0 box-border inline-block h-fit w-fit cursor-pointer
-           	border-none p-0 transition-all
-    		select-none no-underline;
+	@apply relative m-0 box-border inline-block h-fit w-fit cursor-pointer border-none p-0 no-underline transition-all select-none;
 	font-size: inherit;
 	font-family: inherit;
 	-webkit-tap-highlight-color: transparent;

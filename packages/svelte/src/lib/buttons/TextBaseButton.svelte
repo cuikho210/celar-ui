@@ -34,7 +34,7 @@
 	</span>
 
 	{#if loading}
-		<div class="flex justify-center items-center w-full h-full absolute top-0 left-0">
+		<div class="absolute top-0 left-0 flex h-full w-full items-center justify-center">
 			<DotSpinner size="24px" />
 		</div>
 	{/if}
