@@ -1,7 +1,7 @@
 <script lang="ts">
-	import './styles/dialog.scss';
+	import './styles/dialog.css';
 	import '../containment/styles/surface-container.css';
-	import './styles/surface-dialog.scss';
+	import './styles/surface-dialog.css';
 
 	import MinimalDialog, { type MinimalDialogProps } from './MinimalDialog.svelte';
 	import type { Snippet } from 'svelte';

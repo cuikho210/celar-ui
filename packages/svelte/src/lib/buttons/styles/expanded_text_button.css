@@ -5,7 +5,6 @@
 		@apply button-text-base;
 		background-color: transparent;
 		color: var(--color-onPrimaryContainer);
-		display: block;
 		width: 100%;
 		overflow: hidden;
 

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import './styles/popover.scss';
+	import './styles/popover.css';
 	import { scale } from 'svelte/transition';
 	import { Popover as BitsPopover, type PopoverContentProps } from 'bits-ui';
 

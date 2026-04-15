@@ -48,19 +48,9 @@
 		'color-onWarning'
 	];
 
-	const miscColors = [
-		'color-shadow--soft',
-		'color-shadow--md',
-		'color-shadow--strong',
-		'color-border',
-		'color-border--strong',
-		'color-wrapper'
-	];
-
 	const allColors = [
 		{ group: 'Scheme Colors', keys: schemeColors },
-		{ group: 'Extended Colors', keys: extColors },
-		{ group: 'Misc Colors', keys: miscColors }
+		{ group: 'Extended Colors', keys: extColors }
 	];
 
 	// Prefix from config.scss (default is empty string, change if needed)

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './styles/dialog.scss';
+	import './styles/dialog.css';
 	import { fade, fly } from 'svelte/transition';
 	import { Dialog as BitDialog, type DialogContentProps } from 'bits-ui';
 	import type { Snippet } from 'svelte';

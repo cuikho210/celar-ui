@@ -1,0 +1,125 @@
+@reference '$style/index.css';
+
+@layer components {
+	[data-command-dialog] {
+		top: 25dvh;
+		left: calc(50lvw - --spacing(4));
+		transform: translate(-50%, 0);
+		max-height: calc(75dvh - --spacing(8));
+
+		[data-command-input] {
+			@apply border-onBackground/20 border border-solid;
+			background-color: var(--color-background);
+			border-radius: var(--radius-lg);
+			padding: --spacing(2);
+			font-size: inherit;
+			font-family: inherit;
+			line-height: 1.5;
+			color: var(--color-onSurface);
+			outline: none;
+			transition: border-color var(--tw-duration, 150ms) ease-in-out;
+			width: 100%;
+			box-sizing: border-box;
+
+			&::placeholder {
+				@apply text-onBackground/70;
+			}
+
+			&:focus {
+				border-color: var(--color-primary);
+			}
+		}
+
+		[data-command-list] {
+			flex: 1;
+			overflow-y: auto;
+			overflow-x: hidden;
+			margin-top: --spacing(4);
+		}
+
+		[data-command-viewport] {
+			display: flex;
+			flex-direction: column;
+			gap: --spacing(1);
+		}
+
+		[data-command-group] {
+			display: flex;
+			flex-direction: column;
+			gap: --spacing(1);
+
+			&:not(:first-child) {
+				margin-top: --spacing(3);
+			}
+		}
+
+		[data-command-group-heading] {
+			font-weight: 600;
+			font-size: 0.8em;
+			color: --alpha(var(--color-onSurface) / 60%);
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			margin-bottom: --spacing(2);
+		}
+
+		[data-command-group-items] {
+			display: flex;
+			flex-direction: column;
+			gap: --spacing(1);
+		}
+
+		[data-command-item] {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: --spacing(3);
+			padding: --spacing(3);
+			border-radius: var(--radius-lg);
+			cursor: pointer;
+			line-height: 1.5;
+			color: var(--color-onSurface);
+			background-color: transparent;
+			border: none;
+			text-align: left;
+			width: 100%;
+			outline: none;
+			box-sizing: border-box;
+
+			&[data-selected] {
+				background-color: var(--color-primaryContainer);
+				color: var(--color-onPrimaryContainer);
+			}
+
+			&[data-disabled] {
+				opacity: 0.5;
+				cursor: not-allowed;
+
+				&:hover {
+					background-color: transparent;
+				}
+			}
+
+			&:focus-visible {
+				@apply shadow-md;
+				background-color: var(--color-primaryContainer);
+				color: var(--color-onPrimaryContainer);
+			}
+
+			[data-command-item-shortcut] {
+				@apply border-onBackground/20 border border-solid;
+				font-size: 0.9rem;
+				color: var(--color-onSurface);
+				background-color: var(--color-surfaceDim);
+				padding: --spacing(1) --spacing(1.5);
+				border-radius: var(--radius-lg);
+				font-family:
+					ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+			}
+		}
+
+		[data-command-empty] {
+			@apply text-onSurface/50;
+			text-align: center;
+		}
+	}
+}

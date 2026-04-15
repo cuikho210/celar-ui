@@ -27,39 +27,42 @@
 	</div>
 </section>
 
-<style lang="scss">
-	[data-app-bar] {
-		box-sizing: border-box;
-		display: flex;
-		position: relative;
-		justify-content: space-between;
-		align-items: center;
-		gap: var(--gap--half);
-		backdrop-filter: blur(var(--blur-length--x2));
-		background-color: rgba(var(--color-background--rgb), 0.88);
-		padding: 0 var(--gap--half);
-		min-height: var(--gap--x3);
+<style lang="postcss">
+	@reference '$style/index.css';
 
-		[data-app-bar-left] {
+	@layer components {
+		[data-app-bar] {
+			@apply bg-background/88 backdrop-blur;
+			box-sizing: border-box;
 			display: flex;
+			position: relative;
+			justify-content: space-between;
 			align-items: center;
-			gap: var(--gap--half);
-			overflow: hidden;
+			gap: --spacing(2);
+			padding: 0 --spacing(2);
+			min-height: --spacing(12);
 
-			[data-app-bar-title] {
-				flex: 1;
+			[data-app-bar-left] {
+				display: flex;
+				align-items: center;
+				gap: var(--gap--half);
 				overflow: hidden;
-				font-weight: bold;
-				font-size: 1.1rem;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-			}
-		}
 
-		[data-app-bar-actions] {
-			display: flex;
-			align-items: center;
-			gap: var(--gap--sm);
+				[data-app-bar-title] {
+					flex: 1;
+					overflow: hidden;
+					font-weight: bold;
+					font-size: 1.1rem;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+			}
+
+			[data-app-bar-actions] {
+				display: flex;
+				align-items: center;
+				gap: --spacing(1.5);
+			}
 		}
 	}
 </style>

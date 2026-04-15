@@ -23,46 +23,45 @@
 	{@render children?.()}
 </a>
 
-<style lang="scss">
-	[data-navigation-bar-button] {
-		box-sizing: border-box;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
-		gap: var(--gap--xs);
-		background-color: transparent;
-		padding: var(--gap--half) 0;
-		width: 100%;
-		color: var(--color-onSurface);
-		text-align: center;
-		font-size: 0.8rem;
-		text-decoration: none;
-		-webkit-tap-highlight-color: transparent;
+<style lang="postcss">
+	@reference '$style/index.css';
 
-		&:not(:disabled):active {
-			top: 0;
-		}
-
-		&:hover {
-			& > [data-navigation-bar-button-icon] {
-				background-color: var(--color-primaryContainer);
-			}
-		}
-
-		&[data-active='true'] {
-			& > [data-navigation-bar-button-icon] {
-				background-color: var(--color-inversePrimary);
-			}
-		}
-
-		& > [data-navigation-bar-button-icon] {
-			transition-duration: var(--transition-dur);
-			transition-property: color, background-color;
-			transition-timing-function: ease-in;
-			border-radius: var(--radius);
+	@layer components {
+		[data-navigation-bar-button] {
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			gap: --spacing(1);
 			background-color: transparent;
-			padding: var(--gap--xs) var(--gap);
+			padding: --spacing(2) 0;
+			width: 100%;
+			color: var(--color-onSurface);
+			text-align: center;
+			font-size: 0.8rem;
+			text-decoration: none;
+			-webkit-tap-highlight-color: transparent;
+
+			&:not(:disabled):active {
+				top: 0;
+			}
+
+			&:hover {
+				& > [data-navigation-bar-button-icon] {
+					background-color: var(--color-primaryContainer);
+				}
+			}
+
+			&[data-active='true'] {
+				& > [data-navigation-bar-button-icon] {
+					background-color: var(--color-inversePrimary);
+				}
+			}
+
+			& > [data-navigation-bar-button-icon] {
+				@apply rounded-2xl bg-transparent px-4 py-1 transition-all;
+			}
 		}
 	}
 </style>

@@ -7,36 +7,40 @@
 	<div data-linear-progress-indicator-line></div>
 </div>
 
-<style lang="scss">
-	[data-linear-progress-indicator] {
-		--line-height: var(--gap--sm);
-		--anim-duration: 1.7s;
+<style lang="postcss">
+	@reference '$style/index.css';
 
-		display: block;
-		position: relative;
-		background-color: var(--color-surfaceDim);
-		width: 100%;
-		height: var(--line-height);
-		overflow: hidden;
+	@layer components {
+		[data-linear-progress-indicator] {
+			--line-height: --spacing(1.5);
+			--anim-duration: 1.7s;
 
-		[data-linear-progress-indicator-line] {
-			position: absolute;
-			top: 0;
-			left: 0;
-			animation: linear-progress-animation var(--anim-duration) linear infinite;
-			background-color: var(--color-primary);
-			width: 0;
-			height: 100%;
-		}
+			display: block;
+			position: relative;
+			background-color: var(--color-surfaceDim);
+			width: 100%;
+			height: var(--line-height);
+			overflow: hidden;
 
-		@keyframes linear-progress-animation {
-			0% {
-				left: -8%;
-				width: 8%;
+			[data-linear-progress-indicator-line] {
+				position: absolute;
+				top: 0;
+				left: 0;
+				animation: linear-progress-animation var(--anim-duration) linear infinite;
+				background-color: var(--color-primary);
+				width: 0;
+				height: 100%;
 			}
-			100% {
-				left: 100%;
-				width: 100%;
+
+			@keyframes linear-progress-animation {
+				0% {
+					left: -8%;
+					width: 8%;
+				}
+				100% {
+					left: 100%;
+					width: 100%;
+				}
 			}
 		}
 	}
