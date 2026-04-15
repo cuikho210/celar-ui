@@ -23,7 +23,7 @@
 	{/snippet}
 </AppBar>
 
-<Container sm>
+<Container lg>
 	<OutlinedButton href="/adaptive-sidebar">Adaptive Sidebar</OutlinedButton>
 	<Gap />
 	<ColorPalette />

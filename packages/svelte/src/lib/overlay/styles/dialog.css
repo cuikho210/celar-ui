@@ -35,6 +35,15 @@
 		&[data-md='true'] {
 			max-width: min(calc(100% - --spacing(8)), var(--breakpoint-md));
 		}
+		&[data-lg='true'] {
+			max-width: min(calc(100% - --spacing(8)), var(--breakpoint-lg));
+		}
+		&[data-xl='true'] {
+			max-width: min(calc(100% - --spacing(8)), var(--breakpoint-xl));
+		}
+		&[data-2xl='true'] {
+			max-width: min(calc(100% - --spacing(8)), var(--breakpoint-2xl));
+		}
 		&[data-fluid='true'] {
 			width: 100%;
 		}

@@ -29,7 +29,7 @@
 			justify-content: flex-start;
 			align-items: center;
 			border-radius: var(--radius-2xl);
-			padding: --spacing(1.5) 0;
+			padding: --spacing(2) 0;
 			width: 100%;
 
 			> input {

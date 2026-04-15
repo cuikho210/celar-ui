@@ -35,7 +35,7 @@
 	{/snippet}
 </AppBar>
 
-<Container sm>
+<Container md>
 	<Breadcrumb>
 		<a href="/">Home</a>
 		<a href="/components">Components</a>

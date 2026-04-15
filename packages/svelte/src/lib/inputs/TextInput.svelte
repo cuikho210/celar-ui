@@ -35,7 +35,7 @@
 				@apply border-onBackground/20 rounded-2xl border border-solid transition-all;
 				box-sizing: border-box;
 				background-color: transparent;
-				padding: --spacing(1.5) --spacing(4);
+				padding: --spacing(2) --spacing(4);
 				padding-left: --spacing(14);
 				width: 100%;
 				font-size: inherit;

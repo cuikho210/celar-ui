@@ -34,7 +34,7 @@
 		@apply bg-primary h-2 rounded-2xl;
 	}
 	@utility thumb {
-		@apply bg-primary box-border h-8 w-8 rounded-[50%] border-none;
+		@apply bg-primary box-border h-6 w-6 rounded-[50%] border-none;
 	}
 
 	@layer components {
@@ -77,7 +77,7 @@
 				}
 
 				&::-webkit-slider-thumb {
-					margin-top: calc(0.5 * (--spacing(2) - --spacing(8)));
+					margin-top: calc(0.5 * --spacing(-4));
 					@apply thumb;
 				}
 				&::-moz-range-thumb {
