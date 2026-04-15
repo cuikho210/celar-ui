@@ -27,6 +27,7 @@
 	"files": [
 		"dist",
 		"src/styles",
+		"src/bin",
 		"!dist/**/*.test.*",
 		"!dist/**/*.spec.*"
 	],
