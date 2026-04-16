@@ -138,9 +138,10 @@
 </svg>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-duck-spinner] {
 			.line {
 				fill: none;

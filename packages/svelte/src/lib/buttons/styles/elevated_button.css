@@ -1,6 +1,6 @@
 @reference './button_utils.css';
 
-@layer components {
+@layer base {
 	[data-button-elevated] {
 		@apply button-text-base bg-primaryContainer text-onPrimaryContainer shadow;
 

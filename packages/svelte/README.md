@@ -1,58 +1,60 @@
-# Svelte library
+# Celar UI for Svelte
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+A component library for Svelte, powered by Bits-ui and Tailwind CSS 4.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+## Quick Start
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+### 1. Install
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+bun add @celar-ui/svelte
 ```
 
-## Developing
+### 2. Configure CSS
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+In your root CSS file:
+
+```css
+@import '@celar-ui/svelte/styles/index.css';
+@source 'path/to/node_modules/@celar-ui/svelte/dist';
+```
+
+### 3. Use Components
+
+```svelte
+<script>
+	import { FilledButton, TextInput } from '@celar-ui/svelte';
+</script>
+
+<FilledButton>Click me</FilledButton>
+<TextInput placeholder="Enter text" />
+```
+
+## Custom Theme
+
+Generate a custom theme with your brand color:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npx @celar-ui/svelte -c #aabbcc -o ./theme.css
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+Then update your root CSS:
 
-## Building
-
-To build your library:
-
-```bash
-npm run package
+```css
+@import '@celar-ui/svelte/styles/index.css';
+@import 'path/to/theme.css';
+@source 'path/to/node_modules/@celar-ui/svelte/dist';
 ```
 
-To create a production version of your showcase app:
+## Available Components
 
-```bash
-npm run build
-```
+- **Buttons**: FilledButton, ElevatedButton, OutlinedButton, TextButton, IconButton, ExpandedTextButton
+- **Inputs**: TextInput, Checkbox, RadioGroup, Switch, Slider, ColorInput, FileInput, TagInput
+- **Containment**: Container, Card, Avatar, Breadcrumb, Spacer, Gap, SurfaceContainer
+- **Navigation**: AppBar, NavigationBar, NavigationBarButton, AdaptiveSidebar, NavigationDrawer
+- **Overlay**: Dialog, CommandDialog, MinimalDialog, MinimalSurfaceDialog, Popover
+- **Misc**: Badge, DotSpinner, DuckSpinner, LinearProgressIndicator
 
-You can preview the production build with `npm run preview`.
+## License
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+MIT

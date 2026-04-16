@@ -8,9 +8,10 @@
 </div>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-linear-progress-indicator] {
 			--line-height: --spacing(1.5);
 			--anim-duration: 1.7s;

@@ -55,9 +55,10 @@
 </label>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-checkbox] {
 			position: relative;
 			box-sizing: border-box;

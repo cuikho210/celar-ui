@@ -1,6 +1,7 @@
+@reference 'tailwindcss';
 @reference '@celar-ui/svelte/styles/index.css';
 
-@layer components {
+@layer base {
 	[data-surface-container] {
 		@apply elevated;
 		border-radius: var(--radius-4xl);

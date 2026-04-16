@@ -1,6 +1,6 @@
 @reference './button_utils.css';
 
-@layer components {
+@layer base {
 	[data-button-text] {
 		@apply button-text-base;
 		transition-property: background-color, opacity, filter;

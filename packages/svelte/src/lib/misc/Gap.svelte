@@ -9,9 +9,10 @@
 <div data-gap style:width={size}></div>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-gap] {
 			display: block;
 			aspect-ratio: 1;

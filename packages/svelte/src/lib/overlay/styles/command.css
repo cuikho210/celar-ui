@@ -1,6 +1,7 @@
+@reference 'tailwindcss';
 @reference '@celar-ui/svelte/styles/index.css';
 
-@layer components {
+@layer base {
 	[data-command-dialog] {
 		top: 25dvh;
 		left: calc(50lvw - --spacing(4));

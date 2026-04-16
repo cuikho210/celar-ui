@@ -14,9 +14,10 @@
 </span>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-badge] {
 			box-sizing: border-box;
 			border-radius: var(--radius-2xl);

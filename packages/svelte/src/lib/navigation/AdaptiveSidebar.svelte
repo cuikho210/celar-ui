@@ -47,9 +47,10 @@
 </div>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-adaptive-sidebar-backdrop] {
 			@apply bg-onBackground/20 backdrop-blur transition-all;
 			position: fixed;

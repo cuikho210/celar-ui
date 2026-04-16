@@ -1,6 +1,6 @@
 @reference './button_utils.css';
 
-@layer components {
+@layer base {
 	[data-button-filled] {
 		@apply button-text-base;
 		background-color: var(--color-primary);
