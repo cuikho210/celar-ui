@@ -24,9 +24,10 @@
 </a>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-navigation-bar-button] {
 			box-sizing: border-box;
 			display: flex;

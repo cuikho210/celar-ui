@@ -28,9 +28,10 @@
 </section>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-app-bar] {
 			@apply bg-background/88 backdrop-blur;
 			box-sizing: border-box;

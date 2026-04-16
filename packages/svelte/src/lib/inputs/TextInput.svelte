@@ -20,9 +20,10 @@
 </label>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-text-input] {
 			margin: 0;
 			padding: 0;

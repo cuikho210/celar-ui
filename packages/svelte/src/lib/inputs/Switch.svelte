@@ -18,9 +18,10 @@
 </label>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-switch] {
 			@apply rounded-lg py-1.5 pr-4 transition-all;
 			position: relative;

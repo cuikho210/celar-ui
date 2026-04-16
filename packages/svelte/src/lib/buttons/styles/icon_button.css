@@ -1,6 +1,6 @@
 @reference './button_utils.css';
 
-@layer components {
+@layer base {
 	[data-button-icon] {
 		@apply button-base;
 		flex-grow: 0;

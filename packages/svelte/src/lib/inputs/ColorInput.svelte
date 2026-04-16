@@ -19,9 +19,10 @@
 </label>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-color-input] {
 			@apply border-onBackground/20 border border-solid;
 			display: flex;

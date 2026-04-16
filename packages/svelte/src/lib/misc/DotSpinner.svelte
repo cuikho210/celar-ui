@@ -70,7 +70,7 @@
 </svg>
 
 <style lang="postcss">
-	@layer components {
+	@layer base {
 		svg {
 			display: inline-block;
 			aspect-ratio: 1;

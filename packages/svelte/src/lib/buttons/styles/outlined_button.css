@@ -1,6 +1,6 @@
 @reference './button_utils.css';
 
-@layer components {
+@layer base {
 	[data-button-outlined] {
 		@apply button-text-base border-onBackground/20 border border-solid;
 		background-color: transparent;

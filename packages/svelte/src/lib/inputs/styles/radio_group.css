@@ -1,5 +1,6 @@
+@reference 'tailwindcss';
 @reference '@celar-ui/svelte/styles/index.css';
-@layer components {
+@layer base {
 	[data-radio-group-root] {
 		position: relative;
 	}

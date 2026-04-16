@@ -1,6 +1,7 @@
+@reference 'tailwindcss';
 @reference '@celar-ui/svelte/styles/index.css';
 
-@layer components {
+@layer base {
 	[data-breadcrumb] {
 		position: relative;
 		padding: 0;

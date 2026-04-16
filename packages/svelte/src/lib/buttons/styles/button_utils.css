@@ -1,3 +1,4 @@
+@reference 'tailwindcss';
 @reference '@celar-ui/svelte/styles/index.css';
 
 @utility button-base {

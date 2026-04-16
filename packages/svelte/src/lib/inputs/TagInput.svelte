@@ -106,9 +106,10 @@
 </div>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
-	@layer components {
+	@layer base {
 		[data-tag-input] {
 			--color-background: transparent;
 

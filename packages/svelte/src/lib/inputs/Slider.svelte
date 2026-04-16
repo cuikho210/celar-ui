@@ -19,6 +19,7 @@
 </div>
 
 <style lang="postcss">
+	@reference 'tailwindcss';
 	@reference '@celar-ui/svelte/styles/index.css';
 
 	@utility track {
@@ -37,7 +38,7 @@
 		@apply bg-primary box-border h-6 w-6 rounded-[50%] border-none;
 	}
 
-	@layer components {
+	@layer base {
 		[data-slider] {
 			position: relative;
 			padding: 0 --spacing(4);

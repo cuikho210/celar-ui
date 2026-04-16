@@ -1,3 +1,6 @@
+@import 'tailwindcss';
+@import '$style/index.css';
+
 html,
 body {
 	margin: 0;
