@@ -1,6 +1,6 @@
 # Celar UI for Svelte
 
-A Material Design 3 component library for Svelte, powered by Bits-ui and Tailwind CSS 4.
+A component library for Svelte, powered by Bits-ui and Tailwind CSS 4.
 
 ## Quick Start
 
@@ -43,7 +43,7 @@ Then update your root CSS:
 ```css
 @import '@celar-ui/svelte/styles/index.css';
 @import 'path/to/theme.css';
-@source '../../../node_modules/@celar-ui/svelte/dist';
+@source 'path/to/node_modules/@celar-ui/svelte/dist';
 ```
 
 ## Available Components

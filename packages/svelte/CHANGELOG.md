@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Demo styles**: Moved `@import 'tailwindcss'` from styles/index.css to demo's style.css
 
+### ⚠️ Breaking Changes
+
+- **Cascade precedence**: Components now have lower cascade precedence due to migration from `@layer components` to `@layer base`
+
 ---
 
 ## [2.1.0] - 2026-04-16
